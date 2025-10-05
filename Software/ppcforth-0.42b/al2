@@ -1,0 +1,2 @@
+asl $1 -D p403gcx -D ULTRALITE -w -L
+p2hex $1.p -F moto -r 0x7fe00000-0x7fe80000

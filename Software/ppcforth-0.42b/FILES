@@ -1,0 +1,13 @@
+				File List
+				
+				
+	CHANGELOG	List of changes
+	FILES		This file
+	INSTALL		Brief installation/compilation instructions
+	LICENSE		GPL v2 License
+	al, al2		Two example scripts for compilation
+	dict.asm	Dictionary of routines
+	local.inc	Basic customization settings
+	ppcforth.asm	Main program
+	ppcforth.inc	Include file of more settings, macros, etc.
+	ppcforth.txt	Brief manual
