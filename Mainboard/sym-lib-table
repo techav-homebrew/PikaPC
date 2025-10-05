@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PikaPC")(type "KiCad")(uri "${KIPRJMOD}/PikaPC.kicad_sym")(options "")(descr ""))
+)
