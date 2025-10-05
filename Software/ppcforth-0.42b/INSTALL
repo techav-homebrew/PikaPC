@@ -1,0 +1,74 @@
+			PPCForth Installation
+				
+				
+	Before I detail anything, let me point out PPCForth was written under Linux and so all installation instructions for things like the assembler assume this.  If you're running a *BSD or other unix-like system you should be fine.  I'm sure it's possible to try to compile under something like cygwin from Cygnus (AKA Redhat), but not running a MS environment, I have no reason to try.			
+				
+	
+	PPCForth requires the ASL assembler written by Alfred Arnold
+(alfred@ccac.rwth-aachen.de), available from:
+http://john.ccac.rwth-aachen.de:8000/as/.
+
+Alternatively, here's the direct link for the files:
+http://john.ccac.rwth-aachen.de:8000/ftp/as/source/c_version/
+
+You'll need to read the documentation to install it, but it's not too difficult as long as you make sure /usr/local/bin is in your path.
+
+	There isn't much in the way of installation required, as long as
+your setup resembles mine somewhat.  Otherwise you'll need to edit the init
+code (extensively...).  Edit the local.inc file and set the b_of_4th to a
+place in RAM with at least 32KB of space.  My code assumes this is pointed
+to by BR1, and is 32 bits wide.  BR0 is assumed to point to a 512KB AM29F040
+byte-wide FLASH memory. If you're going to burn it into ROM/FLASH and boot
+from it, define "rom" in the first line of the assembler script ('al', i.e.
+'-D rom') and it will start the code at address 0.  If you are booting from
+PPCForth, make sure this matches up with your config!!!  The assembler
+script will produce a Motorola S-Record file (ppcforth.hex).  I apologize
+ahead of time for the sprinkling of non-generic code mixed with the main
+body of code, as this will likely make porting efforts to other boards more
+interesting.  
+
+Here's a memory map of my config:
+
+	0x7ff80000-0x7fffffff	AM29F040 512K byte, 8 bit FLASH
+	
+	0x7fe00000-0x7fe7ffff	512KB of SRAM, 32 bit bus
+	
+	0x70100000-0x701fffff	I/O space
+	
+	
+And a breakdown of the RAM map:
+
+	0x7fe7fffc		Inital SP location (r1)
+	0x7fe74000		FORTH RAM space
+	0x7fe70000		Base of exception vector table	
+	0x7fe60000		FORTH load location when executing in RAM
+	0x7fe00000		Base of RAM, open for loading C programs/etc
+	
+	
+	
+	You can customize how much memory is required by editing
+ppcforth.inc, particularly the "maxtasks" parameter, which eats 512 bytes
+for every task slot (10 task slots is the default).  22K of RAM is required
+by default.  Also, by defining either "LITE" or "ULTRALITE", you can
+partially or completely strip away extra stuff.  The ULTRALITE version isn't
+particularly useful beyond loading S records, if you happen to be interested
+in a bare-bones loader.
+
+
+	Finally, you'll need some way to get the code onto your board.  I
+burned it into the flash chip the first time around, and then from then on I
+have loaded it into RAM (at 0x7fe60000) and used the 'reflash' word to
+reburn it into the first block of the flash, 64K in size.  Just remember to
+make sure that the branch opcode to jump to start of the flash is in place
+(at the end of the boot rom).  
+
+	To talk to the board you can use most any serial communications
+program that supports plain text uploads and hardware (DSR/DTR only)
+handshaking.  By default, the code assumes the serial clock source is the
+system clock (which is 33 MHz), 8-N-1, 115200 baud.  Minicom works well.   
+
+
+Good luck!
+	
+Larry Battraw
+(battraw@home.com)
