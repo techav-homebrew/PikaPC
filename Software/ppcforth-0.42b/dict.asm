@@ -2950,7 +2950,7 @@ fdmasr_
 ; G- guarded bit-- do not prefetch or speculatively execute in this
 ; page.  Attempted execution out of a page marked with this will 
 ; cause an instruction storage exception.
-
+        ifdef	p403gcx
 ; (epn[0:21]+size[22:24]+v[25]) tid tlb_entry
 _tlbwehi dd  	(tlbwehi_-*)
         dd      (tlb_wehi-*)
@@ -2967,7 +2967,9 @@ tlb_wehi lwz	r4,0(r30)
 	mtspr	pid,r6
         blr
 tlbwehi_
+        endif
 
+        ifdef	p403gcx
 ; (rpn[0:21]+ex[22]+wr[23]+zsel[24:27]+wimg[28:31]) tlb_entry
 _tlbwelo dd  	(tlbwelo_-*)
         dd      (tlb_welo-*)
@@ -2980,8 +2982,9 @@ tlb_welo lwz	r3,0(r30)
 	tlbwelo	r4,r3
         blr
 tlbwelo_
+        endif
 
-
+        ifdef	p403gcx
 ; tlb_entry - tlbhi pid
 _tlbrehi dd  	(tlbrehi_-*)
         dd      (tlb_rehi-*)
@@ -2997,7 +3000,9 @@ tlb_rehi lwz	r3,0(r30)
 	stw	r4,4(r30)
         blr
 tlbrehi_
+        endif
 
+        ifdef	p403gcx
 ; tlb_entry - tlblo
 _tlbrelo dd  	(tlbrelo_-*)
         dd      (tlb_relo-*)
@@ -3009,7 +3014,9 @@ tlb_relo lwz	r3,0(r30)
 	stw	r4,0(r30)
  	blr
 tlbrelo_
+        endif
 
+        ifdef	p403gcx
 _fpid 	dd  	(fpid_-*)
         dd      (fpid-*)
         db      "pid@"
@@ -3030,7 +3037,9 @@ spid	lwz	r3,0(r30)
 	addi	r30,r30,4
 	blr
 spid_
+        endif
 
+        ifdef	p403gcx
 ; (effective address)  pid -- returns TLB number (0-63) for match, 
 ; -1 for no match
 _tlbsx	dd	(tlbsx_-*)
@@ -3050,6 +3059,7 @@ tlb_sx	lwz	r3,0(r30)
 tlbhit	stw	r3,0(r30)
 	blr
 tlbsx_
+        endif
 
 
 _getpc	dd      (getpc_-*)
@@ -3102,7 +3112,7 @@ dvcache3 dccci   r0,r4           ; invalidate all d-cache
 	blr
 ccache_
 
-
+        ifdef	p403gcx
 _tlbia	dd      (tlbia_-*)
         dd      (tlb_ia-*)
         db      "tlbia"
@@ -3111,6 +3121,7 @@ _tlbia	dd      (tlbia_-*)
 tlb_ia	tlbia
 	blr
 tlbia_
+        endif
 
 _isync	dd      (isync_-*)
         dd      (i_sync-*)

@@ -11,25 +11,25 @@
 
 
 
-; CHANGE THIS <<<<<<<<<<<---------------------------------------\
+; CHANGE THIS <<<<<<<<<<<---------------------------------------|
 b_of_4th equ    0x7fe74000      ; bottom of forth system (RAM)  |
 rambase equ     0x7fe00000      ; base of system ram            |
 rombase equ     0x7ff00000      ; base of system rom            |
 loadpt	equ	0x7fe60000	; used for loads to RAM		|
 				; (if rom is not defined!)	|
-systack	equ	(rambase+ramsize-4) ; system stack		|
 ramsize equ     0x80000         ; 512K of RAM			|
 romsize	equ	0x80000		; 512K of ROM	 		|
 ledaddr	equ	0x70110000	; latch (to LED) here		|
 szbtblk	equ	0x10000		; 64K boot block (size of block	|
 				; for FLASH, holding boot code)	|
+systack	equ	(rambase+ramsize-4) ; system stack		|
 ; Baud rate divisors when using the main system clock as the	|
 ; source for generating the serial clock			|				
 baud33	equ	17		; 115,200 at 33 MHz		|
 baud25	equ	13		; 115,200 at 24/25 MHz		|
 baud184	equ	9		; 115,200 at 18.432 MHz		|
 ;                                                               |
-; --------------------------------------------------------------/
+; --------------------------------------------------------------|
 
 
 

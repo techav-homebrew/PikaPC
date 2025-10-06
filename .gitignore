@@ -1,4 +1,10 @@
+# don't include compiler utilities
 Utilities
+
+# don't include compiler output
+*.hex
+*.lst
+*.p
 
 # From: https://github.com/github/gitignore/blob/master/KiCad.gitignore
 # For PCBs designed using KiCad: https://www.kicad.org/

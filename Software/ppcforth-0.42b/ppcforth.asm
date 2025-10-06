@@ -64,7 +64,7 @@
 
 ; standard header info
 
-	CPU	PPC403GC
+	CPU	PPC403
 	BIGENDIAN ON
 	include "stddef60.inc"
 	include "ppcforth.inc"
