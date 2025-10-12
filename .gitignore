@@ -5,6 +5,7 @@ Utilities
 *.hex
 *.lst
 *.p
+*.bin
 
 # From: https://github.com/github/gitignore/blob/master/KiCad.gitignore
 # For PCBs designed using KiCad: https://www.kicad.org/

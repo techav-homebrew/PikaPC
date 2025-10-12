@@ -131,10 +131,12 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
         mtspr   iccr,r3         ; update iccr (all inst cacheable)
         lwa     r3,0xff1e0fa0   ; get br0 value 3/3 ws ff1e0fa0 ff1c05a0
         mtdcr   br0,r3          ; set up br0
-        lwa     r3,0xfe1b0a10   ; get br1 value
+;        lwa     r3,0xfe1b0a10   ; get br1 value
+	lwa 	r3,0xfe1e8500	; set br1 for 1MB 16-bit SRAM, Burst 1-1 wait
         mtdcr   br1,r3          ; set up br1 (ram bank)
 
-        lwa     r3,0x011c8fce   ; get br2/br3 value (for IO config)
+; techav - not using br2 or br3 on 403ga
+;        lwa     r3,0x011c8fce   ; get br2/br3 value (for IO config)
 	
 ;
 ;	I have two boards-- one based on the 403gc which has a bank of IO on
@@ -142,17 +144,19 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 ;	
 	
 	
-	ifdef   p403gcx		; This also determines which BRs are used
+;	ifdef   p403gcx		; This also determines which BRs are used
 				; for IO, and whether turbo is enabled
-        mtdcr   br3,r3          ; I/O is on bank reg 3	
-	lwa	r3,0xb0006021	; get io config reg value 0xb0006021 is turbo
+;        mtdcr   br3,r3          ; I/O is on bank reg 3	
+;	lwa	r3,0xb0006021	; get io config reg value 0xb0006021 is turbo
 	
-        elseif
-        mtdcr   br2,r3          ; I/O is on bank reg 2
-        lwa     r3,0xb0002021   ; get io config reg value
-	endif
+;        elseif
+;        mtdcr   br2,r3          ; I/O is on bank reg 2
+;        lwa     r3,0xb0002021   ; get io config reg value
+;	endif
         
-	mtdcr   iocr,r3
+;	mtdcr   iocr,r3
+	lwa 	r3,0x00000023	; user serclk & rts/cts, no timerclk, no debug
+	mtdcr 	iocr,r3
 
 ; initialize serial port
 
@@ -170,11 +174,13 @@ initser	li      r3,0
         stb     r3,_brdh(r4)
 				; set baud rate divisor for 33MHz is 403gcx
 				; is defined, 25/24 otherwise
-	ifdef	p403gcx
-        li      r3,baud33       
-	elseif
-	li	r3,baud25	; default to 25 or 24 MHz (24 is more accurate)
-	endif
+;	ifdef	p403gcx
+;        li      r3,baud33       
+;	elseif
+;	li	r3,baud25	; default to 25 or 24 MHz (24 is more accurate)
+;	endif
+	li 	r3,baud737	; 38400 from 7.3728 MHz serclk
+
         stb     r3,_brdl(r4)
         li      r3,0x18         ; 8-n-1 RTS active 
         stb     r3,_spctl(r4)

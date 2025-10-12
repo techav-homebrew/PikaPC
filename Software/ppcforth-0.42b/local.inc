@@ -17,8 +17,8 @@ rambase equ     0x7fe00000      ; base of system ram            |
 rombase equ     0x7ff00000      ; base of system rom            |
 loadpt	equ	0x7fe60000	; used for loads to RAM		|
 				; (if rom is not defined!)	|
-ramsize equ     0x80000         ; 512K of RAM			|
-romsize	equ	0x80000		; 512K of ROM	 		|
+ramsize equ     0x100000        ; 1M of RAM			|
+romsize	equ	0x20000		; 128K of ROM	 		|
 ledaddr	equ	0x70110000	; latch (to LED) here		|
 szbtblk	equ	0x10000		; 64K boot block (size of block	|
 				; for FLASH, holding boot code)	|
@@ -28,6 +28,7 @@ systack	equ	(rambase+ramsize-4) ; system stack		|
 baud33	equ	17		; 115,200 at 33 MHz		|
 baud25	equ	13		; 115,200 at 24/25 MHz		|
 baud184	equ	9		; 115,200 at 18.432 MHz		|
+baud737 equ     11              ; 38,400 at 7.3728 MHz          |
 ;                                                               |
 ; --------------------------------------------------------------|
 
@@ -40,7 +41,12 @@ vector	equ	rambase+0x70000
 ; Now place a branch instruction at the end of the memory we're booting from.
 ; Power-on reset vector... 
 ; THIS ASSUMES A 512K-BYTE SIZED MEMORY!!!
+	ifdef	rom		; Start at 0 if rom defined
+        org     romsize-4
+        b       start
+        elseif
         org     (rombase+romsize)-4 ; first exec point in ROM after reset
         b       start
+        endif
 
 
