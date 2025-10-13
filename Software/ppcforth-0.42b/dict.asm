@@ -4582,7 +4582,9 @@ syswatch mfspr   r20,tblo
         b       ledstor
 ledoff  li      r20,0
 ledstor lwa     r21,0x70110000	; this is the address of the LED latch
+        ifdef   LED
         stb     r20,0(r21)
+        endif
         b	syswatch
 	dd	100000		; callback time
         dd      1000  		; time before pre-emption
@@ -4607,7 +4609,9 @@ ledlp	addi	r3,r3,1
         b       ledstor2
 ledoff2  li      r20,0	
 ledstor2 lwa     r21,0x70110000	; this is the address of the LED latch
+        ifdef   LED
         stb     r20,0(r21)
+        endif
         b	ledlp		; loop forever
 	
 	dd	100000		; callback time

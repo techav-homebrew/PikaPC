@@ -429,9 +429,12 @@ warm
 	
 	lwax	r3,srbase
 	stw	r4,0(r3)	; set srec load base (offset) to 0
+
+	ifdef 	LED
 	lwa     r4,0x70110000
 	li	r3,0
 	stb	r3,0(r4)	; turn off LED
+	endif
 
 
 ; -----------------------------
@@ -1375,17 +1378,17 @@ dmplp   lwzx    r3,r1,r2        ; get saved reg
 ; CHANGE THIS <<<<<<<<<<<---------------------------------------\
 ; output character in r3
 ; uses nothing
-putch   addi    r1,r1,-8
-        stw     r7,0(r1)
-        stw     r8,4(r1)
-        lis     r8,0x4000
-putchq  lbz     r7,_spls(r8)
-        andi.   r7,r7,4
-        beq     0,putchq
-        stb     r3,_sptb(r8)
-        lwz     r8,4(r1)
-        lwz     r7,0(r1)
-        addi    r1,r1,8
+putch   addi    r1,r1,-8	; set up stack frame
+        stw     r7,0(r1)	; save register
+        stw     r8,4(r1)	; save register
+        lis     r8,0x4000	; load I/O address 0x40000000
+putchq  lbz     r7,_spls(r8)	; get serial register address
+        andi.   r7,r7,4		; check TX ready bit
+        beq     0,putchq	; loop until ready
+        stb     r3,_sptb(r8)	; print byte
+        lwz     r8,4(r1)	; restore register
+        lwz     r7,0(r1)	; restore register
+        addi    r1,r1,8		; clear stack frame
         blr
 
 ; CHANGE THIS <<<<<<<<<<<---------------------------------------\
