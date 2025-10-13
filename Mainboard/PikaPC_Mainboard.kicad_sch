@@ -31457,16 +31457,6 @@
 	)
 	(wire
 		(pts
-			(xy 457.2 -101.6) (xy 469.9 -101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3217bbc2-3723-4a63-847b-9bf15f967be9")
-	)
-	(wire
-		(pts
 			(xy 495.3 44.45) (xy 482.6 44.45)
 		)
 		(stroke
@@ -33677,16 +33667,6 @@
 	)
 	(wire
 		(pts
-			(xy 457.2 -116.84) (xy 469.9 -116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f210d94-af55-40c7-80b0-91d8b0554901")
-	)
-	(wire
-		(pts
 			(xy 149.86 228.6) (xy 152.4 228.6)
 		)
 		(stroke
@@ -33757,7 +33737,7 @@
 	)
 	(wire
 		(pts
-			(xy 441.96 -101.6) (xy 429.26 -101.6)
+			(xy 469.9 -101.6) (xy 457.2 -101.6)
 		)
 		(stroke
 			(width 0)
@@ -34417,7 +34397,7 @@
 	)
 	(wire
 		(pts
-			(xy 441.96 -116.84) (xy 429.26 -116.84)
+			(xy 469.9 -116.84) (xy 457.2 -116.84)
 		)
 		(stroke
 			(width 0)
@@ -39175,16 +39155,6 @@
 		)
 		(uuid "a3ff4033-af7f-41dc-b3e7-ed20434b4d19")
 	)
-	(label "COM-CTS-5v"
-		(at 457.2 -116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a485ac90-3e9b-4c94-8012-3a1c8b1f825c")
-	)
 	(label "BusReq"
 		(at 205.74 55.88 180)
 		(effects
@@ -39315,16 +39285,6 @@
 		)
 		(uuid "adab1a6d-faa7-4563-ac7f-bc6833005965")
 	)
-	(label "COM-Rx-5v"
-		(at 457.2 -101.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "adfdc87a-b991-42d0-bf42-92c0804cb8da")
-	)
 	(label "A1"
 		(at 330.2 81.28 180)
 		(effects
@@ -39386,7 +39346,7 @@
 		(uuid "b35ea1ac-e73b-4e93-bd20-88706473fa7a")
 	)
 	(label "COM-Rx"
-		(at 429.26 -101.6 0)
+		(at 457.2 -101.6 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40176,7 +40136,7 @@
 		(uuid "df968e6c-cedd-4ea6-a839-350f0b0c9c82")
 	)
 	(label "COM-CTS"
-		(at 429.26 -116.84 0)
+		(at 457.2 -116.84 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -42325,7 +42285,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 449.58 -110.49 0)
+		(at 579.12 -95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -42333,7 +42293,7 @@
 		(dnp no)
 		(uuid "16fb9a83-c977-45f2-b061-c990dc350728")
 		(property "Reference" "#PWR069"
-			(at 449.58 -104.14 0)
+			(at 579.12 -88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -42342,7 +42302,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 449.58 -106.3569 0)
+			(at 579.12 -91.1169 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -42350,7 +42310,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 449.58 -110.49 0)
+			(at 579.12 -95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -42359,7 +42319,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 449.58 -110.49 0)
+			(at 579.12 -95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -42368,7 +42328,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 449.58 -110.49 0)
+			(at 579.12 -95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -43581,7 +43541,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74LVC125")
-		(at 449.58 -116.84 0)
+		(at 579.12 -101.6 0)
 		(mirror y)
 		(unit 2)
 		(exclude_from_sim no)
@@ -43590,7 +43550,7 @@
 		(dnp no)
 		(uuid "35d88e12-e9c8-43d2-90ae-d689755634d3")
 		(property "Reference" "U13"
-			(at 450.85 -116.84 0)
+			(at 580.39 -101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -43598,7 +43558,7 @@
 			)
 		)
 		(property "Value" "74LVC125"
-			(at 443.23 -119.38 0)
+			(at 572.77 -104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -43606,7 +43566,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
-			(at 449.58 -116.84 0)
+			(at 579.12 -101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -43615,7 +43575,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LVC125"
-			(at 449.58 -116.84 0)
+			(at 579.12 -101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -43624,7 +43584,7 @@
 			)
 		)
 		(property "Description" "Quad buffer 3-State outputs"
-			(at 449.58 -116.84 0)
+			(at 579.12 -101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48975,7 +48935,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74LVC125")
-		(at 449.58 -101.6 0)
+		(at 579.12 -86.36 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -48984,7 +48944,7 @@
 		(dnp no)
 		(uuid "779c5b87-0d1d-4979-8256-bd2eaa9d7046")
 		(property "Reference" "U13"
-			(at 450.85 -101.6 0)
+			(at 580.39 -86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48992,7 +48952,7 @@
 			)
 		)
 		(property "Value" "74LVC125"
-			(at 441.96 -99.06 0)
+			(at 571.5 -83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49000,7 +48960,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
-			(at 449.58 -101.6 0)
+			(at 579.12 -86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49009,7 +48969,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LVC125"
-			(at 449.58 -101.6 0)
+			(at 579.12 -86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49018,7 +48978,7 @@
 			)
 		)
 		(property "Description" "Quad buffer 3-State outputs"
-			(at 449.58 -101.6 0)
+			(at 579.12 -86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51137,7 +51097,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 449.58 -95.25 0)
+		(at 579.12 -80.01 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -51146,7 +51106,7 @@
 		(fields_autoplaced yes)
 		(uuid "9b3f7ad4-51d7-4213-b811-6eb19b265164")
 		(property "Reference" "#PWR067"
-			(at 449.58 -88.9 0)
+			(at 579.12 -73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51155,7 +51115,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 449.58 -91.1169 0)
+			(at 579.12 -75.8769 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51163,7 +51123,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 449.58 -95.25 0)
+			(at 579.12 -80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51172,7 +51132,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 449.58 -95.25 0)
+			(at 579.12 -80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51181,7 +51141,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 449.58 -95.25 0)
+			(at 579.12 -80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
