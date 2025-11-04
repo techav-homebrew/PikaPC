@@ -1,0 +1,28 @@
+Name     ;
+PartNo   ;
+Date     ;
+Revision ;
+Designer ;
+Company  ;
+Assembly ;
+Location ;
+
+
+ORDER: CLK, !CS2, !CS3, !CS4, !CS5, ADSQ0, ADSQ1, ADS; 
+
+
+VECTORS:
+01111***
+11111***
+01011***
+11011***
+01011***
+11011***
+01011***
+11011***
+01011***
+11011***
+01111***
+11111***
+01111***
+11111***
