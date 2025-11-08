@@ -42285,6 +42285,16 @@
 	)
 	(wire
 		(pts
+			(xy 906.78 228.6) (xy 919.48 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1851710e-2c4c-4b44-8e04-8a26795e64b9")
+	)
+	(wire
+		(pts
 			(xy 175.26 205.74) (xy 175.26 208.28)
 		)
 		(stroke
@@ -53873,6 +53883,16 @@
 		)
 		(uuid "512bd10d-1a7d-4f69-805f-7bc360628304")
 	)
+	(label "SysClk-5v"
+		(at 906.78 228.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "51cc1fcd-a270-4ec6-a99f-5f8f8e2dd7c7")
+	)
 	(label "PD18"
 		(at 995.68 175.26 180)
 		(effects
@@ -55263,7 +55283,7 @@
 		)
 		(uuid "85fd8bc7-9ffa-4ade-b535-0fe0bf88480b")
 	)
-	(label "SysClk-5v"
+	(label "~{SysClk-5v}"
 		(at 934.72 228.6 0)
 		(effects
 			(font
@@ -80209,7 +80229,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74LS04")
-		(at 845.82 215.9 0)
+		(at 927.1 228.6 0)
 		(unit 6)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -80218,7 +80238,7 @@
 		(fields_autoplaced yes)
 		(uuid "c3ae626b-7686-49a5-9845-8fce7c9be781")
 		(property "Reference" "U9"
-			(at 845.82 207.9455 0)
+			(at 927.1 220.6455 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -80226,7 +80246,7 @@
 			)
 		)
 		(property "Value" "74LS04"
-			(at 845.82 210.3698 0)
+			(at 927.1 223.0698 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -80234,7 +80254,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
-			(at 845.82 215.9 0)
+			(at 927.1 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -80243,7 +80263,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS04"
-			(at 845.82 215.9 0)
+			(at 927.1 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -80252,7 +80272,7 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
-			(at 845.82 215.9 0)
+			(at 927.1 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
