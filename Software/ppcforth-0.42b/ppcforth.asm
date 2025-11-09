@@ -129,11 +129,41 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
         mtspr   dccr,r3
         li      r3,-1           ; all inst cacheable
         mtspr   iccr,r3         ; update iccr (all inst cacheable)
-        lwa     r3,0xff1e0fa0   ; get br0 value 3/3 ws ff1e0fa0 ff1c05a0
-        mtdcr   br0,r3          ; set up br0
+
+; ------------------------------
+; set up bank registers:
+; 	br0	ROM		$7ff0,0000; 1MB; 8b; burst; 3/3WS; hold 0
+;	br1	RAM		$7fe0,0000; 1MB; 16b; burst; 1/1WS; hold 0
+;	br2	Video Memory	$7f00,0000; 8MB; 32b; no burst; 2WS; ready; hold 0
+;	br3	Video I/O	$7e80,0000; 8MB; 32b; no burst; 2WS; ready; hold 0
+;	br4 	SD Card		$7fd0,0000; 1MB; 8b; no burst; 2WS; hold 0
+;	br5	Keyboard	$7fc0,0000; 1MB; 8b; no burst; 4WS; hold 2
+;	br6	[unused]	
+;	br7	Expansion Bus	$7800,0000; 64MB; 32b; no burst; 2WS; hold 1
+
+        lwa     r3,0xff1e0fa0   ; set br0
+        mtdcr   br0,r3          ;
+	lwa 	r3,0xfe1e8500	; set br1
+        mtdcr   br1,r3          ;
+	lwa 	r3,0xf07d4200	; set br2
+	mtdcr 	br2,r3		;
+	lwa 	r3,0xe87d4200	; set br3
+	mtdcr 	br3,r3		;
+	lwa 	r3,0xfd1c0101	; set br4
+	mtdcr 	br4,r3		;
+	lwa 	r3,0xfc1c0485	; set br5
+	mtdcr 	br5,r3		;
+	lwa	r3,0x80dd0283	; set br7
+	mtdcr	br7,r3		;
+
+
+
+
+;        lwa     r3,0xff1e0fa0   ; get br0 value 3/3 ws ff1e0fa0 ff1c05a0
+;        mtdcr   br0,r3          ; set up br0
 ;        lwa     r3,0xfe1b0a10   ; get br1 value
-	lwa 	r3,0xfe1e8500	; set br1 for 1MB 16-bit SRAM, Burst 1-1 wait
-        mtdcr   br1,r3          ; set up br1 (ram bank)
+;	lwa 	r3,0xfe1e8500	; set br1 for 1MB 16-bit SRAM, Burst 1-1 wait
+;        mtdcr   br1,r3          ; set up br1 (ram bank)
 
 ; techav - not using br2 or br3 on 403ga
 ;        lwa     r3,0x011c8fce   ; get br2/br3 value (for IO config)
@@ -349,7 +379,6 @@ go_auto	bl	exec
 abortld 
 	bl	igetchw		; grab key in buffer
 	endif
-	
 
 ; then fall through to entry
 ; Always cold start 
@@ -361,7 +390,7 @@ abortld
 ;	endif
 
 ; cold start location
-cold    prstr	"<cold start>\r\n"
+cold    prstr	"\r\n<cold start>\r\n"
 	li      r3,0
 	mtspr	tcr,r3		; turn off timer events
         
