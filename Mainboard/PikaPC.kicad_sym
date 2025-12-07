@@ -6777,43 +6777,7 @@
 				)
 			)
 			(pin power_in line
-				(at -17.78 -43.18 0)
-				(length 5.08)
-				(name "AVss"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "159"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
 				(at -17.78 -45.72 0)
-				(length 5.08)
-				(name "AVss"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "161"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -17.78 -48.26 0)
 				(length 5.08)
 				(name "AVss"
 					(effects
@@ -6831,7 +6795,7 @@
 				)
 			)
 			(pin power_in line
-				(at -17.78 -50.8 0)
+				(at -17.78 -48.26 0)
 				(length 5.08)
 				(name "AVss"
 					(effects
@@ -6848,8 +6812,44 @@
 					)
 				)
 			)
+			(pin power_in line
+				(at -17.78 -53.34 0)
+				(length 5.08)
+				(name "AVss"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "159"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -17.78 -55.88 0)
+				(length 5.08)
+				(name "AVss"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "161"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin passive line
-				(at -17.78 -63.5 0)
+				(at -17.78 -60.96 0)
 				(length 5.08)
 				(name "RSET"
 					(effects
@@ -6867,7 +6867,7 @@
 				)
 			)
 			(pin passive line
-				(at -17.78 -68.58 0)
+				(at -17.78 -66.04 0)
 				(length 5.08)
 				(name "VREF"
 					(effects
@@ -6885,7 +6885,7 @@
 				)
 			)
 			(pin input inverted
-				(at -17.78 -73.66 0)
+				(at -17.78 -71.12 0)
 				(length 5.08)
 				(name "~{PDOWN}"
 					(effects
@@ -7029,7 +7029,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -45.72 180)
+				(at 17.78 -43.18 180)
 				(length 5.08)
 				(name "AVdd"
 					(effects
@@ -7047,7 +7047,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -48.26 180)
+				(at 17.78 -45.72 180)
 				(length 5.08)
 				(name "AVdd"
 					(effects
@@ -7065,7 +7065,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -50.8 180)
+				(at 17.78 -48.26 180)
 				(length 5.08)
 				(name "AVdd"
 					(effects
@@ -7083,7 +7083,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -55.88 180)
+				(at 17.78 -53.34 180)
 				(length 5.08)
 				(name "CLKAVdd1"
 					(effects
@@ -7101,7 +7101,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -58.42 180)
+				(at 17.78 -55.88 180)
 				(length 5.08)
 				(name "CLKAVdd2"
 					(effects
@@ -7122,7 +7122,7 @@
 		(symbol "S3 86C325 ViRGE_5_1"
 			(rectangle
 				(start -12.7 0)
-				(end 12.7 -76.2)
+				(end 12.7 -73.66)
 				(stroke
 					(width 0)
 					(type solid)
