@@ -7,6 +7,20 @@ Utilities
 *.p
 *.bin
 
+# exclude WinCupl output files
+
+*.jed
+*.abs
+*.lst
+*.doc
+*.pla
+*.wo
+*.so
+*.sim
+Logic/*/*.pdf
+Logic/*/CB*
+Logic/*/CM*
+
 # From: https://github.com/github/gitignore/blob/master/KiCad.gitignore
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/
