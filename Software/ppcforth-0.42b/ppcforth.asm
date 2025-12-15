@@ -132,31 +132,29 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 
 ; ------------------------------
 ; set up bank registers:
-; 	br0	ROM		$7ff0,0000; 1MB; 8b; burst; 3/3WS; hold 0
-;	br1	RAM		$7fe0,0000; 1MB; 16b; burst; 1/1WS; hold 0
-;	br2	Video Memory	$7f00,0000; 8MB; 32b; no burst; 2WS; ready; hold 0
-;	br3	Video I/O	$7e80,0000; 8MB; 32b; no burst; 2WS; ready; hold 0
-;	br4 	SD Card		$7fd0,0000; 1MB; 8b; no burst; 2WS; hold 0
-;	br5	Keyboard	$7fc0,0000; 1MB; 8b; no burst; 4WS; hold 2
+;	br0	ROM		$7ff0,0000;  1MB;  8b; burst;    3/3WS;	hold 0;
+;	br1	RAM		$7fe0,0000;  1MB; 16b; burst;    1/1WS;	hold 0;
+;	br2	Video 		$7000,0000; 64MB; 32b; no burst; 2WS;	hold 0;
+;	br3	Video Alt	$7400,0000; 64MB; 32b; no burst; 2WS;	hold 0; ready
+;	br4	SD Card		$7c00,0000;  1MB;  8b; no burst; 2WS;	hold 0;
+;	br5	PS/2 Controller	$7c10,0000;  1MB;  8b; no burst; 4WS;	hold 2;
 ;	br6	[unused]	
-;	br7	Expansion Bus	$7800,0000; 64MB; 32b; no burst; 2WS; hold 1
+;	br7	Expansion Bus	$7800,0000; 64MB; 32b; no burst; 2WS;	hold 1; 
 
-        lwa     r3,0xff1e0fa0   ; set br0
+	lwa     r3,0xff1e0fa0   ; set br0 (ROM)
         mtdcr   br0,r3          ;
-	lwa 	r3,0xfe1e8500	; set br1
+	lwa 	r3,0xfe1e8500	; set br1 (RAM)
         mtdcr   br1,r3          ;
-	lwa 	r3,0xf07d4200	; set br2
+	lwa 	r3,0x00dd0200	; set br2 (Video)
 	mtdcr 	br2,r3		;
-	lwa 	r3,0xe87d4200	; set br3
+	lwa 	r3,0x40dd4200	; set br3 (Video Alt)
 	mtdcr 	br3,r3		;
-	lwa 	r3,0xfd1c0101	; set br4
+	lwa 	r3,0xc01c0101	; set br4 (SD Card)
 	mtdcr 	br4,r3		;
-	lwa 	r3,0xfc1c0485	; set br5
+	lwa 	r3,0xc11c0485	; set br5 (PS/2)
 	mtdcr 	br5,r3		;
-	lwa	r3,0x80dd0283	; set br7
+	lwa	r3,0x80dd0283	; set br7 (Expansion)
 	mtdcr	br7,r3		;
-
-
 
 
 ;        lwa     r3,0xff1e0fa0   ; get br0 value 3/3 ws ff1e0fa0 ff1c05a0
