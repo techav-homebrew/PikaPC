@@ -13,6 +13,8 @@ PIN       1 = CLK                 ; /* System Clock                    */
 PIN  [5..2] = ![CS5..2]           ; /* Chip Select signals             */ 
 PIN       6 = !OE                 ; /* Output Enable                   */ 
 PIN [10..7] = ![WBE3..0]          ; /* Write Enable signals            */ 
+                                    /* !WBE1 = A1                      */
+                                    /* !WBE0 = A0                      */
 PIN      11 = !SRDY               ; /*                                 */ 
 
 /* *************** OUTPUT PINS *********************/
@@ -32,10 +34,10 @@ PBDEN = CS2 # CS3 # CS4 # CS5;
 
 /* Byte Enables */
 
-SBE3 = (OE # WBE3) & PBDEN;
-SBE2 = (OE # WBE2) & PBDEN;
-SBE1 = (OE # WBE1) & PBDEN;
-SBE0 = (OE # WBE0) & PBDEN;
+SBE0 = (CS2 & OE) # ((CS2 # CS3) & WBE3) # (CS3 & OE & WBE1 & WBE0);
+SBE1 = (CS2 & OE) # ((CS2 # CS3) & WBE2) # (CS3 & OE & WBE1 & !WBE0);
+SBE2 = (CS2 & OE) # ((CS2 # CS3) & WBE1) # (CS3 & OE & !WBE1 & WBE0);
+SBE3 = (CS2 & OE) # ((CS2 # CS3) & WBE0) # (CS3 & OE & !WBE1 & !WBE0);
 
 /* Ready */
 
@@ -47,7 +49,7 @@ RDYIN.sp = 'b'0;
 
 /* Address Strobe */
 
-ADSQ0.d = PBDEN;
+ADSQ0.d = CS2 # CS3;
 ADSQ1.d = ADSQ0;
 
 ADSQ0.ar = !PBDEN;
