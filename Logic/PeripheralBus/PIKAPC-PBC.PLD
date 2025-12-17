@@ -34,10 +34,10 @@ PBDEN = CS2 # CS3 # CS4 # CS5;
 
 /* Byte Enables */
 
-SBE0 = (CS2 & OE) # ((CS2 # CS3) & WBE3) # (CS3 & OE & WBE1 & WBE0);
-SBE1 = (CS2 & OE) # ((CS2 # CS3) & WBE2) # (CS3 & OE & WBE1 & !WBE0);
-SBE2 = (CS2 & OE) # ((CS2 # CS3) & WBE1) # (CS3 & OE & !WBE1 & WBE0);
-SBE3 = (CS2 & OE) # ((CS2 # CS3) & WBE0) # (CS3 & OE & !WBE1 & !WBE0);
+SBE3 = (CS2 & OE) # ((CS2 # CS3) & WBE3) # (CS3 & OE & WBE1 & WBE0);
+SBE2 = (CS2 & OE) # ((CS2 # CS3) & WBE2) # (CS3 & OE & WBE1 & !WBE0);
+SBE1 = (CS2 & OE) # ((CS2 # CS3) & WBE1) # (CS3 & OE & !WBE1 & WBE0);
+SBE0 = (CS2 & OE) # ((CS2 # CS3) & WBE0) # (CS3 & OE & !WBE1 & !WBE0);
 
 /* Ready */
 
