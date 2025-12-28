@@ -9306,16 +9306,16 @@
 				)
 			)
 		)
-		(symbol "T224162B-xJ_0_1"
+		(symbol "T224162B-xJ_1_1"
 			(rectangle
 				(start -12.7 21.59)
 				(end 12.7 -21.59)
 				(stroke
 					(width 0)
-					(type default)
+					(type solid)
 				)
 				(fill
-					(type none)
+					(type background)
 				)
 			)
 		)
