@@ -45930,6 +45930,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 416.56) (xy 165.1 416.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d69a0b8-332e-4970-98bd-584d0677a166")
+	)
+	(wire
+		(pts
 			(xy 645.16 246.38) (xy 657.86 246.38)
 		)
 		(stroke
@@ -46677,6 +46687,16 @@
 			(type default)
 		)
 		(uuid "1fc5d112-a296-42ac-95a1-5eec722a395d")
+	)
+	(wire
+		(pts
+			(xy 152.4 414.02) (xy 165.1 414.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "204867f9-65fd-4aea-bb0d-5d6c2b5ca5ca")
 	)
 	(wire
 		(pts
@@ -47730,6 +47750,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 408.94) (xy 165.1 408.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b5b982e-527c-4605-92a5-7f02deeb0025")
+	)
+	(wire
+		(pts
 			(xy 368.3 314.96) (xy 381 314.96)
 		)
 		(stroke
@@ -47907,6 +47937,16 @@
 			(type default)
 		)
 		(uuid "41d19256-0c69-4118-a319-535ae31fc919")
+	)
+	(wire
+		(pts
+			(xy 152.4 419.1) (xy 165.1 419.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41d48315-41fb-46d2-961c-9accac5f9ae8")
 	)
 	(wire
 		(pts
@@ -50137,6 +50177,16 @@
 			(type default)
 		)
 		(uuid "73bd7216-df3c-4303-a209-2e955f16c5b7")
+	)
+	(wire
+		(pts
+			(xy 152.4 411.48) (xy 165.1 411.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73bf2e1c-e871-428e-b8bd-41c0ddefe555")
 	)
 	(wire
 		(pts
@@ -56888,6 +56938,16 @@
 		)
 		(uuid "178ea297-55ae-403b-a799-5241dab148e8")
 	)
+	(label "~{PBE3}"
+		(at 152.4 414.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "179a84c9-9477-421f-ab84-ca803602c095")
+	)
 	(label "A25"
 		(at 142.24 91.44 180)
 		(effects
@@ -57257,6 +57317,16 @@
 			(justify left bottom)
 		)
 		(uuid "1f95b438-7fba-48e1-9dbb-d65a46933e33")
+	)
+	(label "~{PBE1}"
+		(at 152.4 416.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "20812671-b8f7-4bca-9e1e-09d83faf64db")
 	)
 	(label "VD9"
 		(at 505.46 203.2 180)
@@ -60938,6 +61008,16 @@
 		)
 		(uuid "9b9659e6-0853-4bd3-ab66-c127dad29237")
 	)
+	(label "~{PBE2}"
+		(at 152.4 411.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9bd3f81f-c0dc-45ae-80db-cd62820e4fcc")
+	)
 	(label "D22"
 		(at 78.74 83.82 180)
 		(effects
@@ -63408,6 +63488,16 @@
 		)
 		(uuid "f4f17681-22ed-4bf9-93f9-c19be3715fc0")
 	)
+	(label "~{PB32}"
+		(at 152.4 408.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f537c968-5eeb-46c5-aba1-44a1b808c43c")
+	)
 	(label "VD22"
 		(at 203.2 373.38 0)
 		(effects
@@ -63517,6 +63607,16 @@
 			(justify right bottom)
 		)
 		(uuid "f777a55e-3f72-453e-be34-000b2e4458f2")
+	)
+	(label "~{PBE0}"
+		(at 152.4 419.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f7a12370-43f6-4591-be49-1da19295762e")
 	)
 	(label "VMD39"
 		(at 607.06 408.94 180)
@@ -72625,6 +72725,95 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Network08_US")
+		(at 170.18 419.1 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43bd7bab-ecbf-458b-b876-042614b0b7ad")
+		(property "Reference" "RN7"
+			(at 169.926 403.5255 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "9A103J"
+			(at 169.926 405.9498 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Array_SIP9"
+			(at 170.18 431.165 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
+			(at 170.18 419.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "8 resistor network, star topology, bussed resistors, small US symbol"
+			(at 170.18 419.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "853263eb-bbb5-44bb-99aa-7b4e83f7f6d5")
+		)
+		(pin "8"
+			(uuid "7536cf88-b75a-42dc-8670-8da79dd3d98e")
+		)
+		(pin "7"
+			(uuid "0aaa5ee3-55ec-461d-975b-c87872d7d185")
+		)
+		(pin "3"
+			(uuid "d736b9b9-b1c1-4b6b-92df-c7223754e04d")
+		)
+		(pin "1"
+			(uuid "27071418-374d-4619-87b9-a931e06720b8")
+		)
+		(pin "4"
+			(uuid "9b8eab9c-8c9f-4024-baf0-2d9a644b5e20")
+		)
+		(pin "6"
+			(uuid "64b85667-e271-4040-980f-cc740cd1844e")
+		)
+		(pin "2"
+			(uuid "8f083a1a-8419-49f8-9559-0b37c4da002f")
+		)
+		(pin "9"
+			(uuid "9693c3fe-187f-468f-ab2c-5eee68e1188f")
+		)
+		(instances
+			(project "PikaPC_Mainboard"
+				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
+					(reference "RN7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Oscillator:CXO_DIP8")
 		(at 190.5 259.08 0)
 		(unit 1)
@@ -77847,6 +78036,73 @@
 			(project "PikaPC_Mainboard"
 				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
 					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 175.26 408.94 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75fb40c2-f9d1-4063-aee6-bd94b36a7f4a")
+		(property "Reference" "#PWR029"
+			(at 171.45 408.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 178.435 408.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 408.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 408.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 175.26 408.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "df6913e3-7b86-43d1-86a1-76f6c70ee997")
+		)
+		(instances
+			(project "PikaPC_Mainboard"
+				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -92612,7 +92868,7 @@
 				)
 			)
 		)
-		(property "Value" "10X-1-472LF"
+		(property "Value" "10X-1-102LF"
 			(at 246.126 75.7498 90)
 			(effects
 				(font

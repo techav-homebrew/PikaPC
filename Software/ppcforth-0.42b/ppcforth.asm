@@ -134,8 +134,8 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 ; set up bank registers:
 ;	br0	ROM		$7ff0,0000;  1MB;  8b; burst;    3/3WS;	hold 0;
 ;	br1	RAM		$7fe0,0000;  1MB; 16b; burst;    1/1WS;	hold 0;
-;	br2	Video 		$7000,0000; 64MB; 32b; no burst; 2WS;	hold 0;
-;	br3	Video Alt	$7400,0000; 64MB; 32b; no burst; 2WS;	hold 0; ready
+;	br2	Video 		$7000,0000; 64MB; 32b; no burst; 2WS;	hold 0; ready
+;	br3	Video Alt	$7400,0000; 64MB;  8b; no burst; 2WS;	hold 0; ready
 ;	br4	SD Card		$7c00,0000;  1MB;  8b; no burst; 2WS;	hold 0;
 ;	br5	PS/2 Controller	$7c10,0000;  1MB;  8b; no burst; 4WS;	hold 2;
 ;	br6	[unused]	
@@ -145,9 +145,9 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
         mtdcr   br0,r3          ;
 	lwa 	r3,0xfe1e8500	; set br1 (RAM)
         mtdcr   br1,r3          ;
-	lwa 	r3,0x00dd0200	; set br2 (Video)
+	lwa 	r3,0x00dd4200	; set br2 (Video)
 	mtdcr 	br2,r3		;
-	lwa 	r3,0x40dd4200	; set br3 (Video Alt)
+	lwa 	r3,0x40dc4200	; set br3 (Video Alt)
 	mtdcr 	br3,r3		;
 	lwa 	r3,0xc01c0101	; set br4 (SD Card)
 	mtdcr 	br4,r3		;
