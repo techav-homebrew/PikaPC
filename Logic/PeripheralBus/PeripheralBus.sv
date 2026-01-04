@@ -88,7 +88,34 @@ always @(negedge sysClk or posedge nCS[3]) begin
 end
 
 // Ready In
-assign nVRdyIn = nVReady;
+// read cycles, Ready In needs to be delayed by at least one clock to prevent 
+// the VLB device from ending the cycle before the CPU latches the data
+reg vRdyDelay;
+
+always @(posedge sysClk or negedge nReset) begin
+    if(!nReset) begin
+        vRdyDelay <= 1'b0;
+        nVRdyIn <= 1'b1;
+    end else begin
+        if(!nOE) begin
+            // read cycles need delay
+            if (vRdyDelay) begin
+                nVRdyIn <= 1'b0;
+                vRdyDelay <= 1'b0;
+            end else if(!nVReady) begin
+                vRdyDelay <= 1'b1;
+                nVRdyIn <= 1'b1;
+            end else begin
+                vRdyDelay <= 1'b0;
+                nVRdyIn <= 1'b1;
+            end
+        end else begin
+            // write cycles don't need delay, just sync to clock
+            vRdyDelay <= 1'b0;
+            nVRdyIn <= nVReady;
+        end
+    end
+end
 
 // buffer enables
 wire [1:0] lowAddr;
@@ -131,11 +158,12 @@ always @(negedge sysClk or negedge vlbCycle) begin
     else begin
         if(!nCS[2]) begin
             if(!nOE) nVBE <= 4'b0000;
-            else if(!nWBE[0]) nVBE <= 4'b0111;
-            else if(!nWBE[1]) nVBE <= 4'b1011;
-            else if(!nWBE[2]) nVBE <= 4'b1101;
-            else if(!nWBE[3]) nVBE <= 4'b1110;
-            else nVBE <= 4'b1111;
+            else begin
+                nVBE[0] <= nWBE[3];
+                nVBE[1] <= nWBE[2];
+                nVBE[2] <= nWBE[1];
+                nVBE[3] <= nWBE[0];
+            end
         end else if(!nCS[3]) begin
             case(lowAddr)
                 2'b00: nVBE <= 4'b1110;
