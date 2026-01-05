@@ -5855,14 +5855,14 @@
 			(pin output inverted
 				(at 17.78 -38.1 180)
 				(length 5.08)
-				(name "~{CAS3}"
+				(name "~{CAS2}"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "82"
+				(number "83"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5873,14 +5873,14 @@
 			(pin output inverted
 				(at 17.78 -40.64 180)
 				(length 5.08)
-				(name "~{CAS2}"
+				(name "~{CAS3}"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "83"
+				(number "82"
 					(effects
 						(font
 							(size 1.27 1.27)
