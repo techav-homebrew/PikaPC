@@ -6750,24 +6750,6 @@
 						)
 					)
 				)
-				(number "163"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -17.78 -38.1 0)
-				(length 5.08)
-				(name "Vss"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
 				(number "195"
 					(effects
 						(font
@@ -6777,43 +6759,7 @@
 				)
 			)
 			(pin power_in line
-				(at -17.78 -45.72 0)
-				(length 5.08)
-				(name "AVss"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "167"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -17.78 -48.26 0)
-				(length 5.08)
-				(name "AVss"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "173"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -17.78 -53.34 0)
+				(at -17.78 -43.18 0)
 				(length 5.08)
 				(name "AVss"
 					(effects
@@ -6831,7 +6777,7 @@
 				)
 			)
 			(pin power_in line
-				(at -17.78 -55.88 0)
+				(at -17.78 -45.72 0)
 				(length 5.08)
 				(name "AVss"
 					(effects
@@ -6841,6 +6787,60 @@
 					)
 				)
 				(number "161"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -17.78 -48.26 0)
+				(length 5.08)
+				(name "AVss"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "163"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -17.78 -50.8 0)
+				(length 5.08)
+				(name "AVss"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "167"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -17.78 -53.34 0)
+				(length 5.08)
+				(name "AVss"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "173"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6921,7 +6921,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -10.16 180)
+				(at 17.78 -5.08 180)
 				(length 5.08)
 				(name "Vdd"
 					(effects
@@ -6939,7 +6939,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -12.7 180)
+				(at 17.78 -7.62 180)
 				(length 5.08)
 				(name "Vdd"
 					(effects
@@ -6957,7 +6957,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -17.78 180)
+				(at 17.78 -10.16 180)
 				(length 5.08)
 				(name "Vdd"
 					(effects
@@ -6975,7 +6975,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -20.32 180)
+				(at 17.78 -12.7 180)
 				(length 5.08)
 				(name "Vdd"
 					(effects
@@ -6993,7 +6993,25 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -25.4 180)
+				(at 17.78 -15.24 180)
+				(length 5.08)
+				(name "Vdd"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "137"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 17.78 -17.78 180)
 				(length 5.08)
 				(name "Vdd"
 					(effects
@@ -7011,16 +7029,34 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 -30.48 180)
+				(at 17.78 -33.02 180)
 				(length 5.08)
-				(name "Vdd"
+				(name "CLKAVdd1"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "137"
+				(number "158"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 17.78 -35.56 180)
+				(length 5.08)
+				(name "CLKAVdd2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "160"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7075,42 +7111,6 @@
 					)
 				)
 				(number "170"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 17.78 -53.34 180)
-				(length 5.08)
-				(name "CLKAVdd1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "158"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 17.78 -55.88 180)
-				(length 5.08)
-				(name "CLKAVdd2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "160"
 					(effects
 						(font
 							(size 1.27 1.27)

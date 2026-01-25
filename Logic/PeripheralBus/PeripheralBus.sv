@@ -88,11 +88,14 @@ always @(negedge sysClk or posedge nCS[3]) begin
 end
 
 // Ready In
-// read cycles, Ready In needs to be delayed by at least one clock to prevent 
-// the VLB device from ending the cycle before the CPU latches the data
+// On read cycles, Ready In needs to be delayed by at least one clock to 
+// prevent the VLB device from ending the cycle before the CPU latches the data
+// On write cycles, the VLB device will latch the incoming data on the next 
+// rising edge of the clock following assertion of Ready, so we need to make
+// sure that we assert Ready In as soon as possible and will a clock negedge
 reg vRdyDelay;
 
-always @(posedge sysClk or negedge nReset) begin
+always @(negedge sysClk or negedge nReset) begin
     if(!nReset) begin
         vRdyDelay <= 1'b0;
         nVRdyIn <= 1'b1;
