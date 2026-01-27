@@ -1,5 +1,7 @@
 # don't include compiler utilities
 Utilities
+Documentation
+SPI
 
 # don't include compiler output
 *.hex
@@ -46,6 +48,8 @@ fp-info-cache
 ~*.lck
 \#auto_saved_files#
 *.ai
+
+*.old
 
 # Netlist files (exported from Eeschema)
 *.net
