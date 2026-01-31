@@ -17017,6 +17017,15 @@
 		(uuid "2ac01e8f-d81b-4bea-98a5-0081b45fd75a")
 	)
 	(bus_entry
+		(at 185.42 40.64)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ebf6108-e337-4503-a526-be1ef6687791")
+	)
+	(bus_entry
 		(at 152.4 119.38)
 		(size 2.54 2.54)
 		(stroke
@@ -17051,6 +17060,15 @@
 			(type default)
 		)
 		(uuid "3ea9995c-fcd6-481b-8109-8e35a94a8c34")
+	)
+	(bus_entry
+		(at 185.42 38.1)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42201ebf-6121-494e-845c-093397359798")
 	)
 	(bus_entry
 		(at 152.4 35.56)
@@ -17213,6 +17231,24 @@
 			(type default)
 		)
 		(uuid "7afb39eb-55f1-4699-913f-ab5c9c9ad174")
+	)
+	(bus_entry
+		(at 185.42 35.56)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b37f149-1593-475e-9c47-3d54e7696ba6")
+	)
+	(bus_entry
+		(at 185.42 33.02)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c24213e-bde2-4b3b-8507-ab6cb8c46402")
 	)
 	(bus_entry
 		(at 76.2 106.68)
@@ -17438,6 +17474,15 @@
 			(type default)
 		)
 		(uuid "c9fb0eec-a65f-4efd-8e83-e293af3f4385")
+	)
+	(bus_entry
+		(at 185.42 30.48)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc2934d5-7b7a-4343-9fd1-6738675703e3")
 	)
 	(bus_entry
 		(at 152.4 30.48)
@@ -18550,6 +18595,16 @@
 	)
 	(bus
 		(pts
+			(xy 180.34 33.02) (xy 182.88 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53398853-e466-4b82-b6fd-a5c53841c10f")
+	)
+	(bus
+		(pts
 			(xy 78.74 50.8) (xy 78.74 48.26)
 		)
 		(stroke
@@ -18587,6 +18642,16 @@
 			(type default)
 		)
 		(uuid "54a8ac55-90cc-4a87-afea-8a26e409b1e5")
+	)
+	(bus
+		(pts
+			(xy 182.88 33.02) (xy 182.88 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55aee9a7-209e-4371-960b-7f2a78689738")
 	)
 	(wire
 		(pts
@@ -18968,6 +19033,16 @@
 		)
 		(uuid "75802c3b-65a9-45d1-b967-57e703dc8346")
 	)
+	(bus
+		(pts
+			(xy 182.88 35.56) (xy 182.88 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76c3c285-f260-4e03-9731-c8d9559aeb67")
+	)
 	(wire
 		(pts
 			(xy 134.62 185.42) (xy 134.62 182.88)
@@ -19137,6 +19212,16 @@
 			(type default)
 		)
 		(uuid "874f03ef-834d-4471-b8ee-1cc261137b6c")
+	)
+	(bus
+		(pts
+			(xy 182.88 38.1) (xy 182.88 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "877d1ff5-c8fd-423a-af5b-e18a42b907fd")
 	)
 	(wire
 		(pts
@@ -19747,6 +19832,16 @@
 			(type default)
 		)
 		(uuid "c5af14d3-c05c-454a-a141-a3059879ba93")
+	)
+	(bus
+		(pts
+			(xy 182.88 40.64) (xy 182.88 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5d01179-e4b8-425c-a70f-049804e0db7a")
 	)
 	(wire
 		(pts
@@ -21820,6 +21915,17 @@
 		)
 		(uuid "1a22900a-806e-49bc-a849-297b6522ee08")
 	)
+	(hierarchical_label "HoldReq"
+		(shape input)
+		(at 20.32 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2c68eb01-cc3c-460f-a1ed-ce96df7a31bf")
+	)
 	(hierarchical_label "Ready"
 		(shape input)
 		(at 96.52 111.76 180)
@@ -21830,6 +21936,17 @@
 			(justify right)
 		)
 		(uuid "5c90c47b-5ee9-472c-8800-ccaf776b5010")
+	)
+	(hierarchical_label "~{NMI}"
+		(shape input)
+		(at 185.42 27.94 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6914666c-ad8e-4923-a4a5-e242143e9663")
 	)
 	(hierarchical_label "~{BusError}"
 		(shape input)
@@ -21875,6 +21992,17 @@
 		)
 		(uuid "a6cfeaf4-d44f-4f07-a9a4-6341c3e7c6a6")
 	)
+	(hierarchical_label "~{IRQ[4..0]}"
+		(shape input)
+		(at 180.34 33.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "abd6d4fa-21f8-46eb-9fd2-c46750fa02f0")
+	)
 	(hierarchical_label "D[31..0]"
 		(shape input)
 		(at 81.28 27.94 0)
@@ -21896,6 +22024,17 @@
 			(justify right)
 		)
 		(uuid "c6818f94-ec51-406e-905a-ca6a215de0b3")
+	)
+	(hierarchical_label "HoldAck"
+		(shape input)
+		(at 76.2 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e8a1c966-38a3-4b42-9567-6704a289d9f3")
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
