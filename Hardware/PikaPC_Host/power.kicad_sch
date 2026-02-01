@@ -9,6 +9,170 @@
 		(company "techav")
 	)
 	(lib_symbols
+		(symbol "Device:C_Polarized_Small_US"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized_Small_US"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor, small US symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Polarized_Small_US_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 1.524) (xy -0.762 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 1.27) (xy -1.016 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.524 -0.762)
+					(mid 0 -0.3734)
+					(end 1.524 -0.762)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Polarized_Small_US_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C_Small_US"
 			(pin_numbers
 				(hide yes)
@@ -6240,6 +6404,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 86.36) (xy 144.78 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13920522-ea66-4e43-9d8d-df0065abcf07")
+	)
+	(wire
+		(pts
 			(xy 167.64 35.56) (xy 180.34 35.56)
 		)
 		(stroke
@@ -6437,6 +6611,26 @@
 			(type default)
 		)
 		(uuid "2b35e903-cf26-424f-9dcb-35d009dcc960")
+	)
+	(wire
+		(pts
+			(xy 132.08 86.36) (xy 132.08 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bd85125-2a98-4103-b4ef-5a1d7561484b")
+	)
+	(wire
+		(pts
+			(xy 132.08 78.74) (xy 132.08 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d439b7e-6aa8-4cc8-a7ad-09db1545ab96")
 	)
 	(wire
 		(pts
@@ -6657,6 +6851,16 @@
 			(type default)
 		)
 		(uuid "50cce941-28b3-41bd-b189-21a0f396d79d")
+	)
+	(wire
+		(pts
+			(xy 139.7 78.74) (xy 139.7 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54fd0f19-6259-40b1-90f8-c74c235ad967")
 	)
 	(wire
 		(pts
@@ -6907,6 +7111,16 @@
 			(type default)
 		)
 		(uuid "756c6085-76ef-4667-9bfe-251bd349d3cd")
+	)
+	(wire
+		(pts
+			(xy 139.7 86.36) (xy 139.7 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76dbaf3d-dbb7-4789-8588-1fc08fe34bf1")
 	)
 	(wire
 		(pts
@@ -7300,6 +7514,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 78.74) (xy 144.78 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2c4520a-f73e-4a40-83ad-8160d5c404bc")
+	)
+	(wire
+		(pts
 			(xy 33.02 66.04) (xy 35.56 66.04)
 		)
 		(stroke
@@ -7570,6 +7794,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 86.36) (xy 127 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3f6d86a-3882-4171-8670-a6ddf70ac391")
+	)
+	(wire
+		(pts
 			(xy 33.02 60.96) (xy 35.56 60.96)
 		)
 		(stroke
@@ -7677,6 +7911,16 @@
 			(type default)
 		)
 		(uuid "f685042c-75cb-4016-bf52-a3048e4f7f2e")
+	)
+	(wire
+		(pts
+			(xy 127 78.74) (xy 127 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6a71168-cc13-4005-b60f-8cb229f9100d")
 	)
 	(wire
 		(pts
@@ -7949,6 +8193,84 @@
 			(project "PikaPC_Host"
 				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
 					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_Small_US")
+		(at 139.7 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0db95cef-15e8-471d-b6d3-7e436cf81c99")
+		(property "Reference" "C52"
+			(at 140.97 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 140.97 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.7"
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small US symbol"
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "80-EDK106M016A9BAA "
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0a59f446-41d9-4aff-983f-31007aed3cd1")
+		)
+		(pin "2"
+			(uuid "20200620-e109-4caa-8288-45cb31e1c2d0")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "C52")
 					(unit 1)
 				)
 			)
@@ -8540,6 +8862,84 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized_Small_US")
+		(at 132.08 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2375e022-ce9d-4174-b1da-801ff0bf78ec")
+		(property "Reference" "C51"
+			(at 133.35 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 133.35 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.7"
+			(at 132.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small US symbol"
+			(at 132.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "80-EDK106M016A9BAA "
+			(at 132.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e01a447f-3343-46a3-ad98-29e8e5d94bc6")
+		)
+		(pin "2"
+			(uuid "6e1069ed-7b3b-4197-90e4-399eb1ac1510")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "C51")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small_US")
 		(at 195.58 35.56 0)
 		(mirror y)
@@ -8604,6 +9004,71 @@
 			(project "PikaPC_Host"
 				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
 					(reference "C27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 144.78 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "278157ee-985d-4165-8827-8f661f24bd00")
+		(property "Reference" "#PWR073"
+			(at 144.78 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 144.78 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 144.78 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a0b37f4-86a8-4d1e-b50b-2229ffab1b6b")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "#PWR073")
 					(unit 1)
 				)
 			)
@@ -9765,6 +10230,71 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 139.7 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4c5520f1-b112-43fa-b0ac-27c58a324c62")
+		(property "Reference" "#PWR071"
+			(at 139.7 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 139.7 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 139.7 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c29f723a-2d66-4972-be54-4e1e3c5764dc")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 200.66 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9963,6 +10493,136 @@
 			(project "PikaPC_Host"
 				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 139.7 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5a56a265-bd1b-4ab8-82db-a596ab8e33ad")
+		(property "Reference" "#PWR070"
+			(at 139.7 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 139.7 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 139.7 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e36f21c3-357c-485f-b748-39ae4668ea16")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 132.08 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5e6e294f-f08c-48a5-a726-82eeb60161bb")
+		(property "Reference" "#PWR074"
+			(at 132.08 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 132.08 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 132.08 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "128288fb-6243-4ce6-aac8-49b21428486d")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "#PWR074")
 					(unit 1)
 				)
 			)
@@ -10589,6 +11249,84 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized_Small_US")
+		(at 144.78 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9c1c0a1e-5cee-431c-98cd-c3686990cd45")
+		(property "Reference" "C53"
+			(at 146.05 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 146.05 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.7"
+			(at 144.78 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 144.78 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small US symbol"
+			(at 144.78 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "80-EDK106M016A9BAA "
+			(at 144.78 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "48145236-c828-4f41-8dde-b60d055e3aff")
+		)
+		(pin "2"
+			(uuid "b858b60a-3d6e-4acc-8dce-e30c7a5a5d8c")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "C53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 111.76 40.64 0)
 		(unit 1)
@@ -10718,6 +11456,71 @@
 			(project "PikaPC_Host"
 				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
 					(reference "C19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 127 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aa0da43d-3491-4595-9739-411ad5ee68fc")
+		(property "Reference" "#PWR068"
+			(at 127 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 127 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 127 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "440ee6c9-b516-4373-89c1-c91efe69e7cd")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -11677,6 +12480,136 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 132.08 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e32ec4fc-cd87-4b07-bc51-37980b660080")
+		(property "Reference" "#PWR087"
+			(at 132.08 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 132.08 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 132.08 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3897e129-3ce6-4690-9092-f05110fccab6")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "#PWR087")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 127 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ea045406-8517-4f09-8f9f-a557c26ef444")
+		(property "Reference" "#PWR069"
+			(at 127 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 127 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 127 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "93f9ed0d-bfa7-45b1-b272-667251a65453")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "#PWR069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small_US")
 		(at 83.82 35.56 90)
 		(mirror x)
@@ -11888,6 +12821,84 @@
 			(project "PikaPC_Host"
 				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_Small_US")
+		(at 127 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f6f17b38-74df-4052-9760-fd8edc3a16f0")
+		(property "Reference" "C50"
+			(at 128.27 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 128.27 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.7"
+			(at 127 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 127 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small US symbol"
+			(at 127 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "80-EDK106M016A9BAA "
+			(at 127 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "67bebd34-a963-410f-872a-fefdb01544ec")
+		)
+		(pin "2"
+			(uuid "8a76b46c-a208-4d20-b378-eec8939799f6")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "C50")
 					(unit 1)
 				)
 			)
@@ -12219,6 +13230,71 @@
 			(project "PikaPC_Host"
 				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
 					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 144.78 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fc94c2a2-a237-45d0-b167-bfa3044ab82a")
+		(property "Reference" "#PWR072"
+			(at 144.78 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 144.78 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 144.78 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "10ae0ef5-fc6a-4daf-aee7-99a3791b5cb6")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/fa2fd65c-4f78-487f-96bd-13f5cb66f892"
+					(reference "#PWR072")
 					(unit 1)
 				)
 			)
