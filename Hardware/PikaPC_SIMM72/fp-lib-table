@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "PikaPC_SIM72")(type "KiCad")(uri "${KIPRJMOD}/PikaPC_SIM72.pretty")(options "")(descr ""))
+)
