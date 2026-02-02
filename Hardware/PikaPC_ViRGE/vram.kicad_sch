@@ -5906,7 +5906,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 60.96) (xy 246.38 60.96)
+			(xy 259.08 53.34) (xy 246.38 53.34)
 		)
 		(stroke
 			(width 0)
@@ -5966,7 +5966,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 53.34) (xy 246.38 53.34)
+			(xy 259.08 60.96) (xy 246.38 60.96)
 		)
 		(stroke
 			(width 0)
@@ -6196,7 +6196,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 76.2) (xy 246.38 76.2)
+			(xy 259.08 38.1) (xy 246.38 38.1)
 		)
 		(stroke
 			(width 0)
@@ -6336,7 +6336,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 71.12) (xy 246.38 71.12)
+			(xy 259.08 43.18) (xy 246.38 43.18)
 		)
 		(stroke
 			(width 0)
@@ -6436,7 +6436,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 58.42) (xy 246.38 58.42)
+			(xy 259.08 55.88) (xy 246.38 55.88)
 		)
 		(stroke
 			(width 0)
@@ -6726,7 +6726,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 55.88) (xy 246.38 55.88)
+			(xy 259.08 58.42) (xy 246.38 58.42)
 		)
 		(stroke
 			(width 0)
@@ -6786,7 +6786,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 50.8) (xy 246.38 50.8)
+			(xy 259.08 63.5) (xy 246.38 63.5)
 		)
 		(stroke
 			(width 0)
@@ -7156,7 +7156,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 68.58) (xy 246.38 68.58)
+			(xy 259.08 45.72) (xy 246.38 45.72)
 		)
 		(stroke
 			(width 0)
@@ -7666,7 +7666,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 45.72) (xy 246.38 45.72)
+			(xy 259.08 68.58) (xy 246.38 68.58)
 		)
 		(stroke
 			(width 0)
@@ -8166,7 +8166,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 43.18) (xy 246.38 43.18)
+			(xy 259.08 71.12) (xy 246.38 71.12)
 		)
 		(stroke
 			(width 0)
@@ -8186,7 +8186,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 73.66) (xy 246.38 73.66)
+			(xy 259.08 40.64) (xy 246.38 40.64)
 		)
 		(stroke
 			(width 0)
@@ -8406,7 +8406,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 63.5) (xy 246.38 63.5)
+			(xy 259.08 50.8) (xy 246.38 50.8)
 		)
 		(stroke
 			(width 0)
@@ -8436,7 +8436,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 38.1) (xy 246.38 38.1)
+			(xy 259.08 76.2) (xy 246.38 76.2)
 		)
 		(stroke
 			(width 0)
@@ -8586,7 +8586,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 48.26) (xy 246.38 48.26)
+			(xy 259.08 66.04) (xy 246.38 66.04)
 		)
 		(stroke
 			(width 0)
@@ -9406,7 +9406,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 66.04) (xy 246.38 66.04)
+			(xy 259.08 48.26) (xy 246.38 48.26)
 		)
 		(stroke
 			(width 0)
@@ -9446,7 +9446,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 40.64) (xy 246.38 40.64)
+			(xy 259.08 73.66) (xy 246.38 73.66)
 		)
 		(stroke
 			(width 0)
@@ -9754,8 +9754,8 @@
 		)
 		(uuid "fff5a740-dd0d-4333-9fb2-d1fafe5812e1")
 	)
-	(label "~{VMCAS0}"
-		(at 134.62 71.12 0)
+	(label "~{VMCAS0R}"
+		(at 134.62 73.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9775,7 +9775,7 @@
 		(uuid "01fdd952-bdc7-4109-b1dc-8eb85405766b")
 	)
 	(label "VMD17"
-		(at 259.08 40.64 180)
+		(at 259.08 60.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9805,7 +9805,7 @@
 		(uuid "041ca1ae-abcb-42ea-9abb-f351048de091")
 	)
 	(label "VMD10"
-		(at 195.58 63.5 180)
+		(at 195.58 43.18 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9845,7 +9845,7 @@
 		(uuid "05c7b2fd-3ea2-4c98-ae5b-4188c58d4915")
 	)
 	(label "VMD27"
-		(at 259.08 66.04 180)
+		(at 259.08 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9865,7 +9865,7 @@
 		(uuid "06e2875b-caf9-4e97-b673-c6c3058cfbf2")
 	)
 	(label "VMD8"
-		(at 195.58 58.42 180)
+		(at 195.58 38.1 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9925,7 +9925,7 @@
 		(uuid "0906f8f3-87e1-45ba-b05a-f79f64ec0110")
 	)
 	(label "VMD20"
-		(at 259.08 48.26 180)
+		(at 259.08 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9934,7 +9934,7 @@
 		)
 		(uuid "098c0c9d-7a5a-413a-8a55-ea74c520e566")
 	)
-	(label "~{VMCAS7}"
+	(label "~{VMCAS7R}"
 		(at 198.12 152.4 0)
 		(effects
 			(font
@@ -9985,7 +9985,7 @@
 		(uuid "0ceae22d-11ac-4601-81ff-5b209085d1c1")
 	)
 	(label "VMD21"
-		(at 259.08 50.8 180)
+		(at 259.08 71.12 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10014,7 +10014,7 @@
 		)
 		(uuid "1063bdd8-bda4-42bc-b7be-f6228d59825b")
 	)
-	(label "~{VMCAS6}"
+	(label "~{VMCAS6R}"
 		(at 198.12 149.86 0)
 		(effects
 			(font
@@ -10085,7 +10085,7 @@
 		(uuid "189764cf-cb49-44a1-86e3-94e53b84204a")
 	)
 	(label "VMD0"
-		(at 195.58 38.1 180)
+		(at 195.58 58.42 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10115,7 +10115,7 @@
 		(uuid "1bc4ed47-6f07-46f4-9a9d-e79fd0288e5d")
 	)
 	(label "VMD11"
-		(at 195.58 66.04 180)
+		(at 195.58 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10244,7 +10244,7 @@
 		)
 		(uuid "2c7d3b40-d7ae-4d49-a9c9-197f9cb43b24")
 	)
-	(label "~{VMCAS5}"
+	(label "~{VMCAS5R}"
 		(at 134.62 152.4 0)
 		(effects
 			(font
@@ -10274,8 +10274,8 @@
 		)
 		(uuid "2e2e2380-fb2f-49c6-a7df-bdcada4843c2")
 	)
-	(label "~{VMCAS2}"
-		(at 198.12 71.12 0)
+	(label "~{VMCAS2R}"
+		(at 198.12 73.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10295,7 +10295,7 @@
 		(uuid "30087554-4f66-4563-a34e-3688c78fb611")
 	)
 	(label "VMD26"
-		(at 259.08 63.5 180)
+		(at 259.08 43.18 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10365,7 +10365,7 @@
 		(uuid "3460e87a-15fa-41fd-8102-48eaa882f0ee")
 	)
 	(label "VMD29"
-		(at 259.08 71.12 180)
+		(at 259.08 50.8 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10465,7 +10465,7 @@
 		(uuid "3e70d8e5-c1af-43cd-8781-7ce916fdc1e5")
 	)
 	(label "VMD25"
-		(at 259.08 60.96 180)
+		(at 259.08 40.64 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10495,7 +10495,7 @@
 		(uuid "3f2d501b-d563-4e78-9819-3658b8254215")
 	)
 	(label "VMD16"
-		(at 259.08 38.1 180)
+		(at 259.08 58.42 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10515,7 +10515,7 @@
 		(uuid "415bb2ec-1b19-48bf-877c-911d5f36b0f9")
 	)
 	(label "VMD31"
-		(at 259.08 76.2 180)
+		(at 259.08 55.88 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10625,7 +10625,7 @@
 		(uuid "4c917efc-4da6-4c91-9fd1-411db5be0d9a")
 	)
 	(label "VMD13"
-		(at 195.58 71.12 180)
+		(at 195.58 50.8 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10675,7 +10675,7 @@
 		(uuid "4f84d153-8cca-4714-b96b-a05f8f26d06d")
 	)
 	(label "VMD23"
-		(at 259.08 55.88 180)
+		(at 259.08 76.2 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10715,7 +10715,7 @@
 		(uuid "5382b16a-5bd7-4dd1-8d7b-5a33722357c0")
 	)
 	(label "VMD7"
-		(at 195.58 55.88 180)
+		(at 195.58 76.2 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10735,7 +10735,7 @@
 		(uuid "550d3ecf-5307-4b99-be64-eb1388d6bed0")
 	)
 	(label "VMD18"
-		(at 259.08 43.18 180)
+		(at 259.08 63.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10975,7 +10975,7 @@
 		(uuid "6bb9812e-1b00-4243-84cd-d02e7f6d0538")
 	)
 	(label "VMD24"
-		(at 259.08 58.42 180)
+		(at 259.08 38.1 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11085,7 +11085,7 @@
 		(uuid "73aa9810-10e2-4c1f-ad2f-01619e42b44c")
 	)
 	(label "VMD4"
-		(at 195.58 48.26 180)
+		(at 195.58 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11115,7 +11115,7 @@
 		(uuid "7789a0a9-c2e0-49b8-8683-2214e0427864")
 	)
 	(label "VMD3"
-		(at 195.58 45.72 180)
+		(at 195.58 66.04 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11195,7 +11195,7 @@
 		(uuid "7fe7a688-b92c-4fd9-98db-1216519e6d2b")
 	)
 	(label "VMD9"
-		(at 195.58 60.96 180)
+		(at 195.58 40.64 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11205,7 +11205,7 @@
 		(uuid "80ef6429-0f71-4436-8557-df93952b466d")
 	)
 	(label "VMD28"
-		(at 259.08 68.58 180)
+		(at 259.08 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11215,7 +11215,7 @@
 		(uuid "821a8207-7fe9-42df-ba40-3c4d83a74d8a")
 	)
 	(label "VMD12"
-		(at 195.58 68.58 180)
+		(at 195.58 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11255,7 +11255,7 @@
 		(uuid "8c6fc0b5-bc2d-450e-9bef-58a3d7b69f91")
 	)
 	(label "VMD19"
-		(at 259.08 45.72 180)
+		(at 259.08 66.04 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11385,7 +11385,7 @@
 		(uuid "a06a8ca4-e9cc-4fda-a5e0-44b9104e8903")
 	)
 	(label "VMD15"
-		(at 195.58 76.2 180)
+		(at 195.58 55.88 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11485,7 +11485,7 @@
 		(uuid "afc6ca80-5979-4911-b4c7-5503ddcd5375")
 	)
 	(label "VMD6"
-		(at 195.58 53.34 180)
+		(at 195.58 73.66 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11565,7 +11565,7 @@
 		(uuid "b7925776-76d5-4483-a3ce-88f314685115")
 	)
 	(label "VMD30"
-		(at 259.08 73.66 180)
+		(at 259.08 53.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11605,7 +11605,7 @@
 		(uuid "b9eb985f-d91a-4812-8c14-054a523b4140")
 	)
 	(label "VMD1"
-		(at 195.58 40.64 180)
+		(at 195.58 60.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11625,7 +11625,7 @@
 		(uuid "bb55d244-457e-432d-b7ed-457b82a37238")
 	)
 	(label "VMD5"
-		(at 195.58 50.8 180)
+		(at 195.58 71.12 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11775,7 +11775,7 @@
 		(uuid "c879aead-7c70-42a4-b559-f03f83e82e73")
 	)
 	(label "VMD22"
-		(at 259.08 53.34 180)
+		(at 259.08 73.66 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11974,7 +11974,7 @@
 		)
 		(uuid "e3b548f6-1dbb-40c0-8ac4-55840186ac09")
 	)
-	(label "~{VMCAS4}"
+	(label "~{VMCAS4R}"
 		(at 134.62 149.86 0)
 		(effects
 			(font
@@ -12075,7 +12075,7 @@
 		(uuid "ed89d49c-25df-460c-8d08-25cb79e018e5")
 	)
 	(label "VMD14"
-		(at 195.58 73.66 180)
+		(at 195.58 53.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12124,8 +12124,8 @@
 		)
 		(uuid "f593bb48-47cd-4387-b23e-686bba07ff58")
 	)
-	(label "~{VMCAS3}"
-		(at 198.12 73.66 0)
+	(label "~{VMCAS3R}"
+		(at 198.12 71.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12134,8 +12134,8 @@
 		)
 		(uuid "f643f43f-7a25-4166-a187-fcf2a64d2c92")
 	)
-	(label "~{VMCAS1}"
-		(at 134.62 73.66 0)
+	(label "~{VMCAS1R}"
+		(at 134.62 71.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12175,7 +12175,7 @@
 		(uuid "f7dfa9e3-810b-443d-91bd-90addbf3fcc8")
 	)
 	(label "VMD2"
-		(at 195.58 43.18 180)
+		(at 195.58 63.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12299,7 +12299,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 147.32 0)
 			(effects
 				(font
@@ -12431,7 +12431,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 154.94 0)
 			(effects
 				(font
@@ -12565,7 +12565,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 137.16 0)
 			(effects
 				(font
@@ -12632,7 +12632,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 127 0)
 			(effects
 				(font
@@ -12968,7 +12968,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 175.26 0)
 			(effects
 				(font
@@ -13102,7 +13102,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 121.92 0)
 			(effects
 				(font
@@ -13169,7 +13169,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 114.3 0)
 			(effects
 				(font
@@ -14027,7 +14027,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 167.64 0)
 			(effects
 				(font
@@ -14226,7 +14226,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 139.7 0)
 			(effects
 				(font
@@ -14363,7 +14363,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 157.48 0)
 			(effects
 				(font
@@ -14430,7 +14430,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 165.1 0)
 			(effects
 				(font
@@ -14564,7 +14564,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 119.38 0)
 			(effects
 				(font
@@ -14766,7 +14766,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 177.8 0)
 			(effects
 				(font
@@ -15167,7 +15167,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 142.24 0)
 			(effects
 				(font
@@ -15234,7 +15234,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 132.08 0)
 			(effects
 				(font
@@ -15684,7 +15684,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 160.02 0)
 			(effects
 				(font
@@ -16251,7 +16251,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 134.62 0)
 			(effects
 				(font
@@ -16448,7 +16448,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 162.56 0)
 			(effects
 				(font
@@ -16650,7 +16650,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 129.54 0)
 			(effects
 				(font
@@ -16782,7 +16782,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 124.46 0)
 			(effects
 				(font
@@ -16914,7 +16914,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 149.86 0)
 			(effects
 				(font
@@ -16981,7 +16981,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 170.18 0)
 			(effects
 				(font
@@ -17253,7 +17253,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 182.88 0)
 			(effects
 				(font
@@ -17456,7 +17456,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 180.34 0)
 			(effects
 				(font
@@ -17980,7 +17980,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 144.78 0)
 			(effects
 				(font
@@ -18047,7 +18047,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 172.72 0)
 			(effects
 				(font
@@ -18181,7 +18181,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 152.4 0)
 			(effects
 				(font
@@ -18920,7 +18920,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PikaPC_ViRGE:Resistor Option 0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 116.84 0)
 			(effects
 				(font
