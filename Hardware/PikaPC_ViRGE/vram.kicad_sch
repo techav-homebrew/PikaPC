@@ -5687,6 +5687,12 @@
 		(uuid "6af9897d-2f09-4d03-b8d5-1d786d7d31d6")
 	)
 	(junction
+		(at 96.52 185.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "79386fae-b350-4fc0-84ae-c50fc83431e1")
+	)
+	(junction
 		(at 252.73 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6113,6 +6119,16 @@
 			(type default)
 		)
 		(uuid "10fdfa46-d684-4c5b-908b-1b69a174b8f4")
+	)
+	(wire
+		(pts
+			(xy 76.2 185.42) (xy 88.9 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11157ed7-98c5-4641-8870-7d558d3629ee")
 	)
 	(wire
 		(pts
@@ -6593,6 +6609,16 @@
 			(type default)
 		)
 		(uuid "2befc830-3a3f-40ea-b9c8-22e06ef1cb54")
+	)
+	(wire
+		(pts
+			(xy 96.52 185.42) (xy 96.52 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d514deb-525d-41bd-a993-7b01c203e31c")
 	)
 	(wire
 		(pts
@@ -8173,6 +8199,16 @@
 			(type default)
 		)
 		(uuid "926a6dac-75ad-47af-a11e-57a4cbf8338a")
+	)
+	(wire
+		(pts
+			(xy 93.98 185.42) (xy 96.52 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9525f2f0-6615-4db2-8462-13657b4d0b99")
 	)
 	(wire
 		(pts
@@ -10994,6 +11030,16 @@
 		)
 		(uuid "6d7e4a9e-2332-4d82-a25c-b9ccb4e424e2")
 	)
+	(label "VMD28"
+		(at 76.2 185.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6db294df-7de0-4ca8-bf11-89ea4ef787a3")
+	)
 	(label "VMA7"
 		(at 73.66 43.18 0)
 		(effects
@@ -12283,7 +12329,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "004c50ae-997b-41d8-b4ed-51e369e8fa75")
-		(property "Reference" "R51"
+		(property "Reference" "SR13"
 			(at 88.9 146.05 90)
 			(effects
 				(font
@@ -12335,7 +12381,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R51")
+					(reference "SR13")
 					(unit 1)
 				)
 			)
@@ -12415,7 +12461,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "020dc342-0e95-4933-be34-73f3d1d21665")
-		(property "Reference" "R54"
+		(property "Reference" "SR16"
 			(at 88.9 153.67 90)
 			(effects
 				(font
@@ -12467,7 +12513,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R54")
+					(reference "SR16")
 					(unit 1)
 				)
 			)
@@ -12549,7 +12595,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "0d1ca214-c48a-47e5-adca-be4be40bf825")
-		(property "Reference" "R47"
+		(property "Reference" "SR09"
 			(at 88.9 135.89 90)
 			(effects
 				(font
@@ -12601,7 +12647,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R47")
+					(reference "SR09")
 					(unit 1)
 				)
 			)
@@ -12616,7 +12662,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0f7413d1-df1d-4ff4-8580-98df6b6d4df1")
-		(property "Reference" "R43"
+		(property "Reference" "SR05"
 			(at 88.9 125.73 90)
 			(effects
 				(font
@@ -12668,7 +12714,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R43")
+					(reference "SR05")
 					(unit 1)
 				)
 			)
@@ -12952,7 +12998,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1f41cf50-0c4c-42cf-afd3-7a5680c78c01")
-		(property "Reference" "R62"
+		(property "Reference" "SR24"
 			(at 88.9 173.99 90)
 			(effects
 				(font
@@ -13004,7 +13050,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R62")
+					(reference "SR24")
 					(unit 1)
 				)
 			)
@@ -13086,7 +13132,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "21f954a4-35c5-4dd7-af86-e64107cb81e9")
-		(property "Reference" "R41"
+		(property "Reference" "SR03"
 			(at 88.9 120.65 90)
 			(effects
 				(font
@@ -13138,7 +13184,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R41")
+					(reference "SR03")
 					(unit 1)
 				)
 			)
@@ -13153,7 +13199,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "2490d795-90b5-4a7f-aa3b-803ae0fa02ed")
-		(property "Reference" "R38"
+		(property "Reference" "SR00"
 			(at 88.9 113.03 90)
 			(effects
 				(font
@@ -13205,7 +13251,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R38")
+					(reference "SR00")
 					(unit 1)
 				)
 			)
@@ -14011,7 +14057,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "46055c8f-90a5-46d2-8bad-4d462525f87f")
-		(property "Reference" "R59"
+		(property "Reference" "SR21"
 			(at 88.9 166.37 90)
 			(effects
 				(font
@@ -14063,7 +14109,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R59")
+					(reference "SR21")
 					(unit 1)
 				)
 			)
@@ -14210,7 +14256,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "49940a9b-078d-4192-936b-f99f18358211")
-		(property "Reference" "R48"
+		(property "Reference" "SR10"
 			(at 88.9 138.43 90)
 			(effects
 				(font
@@ -14262,7 +14308,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R48")
+					(reference "SR10")
 					(unit 1)
 				)
 			)
@@ -14347,7 +14393,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "4ba64a17-fa1d-4b70-af95-94d4c52a5216")
-		(property "Reference" "R55"
+		(property "Reference" "SR17"
 			(at 88.9 156.21 90)
 			(effects
 				(font
@@ -14399,7 +14445,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R55")
+					(reference "SR17")
 					(unit 1)
 				)
 			)
@@ -14414,7 +14460,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "4f17fb2d-c47d-4ae9-800f-3fea42271499")
-		(property "Reference" "R58"
+		(property "Reference" "SR20"
 			(at 88.9 163.83 90)
 			(effects
 				(font
@@ -14466,7 +14512,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R58")
+					(reference "SR20")
 					(unit 1)
 				)
 			)
@@ -14548,7 +14594,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "56bd5e82-b626-4646-a5c4-f2388e1f2a05")
-		(property "Reference" "R40"
+		(property "Reference" "SR02"
 			(at 88.9 118.11 90)
 			(effects
 				(font
@@ -14600,7 +14646,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R40")
+					(reference "SR02")
 					(unit 1)
 				)
 			)
@@ -14750,7 +14796,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "5dba5769-ca60-46e0-91f6-747e8b7d9da8")
-		(property "Reference" "R63"
+		(property "Reference" "SR25"
 			(at 88.9 176.53 90)
 			(effects
 				(font
@@ -14802,7 +14848,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R63")
+					(reference "SR25")
 					(unit 1)
 				)
 			)
@@ -14942,7 +14988,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 96.52 185.42 0)
+		(at 96.52 187.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14950,7 +14996,7 @@
 		(dnp no)
 		(uuid "655a89cd-c187-4719-9e12-36f1876fd2a7")
 		(property "Reference" "#PWR0106"
-			(at 96.52 191.77 0)
+			(at 96.52 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14959,7 +15005,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 96.52 190.5 90)
+			(at 96.52 193.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14967,7 +15013,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 96.52 185.42 0)
+			(at 96.52 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14976,7 +15022,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 185.42 0)
+			(at 96.52 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14985,7 +15031,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 96.52 185.42 0)
+			(at 96.52 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15151,7 +15197,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "6ae719a3-3fca-411e-acf1-d4a81706c452")
-		(property "Reference" "R49"
+		(property "Reference" "SR11"
 			(at 88.9 140.97 90)
 			(effects
 				(font
@@ -15203,7 +15249,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R49")
+					(reference "SR11")
 					(unit 1)
 				)
 			)
@@ -15218,7 +15264,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "6f90caac-1fef-46b5-a294-9288bfc29bbb")
-		(property "Reference" "R45"
+		(property "Reference" "SR07"
 			(at 88.9 130.81 90)
 			(effects
 				(font
@@ -15270,7 +15316,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R45")
+					(reference "SR07")
 					(unit 1)
 				)
 			)
@@ -15668,7 +15714,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "74e50df6-bcaa-4c13-b865-a3d9abb22802")
-		(property "Reference" "R56"
+		(property "Reference" "SR18"
 			(at 88.9 158.75 90)
 			(effects
 				(font
@@ -15720,7 +15766,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R56")
+					(reference "SR18")
 					(unit 1)
 				)
 			)
@@ -16235,7 +16281,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "7da232a9-f4fc-4cd1-b74f-b373ea83ac10")
-		(property "Reference" "R46"
+		(property "Reference" "SR08"
 			(at 88.9 133.35 90)
 			(effects
 				(font
@@ -16287,7 +16333,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R46")
+					(reference "SR08")
 					(unit 1)
 				)
 			)
@@ -16432,7 +16478,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "8192c8d9-c635-4279-8d6f-88af92b23f65")
-		(property "Reference" "R57"
+		(property "Reference" "SR19"
 			(at 88.9 161.29 90)
 			(effects
 				(font
@@ -16484,7 +16530,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R57")
+					(reference "SR19")
 					(unit 1)
 				)
 			)
@@ -16550,6 +16596,73 @@
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
 					(reference "#PWR0121")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 91.44 185.42 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(uuid "83e8e3d4-671c-4c8b-a683-8accb95ad2bc")
+		(property "Reference" "SR28"
+			(at 88.9 184.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 93.98 184.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 91.44 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "89d6dc72-84cc-45fe-9721-58a8f11c8615")
+		)
+		(pin "2"
+			(uuid "1c853deb-abf6-4d7d-94ca-cf001002590a")
+		)
+		(instances
+			(project "PikaPC_ViRGE"
+				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
+					(reference "SR28")
 					(unit 1)
 				)
 			)
@@ -16634,7 +16747,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8ce8fd1f-3616-4a53-bcc3-5e4c06821a2b")
-		(property "Reference" "R44"
+		(property "Reference" "SR06"
 			(at 88.9 128.27 90)
 			(effects
 				(font
@@ -16686,7 +16799,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R44")
+					(reference "SR06")
 					(unit 1)
 				)
 			)
@@ -16766,7 +16879,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "909bdde3-e84b-42c1-9cd4-e6d9f1c2cf8b")
-		(property "Reference" "R42"
+		(property "Reference" "SR04"
 			(at 88.9 123.19 90)
 			(effects
 				(font
@@ -16818,7 +16931,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R42")
+					(reference "SR04")
 					(unit 1)
 				)
 			)
@@ -16898,7 +17011,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "936a78f7-cbd5-455e-a767-8c6fcf958ff5")
-		(property "Reference" "R52"
+		(property "Reference" "SR14"
 			(at 88.9 148.59 90)
 			(effects
 				(font
@@ -16950,7 +17063,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R52")
+					(reference "SR14")
 					(unit 1)
 				)
 			)
@@ -16965,7 +17078,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "93d3eed8-5837-4e42-9a11-5b7819be86ed")
-		(property "Reference" "R60"
+		(property "Reference" "SR22"
 			(at 88.9 168.91 90)
 			(effects
 				(font
@@ -17017,7 +17130,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R60")
+					(reference "SR22")
 					(unit 1)
 				)
 			)
@@ -17237,7 +17350,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "99cd0d82-3d79-4a12-833f-28a69616af81")
-		(property "Reference" "R65"
+		(property "Reference" "SR27"
 			(at 88.9 181.61 90)
 			(effects
 				(font
@@ -17289,7 +17402,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R65")
+					(reference "SR27")
 					(unit 1)
 				)
 			)
@@ -17440,7 +17553,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "9df6281e-b757-4ff4-9ec0-b6d8fc5334f8")
-		(property "Reference" "R64"
+		(property "Reference" "SR26"
 			(at 88.9 179.07 90)
 			(effects
 				(font
@@ -17492,7 +17605,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R64")
+					(reference "SR26")
 					(unit 1)
 				)
 			)
@@ -17964,7 +18077,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "bd6960ec-5c31-4c4b-b50d-f4d2e6dbe556")
-		(property "Reference" "R50"
+		(property "Reference" "SR12"
 			(at 88.9 143.51 90)
 			(effects
 				(font
@@ -18016,7 +18129,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R50")
+					(reference "SR12")
 					(unit 1)
 				)
 			)
@@ -18031,7 +18144,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "bd8bdb3e-3fb3-44d3-ba10-a68618e4a523")
-		(property "Reference" "R61"
+		(property "Reference" "SR23"
 			(at 88.9 171.45 90)
 			(effects
 				(font
@@ -18083,7 +18196,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R61")
+					(reference "SR23")
 					(unit 1)
 				)
 			)
@@ -18165,7 +18278,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "c58e0b77-d8e2-4c02-b4c3-f136fa3c94ad")
-		(property "Reference" "R53"
+		(property "Reference" "SR15"
 			(at 88.9 151.13 90)
 			(effects
 				(font
@@ -18217,7 +18330,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R53")
+					(reference "SR15")
 					(unit 1)
 				)
 			)
@@ -18904,7 +19017,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "efd75133-4a80-4e8a-b49d-8477af351371")
-		(property "Reference" "R39"
+		(property "Reference" "SR01"
 			(at 88.9 115.57 90)
 			(effects
 				(font
@@ -18956,7 +19069,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "R39")
+					(reference "SR01")
 					(unit 1)
 				)
 			)
@@ -19186,7 +19299,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fd68620b-c7eb-4ac9-b6c5-231b732e0aa9")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 43.18 21.59 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19860,7 +19973,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/cb0782e9-911e-4d9c-9ad6-2142b0d6c312"
-					(reference "U2")
+					(reference "U1")
 					(unit 2)
 				)
 			)

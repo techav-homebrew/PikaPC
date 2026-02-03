@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "63923482-a8ca-4eb1-922e-1447ef585bc0")
+	(uuid "4692b658-b693-416c-a7ab-85cedac28a36")
 	(paper "A")
 	(lib_symbols
 		(symbol "Device:C_Polarized_Small_US"
@@ -8443,7 +8443,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "26f74213-f2a7-442e-b2c3-08f96f9f75d2")
-		(property "Reference" "U1"
+		(property "Reference" "U2"
 			(at 182.88 24.13 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8453,7 +8453,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ATF1504"
+		(property "Value" "ATF1504AS"
 			(at 198.12 24.13 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8625,7 +8625,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/9b83794d-ac83-444e-b108-8beac34e7e90"
-					(reference "U1")
+					(reference "U2")
 					(unit 2)
 				)
 			)
@@ -8709,7 +8709,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2b44eff2-471c-47b1-83b3-a0a96a869fa1")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 63.5 24.13 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9383,7 +9383,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/9b83794d-ac83-444e-b108-8beac34e7e90"
-					(reference "U2")
+					(reference "U1")
 					(unit 5)
 				)
 			)

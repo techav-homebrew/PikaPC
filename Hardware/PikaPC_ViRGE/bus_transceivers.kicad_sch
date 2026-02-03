@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "c2cf62e5-c4af-4c9f-9157-d12ff03265d1")
+	(uuid "b816e97b-a6b0-42f9-b15b-343aa52d7aa5")
 	(paper "A")
 	(lib_symbols
 		(symbol "74xx:74LS245"
@@ -6245,7 +6245,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "74LS573"
+		(property "Value" "74AHCT573"
 			(at 47.8633 74.4798 0)
 			(effects
 				(font
@@ -7956,7 +7956,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "74LS573"
+		(property "Value" "74AHCT573"
 			(at 111.3633 23.6798 0)
 			(effects
 				(font
@@ -9139,7 +9139,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "74LS573"
+		(property "Value" "74AHCT573"
 			(at 47.8633 23.6798 0)
 			(effects
 				(font

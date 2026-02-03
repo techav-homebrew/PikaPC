@@ -7431,7 +7431,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ec0cc54-214c-4ba8-8993-f9c0494a7ed9")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 203.2 24.13 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8108,7 +8108,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/b46edc01-5753-425d-92b9-4f18e9204e38"
-					(reference "U2")
+					(reference "U1")
 					(unit 4)
 				)
 			)
@@ -9772,7 +9772,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cc69caf4-43bc-42e9-bfa6-6e03c60eca3a")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 50.8 36.83 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10446,7 +10446,7 @@
 		(instances
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/b46edc01-5753-425d-92b9-4f18e9204e38"
-					(reference "U2")
+					(reference "U1")
 					(unit 3)
 				)
 			)
