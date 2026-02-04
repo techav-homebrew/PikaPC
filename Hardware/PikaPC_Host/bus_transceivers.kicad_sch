@@ -8187,7 +8187,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IDT74ALVC164245"
+		(property "Value" "74ALVC164245"
 			(at 124.8567 90.5044 0)
 			(effects
 				(font
@@ -9948,7 +9948,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IDT74ALVC164245"
+		(property "Value" "74ALVC164245"
 			(at 48.6567 166.7044 0)
 			(effects
 				(font
@@ -10770,7 +10770,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IDT74ALVC164245"
+		(property "Value" "74ALVC164245"
 			(at 124.8567 166.7044 0)
 			(effects
 				(font
@@ -11192,7 +11192,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IDT74ALVC164245"
+		(property "Value" "74ALVC164245"
 			(at 48.6567 90.5044 0)
 			(effects
 				(font
@@ -11679,7 +11679,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IDT74ALVC164245"
+		(property "Value" "74ALVC164245"
 			(at 201.0567 166.7044 0)
 			(effects
 				(font
@@ -11898,7 +11898,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IDT74ALVC164245"
+		(property "Value" "74ALVC164245"
 			(at 201.0567 90.5044 0)
 			(effects
 				(font

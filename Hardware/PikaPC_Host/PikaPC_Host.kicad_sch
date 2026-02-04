@@ -323,7 +323,7 @@
 		)
 		(uuid "a4e9f1f5-8a52-4be7-95d7-99b0ad3ac169")
 	)
-	(label "SysClk"
+	(label "CpuClk"
 		(at 63.5 55.88 180)
 		(effects
 			(font
@@ -499,7 +499,7 @@
 				(justify right)
 			)
 		)
-		(pin "SysClk" input
+		(pin "CpuClk" input
 			(at 50.8 55.88 0)
 			(uuid "0ff9dc38-e509-41f7-8378-686427547bf9")
 			(effects
@@ -671,7 +671,7 @@
 				(justify left)
 			)
 		)
-		(pin "SysClk" input
+		(pin "CpuClk" input
 			(at 101.6 55.88 180)
 			(uuid "fe796347-fb13-4995-a4fd-0cd5acfd24d5")
 			(effects

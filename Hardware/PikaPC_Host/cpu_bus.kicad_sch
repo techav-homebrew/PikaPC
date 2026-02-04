@@ -20773,7 +20773,7 @@
 		)
 		(uuid "3e5521ac-82b4-4c87-b6a3-cb4ec1ff8aa5")
 	)
-	(label "SysClk"
+	(label "CpuClk"
 		(at 71.12 185.42 180)
 		(effects
 			(font
@@ -21553,7 +21553,7 @@
 		)
 		(uuid "c42d3e2a-8a3d-4a61-a0a2-9ff9fb45fd1a")
 	)
-	(label "SysClk"
+	(label "CpuClk"
 		(at 96.52 104.14 0)
 		(effects
 			(font
@@ -22014,7 +22014,7 @@
 		)
 		(uuid "ad0094a0-6ee4-4fdd-a840-0feaaf4bad0c")
 	)
-	(hierarchical_label "SysClk"
+	(hierarchical_label "CpuClk"
 		(shape input)
 		(at 96.52 104.14 180)
 		(effects
