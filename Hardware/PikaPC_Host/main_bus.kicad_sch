@@ -4172,6 +4172,178 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Oscillator:CXO_DIP8"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Y"
+				(at -5.08 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "CXO_DIP8"
+				(at 1.27 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Oscillator:Oscillator_DIP-8"
+				(at 11.43 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf"
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Crystal Clock Oscillator, DIP8-style metal package"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Crystal Clock Oscillator"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Oscillator*DIP*8*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CXO_DIP8_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -0.635) (xy -1.27 -0.635) (xy -1.27 0.635) (xy -0.635 0.635) (xy -0.635 -0.635) (xy 0 -0.635)
+						(xy 0 0.635) (xy 0.635 0.635) (xy 0.635 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CXO_DIP8_1_1"
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "Vcc"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PikaPC:ATF1508AS"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -7431,16 +7603,6 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 78.74) (xy 76.2 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "414d6773-a01b-41b1-bd80-97b5032fa3d1")
-	)
-	(wire
-		(pts
 			(xy 208.28 76.2) (xy 220.98 76.2)
 		)
 		(stroke
@@ -7998,6 +8160,16 @@
 			(type default)
 		)
 		(uuid "8132e6bf-edd6-4f26-805c-6469456660e7")
+	)
+	(wire
+		(pts
+			(xy 121.92 138.43) (xy 134.62 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81525129-2128-4932-b57f-d1327381c832")
 	)
 	(wire
 		(pts
@@ -9409,6 +9581,16 @@
 		)
 		(uuid "061e566a-a4f9-4e26-8168-a5c9ee9dfa4c")
 	)
+	(label "BusOsc"
+		(at 114.3 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "079cc15d-0491-4d85-8a40-faf64127fc9f")
+	)
 	(label "~{Bus-BE3}"
 		(at 175.26 78.74 0)
 		(effects
@@ -9609,6 +9791,16 @@
 		)
 		(uuid "2d1905d1-dfe7-4cad-a833-3544f29a8c19")
 	)
+	(label "CpuClk"
+		(at 114.3 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2e312c8c-cddb-46a7-a7ee-064660a8b681")
+	)
 	(label "~{IRQ1-In}"
 		(at 101.6 71.12 0)
 		(effects
@@ -9799,16 +9991,6 @@
 		)
 		(uuid "538e953d-a6e9-4150-a86e-7f386db1c543")
 	)
-	(label "CpuClk3"
-		(at 25.4 63.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "545a0b9f-1237-4926-a24b-2a36dca45ff8")
-	)
 	(label "Ready"
 		(at 76.2 88.9 180)
 		(effects
@@ -9909,6 +10091,16 @@
 		)
 		(uuid "636f6c82-2b90-430a-b4bf-b0d5039fb742")
 	)
+	(label "BusClk5"
+		(at 152.4 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "638ddaee-20ce-4621-96bd-7a66ac1832e1")
+	)
 	(label "~{IRQ0-In}"
 		(at 101.6 68.58 0)
 		(effects
@@ -9989,6 +10181,16 @@
 		)
 		(uuid "6f0eabab-eecd-40f8-9399-786afeee49c7")
 	)
+	(label "BusClk3"
+		(at 25.4 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6fa678e6-5aca-4fa1-96e9-2297671649ba")
+	)
 	(label "~{BEN-16}"
 		(at 25.4 30.48 0)
 		(effects
@@ -10029,6 +10231,16 @@
 		)
 		(uuid "7392b99c-1848-45f7-9a56-70a7744463ff")
 	)
+	(label "BusClk5"
+		(at 114.3 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7460a7da-2594-45e9-81ae-f15ff5873b27")
+	)
 	(label "~{Bus-BURST}"
 		(at 175.26 81.28 0)
 		(effects
@@ -10038,16 +10250,6 @@
 			(justify left bottom)
 		)
 		(uuid "779470fb-83b6-4de5-8c2d-679c1e09c7b9")
-	)
-	(label "CpuClk3"
-		(at 101.6 83.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "77cea570-412f-4e56-8299-bee396d8e200")
 	)
 	(label "~{AEN}"
 		(at 25.4 38.1 0)
@@ -10099,16 +10301,6 @@
 		)
 		(uuid "8a8614ca-2cc4-43bb-ac80-87136eee5c33")
 	)
-	(label "CpuClk"
-		(at 152.4 83.82 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8b8e6c9b-7ff3-41cc-9953-2b11df09b85b")
-	)
 	(label "AD6"
 		(at 241.3 38.1 0)
 		(effects
@@ -10149,6 +10341,16 @@
 		)
 		(uuid "92d13ed1-f7ae-4a3f-ab97-0a63fb6c4232")
 	)
+	(label "BusClk3"
+		(at 101.6 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "97f19b9c-8c0d-4dca-b3da-0f258988ba20")
+	)
 	(label "AD18"
 		(at 241.3 53.34 0)
 		(effects
@@ -10169,16 +10371,6 @@
 		)
 		(uuid "98a5428f-6960-4eb6-96af-193cb0145b15")
 	)
-	(label "BusClkDiv3"
-		(at 114.3 116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "997c6635-a475-4a27-9d4c-d6451abd9070")
-	)
 	(label "~{CS7}"
 		(at 76.2 114.3 180)
 		(effects
@@ -10198,16 +10390,6 @@
 			(justify right bottom)
 		)
 		(uuid "9cc93f18-3b15-438b-bb7d-41eb78ba323e")
-	)
-	(label "CpuClk3"
-		(at 114.3 111.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9ebef152-cef1-4907-a285-e984942e3aa0")
 	)
 	(label "~{BEN-32}"
 		(at 25.4 114.3 0)
@@ -10369,16 +10551,6 @@
 		)
 		(uuid "b4a0f7e3-ab93-4d05-a974-d48b6cb02abd")
 	)
-	(label "BusClkDiv3"
-		(at 76.2 78.74 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b65b99ea-9e59-4e51-bbb4-889ad3a496aa")
-	)
 	(label "BDDIR"
 		(at 25.4 35.56 0)
 		(effects
@@ -10438,16 +10610,6 @@
 			(justify left bottom)
 		)
 		(uuid "be2ae062-095b-4f75-8edb-6dd0b80473bc")
-	)
-	(label "BusClk3"
-		(at 101.6 45.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c11ae088-4672-449d-ab25-fc2f9dabdea9")
 	)
 	(label "~{Bus-Reset}"
 		(at 152.4 48.26 180)
@@ -10669,6 +10831,16 @@
 		)
 		(uuid "e7a11771-8701-4134-8064-15399d26830f")
 	)
+	(label "BusOsc"
+		(at 134.62 138.43 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e81cb1ed-5af1-4fd5-a967-76e0fedd435a")
+	)
 	(label "AD0"
 		(at 241.3 30.48 0)
 		(effects
@@ -10679,16 +10851,6 @@
 		)
 		(uuid "e97f582f-6fcb-4bf2-b89f-e2c4c09a9b73")
 	)
-	(label "BusClk3"
-		(at 114.3 114.3 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "eac12aba-1ba4-40fa-8792-a5f35f895ab7")
-	)
 	(label "~{BE0}"
 		(at 101.6 63.5 0)
 		(effects
@@ -10698,6 +10860,16 @@
 			(justify left bottom)
 		)
 		(uuid "eac92425-a9bf-42d6-b502-69d6d6603818")
+	)
+	(label "BusClk3"
+		(at 101.6 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ec1a977f-4b66-4967-9b41-5033e0965ad8")
 	)
 	(label "AD27"
 		(at 175.26 63.5 0)
@@ -10827,12 +10999,12 @@
 	)
 	(hierarchical_label "CpuClk"
 		(shape input)
-		(at 152.4 83.82 0)
+		(at 114.3 111.76 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "4d0c031d-d670-4a2e-819f-2a9d4d7a3301")
 	)
@@ -10890,6 +11062,72 @@
 			(justify right)
 		)
 		(uuid "fecf16d6-d894-41fa-9e4d-61baba704264")
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 104.14 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0208388e-eefa-45ea-b264-81104ce6794d")
+		(property "Reference" "#PWR088"
+			(at 104.14 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 104.14 131.7569 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 104.14 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75ea57e1-8a1d-4147-a17a-ac40f81bdf3e")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/541b8728-35ef-42a9-8317-6c507b38c6a8"
+					(reference "#PWR088")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11356,6 +11594,72 @@
 			(project "PikaPC_Host"
 				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/541b8728-35ef-42a9-8317-6c507b38c6a8"
 					(reference "#PWR096")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 104.14 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "22707982-9539-4a7e-a237-3f2436c4cbf1")
+		(property "Reference" "#PWR089"
+			(at 104.14 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 104.14 145.1031 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 104.14 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "51056954-11f0-49f1-830e-f6cf72480571")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/541b8728-35ef-42a9-8317-6c507b38c6a8"
+					(reference "#PWR089")
 					(unit 1)
 				)
 			)
@@ -12434,6 +12738,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small_US")
+		(at 104.14 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "472b6819-a673-4638-a520-3566c70dae81")
+		(property "Reference" "C54"
+			(at 102.87 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 101.6 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 104.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bcf97660-4941-4d6d-90ff-65174c8b94b9")
+		)
+		(pin "1"
+			(uuid "bc092f66-8761-48f2-852c-4db8e4811662")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/541b8728-35ef-42a9-8317-6c507b38c6a8"
+					(reference "C54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "74xx:74ALVC164245")
 		(at 127 58.42 0)
 		(mirror y)
@@ -13390,6 +13763,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 114.3 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "89a4b20f-5c73-4d83-b653-3377297ccdd1")
+		(property "Reference" "#PWR091"
+			(at 114.3 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 114.3 150.1831 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 114.3 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a0fae43a-d575-4d9f-9279-7ecae5f60d78")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/541b8728-35ef-42a9-8317-6c507b38c6a8"
+					(reference "#PWR091")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 208.28 22.86 90)
 		(unit 1)
@@ -14059,6 +14498,79 @@
 		)
 	)
 	(symbol
+		(lib_id "Oscillator:CXO_DIP8")
+		(at 114.3 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a5058df9-d47d-46c0-b47d-e5e8e978e14e")
+		(property "Reference" "Y3"
+			(at 116.84 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "25M"
+			(at 116.84 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Oscillator:Oscillator_DIP-8"
+			(at 125.73 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf"
+			(at 111.76 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Crystal Clock Oscillator, DIP8-style metal package"
+			(at 114.3 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a85fd5e5-e491-490f-b6cf-e77b04fb93f3")
+		)
+		(pin "4"
+			(uuid "3094a858-c4db-4ebd-9318-9ba46bc472b7")
+		)
+		(pin "5"
+			(uuid "6923c538-2324-4c1e-a55c-7386d6dc18b8")
+		)
+		(pin "8"
+			(uuid "2afb6fac-f18d-41e5-bda9-98a3b24250ad")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/541b8728-35ef-42a9-8317-6c507b38c6a8"
+					(reference "Y3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 175.26 71.12 90)
 		(unit 1)
@@ -14654,6 +15166,72 @@
 			(project "PikaPC_Host"
 				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/541b8728-35ef-42a9-8317-6c507b38c6a8"
 					(reference "#PWR085")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 114.3 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c9f81a22-45b2-40cb-80d0-083fd1cf20af")
+		(property "Reference" "#PWR090"
+			(at 114.3 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 114.3 126.6769 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 114.3 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7b8da762-c804-4878-ad1b-c40e6fcbd89b")
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94/541b8728-35ef-42a9-8317-6c507b38c6a8"
+					(reference "#PWR090")
 					(unit 1)
 				)
 			)
