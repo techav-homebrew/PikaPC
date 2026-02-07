@@ -6643,10 +6643,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "90f1a023-2cf0-4232-9214-e8bfd70600d9")
+			(uuid "90f1a023-2cf0-4232-9214-e8bfd70600da")
 		)
 		(pin "2"
-			(uuid "f3ae25ea-b954-4fc4-9e91-cce06a9be00c")
+			(uuid "f3ae25ea-b954-4fc4-9e91-cce06a9be00d")
 		)
 		(instances
 			(project "PikaPC_SIMM72"
@@ -6844,10 +6844,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "90f1a023-2cf0-4232-9214-e8bfd70600d9")
+			(uuid "90f1a023-2cf0-4232-9214-e8bfd70600db")
 		)
 		(pin "2"
-			(uuid "f3ae25ea-b954-4fc4-9e91-cce06a9be00c")
+			(uuid "f3ae25ea-b954-4fc4-9e91-cce06a9be00e")
 		)
 		(instances
 			(project "PikaPC_SIMM72"
@@ -7117,10 +7117,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "90f1a023-2cf0-4232-9214-e8bfd70600d9")
+			(uuid "90f1a023-2cf0-4232-9214-e8bfd70600dc")
 		)
 		(pin "2"
-			(uuid "f3ae25ea-b954-4fc4-9e91-cce06a9be00c")
+			(uuid "f3ae25ea-b954-4fc4-9e91-cce06a9be00f")
 		)
 		(instances
 			(project "PikaPC_SIMM72"
@@ -7254,10 +7254,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "90f1a023-2cf0-4232-9214-e8bfd70600d9")
+			(uuid "90f1a023-2cf0-4232-9214-e8bfd70600dd")
 		)
 		(pin "2"
-			(uuid "f3ae25ea-b954-4fc4-9e91-cce06a9be00c")
+			(uuid "f3ae25ea-b954-4fc4-9e91-cce06a9be010")
 		)
 		(instances
 			(project "PikaPC_SIMM72"
@@ -7321,10 +7321,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "90f1a023-2cf0-4232-9214-e8bfd70600d9")
+			(uuid "90f1a023-2cf0-4232-9214-e8bfd70600de")
 		)
 		(pin "2"
-			(uuid "f3ae25ea-b954-4fc4-9e91-cce06a9be00c")
+			(uuid "f3ae25ea-b954-4fc4-9e91-cce06a9be011")
 		)
 		(instances
 			(project "PikaPC_SIMM72"
