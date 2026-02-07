@@ -476,7 +476,7 @@
 		(descr "Through hole straight pin header, 2x07, 2.54mm pitch, double rows")
 		(tags "Through hole pin header THT 2x07 2.54mm double row")
 		(property "Reference" "J2"
-			(at 1.27 -2.380001 0)
+			(at -0.635 17.78 0)
 			(layer "F.SilkS")
 			(uuid "0d8b6935-9786-48b1-bb93-02298fb84983")
 			(effects
@@ -46241,17 +46241,6 @@
 		(layer "Edge.Cuts")
 		(uuid "3c1ec760-d841-4858-9320-b06b9ae241b4")
 	)
-	(gr_circle
-		(center 63.85 86.97)
-		(end 63.85 85.47)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill no)
-		(layer "Edge.Cuts")
-		(uuid "4199aa02-bd0a-4f9d-9ee8-4bd1605c11e3")
-	)
 	(gr_line
 		(start 76.2 127.000001)
 		(end 76.2 38.100001)
@@ -46272,17 +46261,6 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "54fd1c28-11d2-4fb0-bcf9-67beda960946")
-	)
-	(gr_circle
-		(center 26.15 42.57)
-		(end 26.15 41.07)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill no)
-		(layer "Edge.Cuts")
-		(uuid "5d5e2638-9819-4c1e-8c54-5f082c90af25")
 	)
 	(gr_line
 		(start 177.8 127.000001)
@@ -46327,105 +46305,112 @@
 		(layer "Edge.Cuts")
 		(uuid "bab5249b-ba98-4588-8035-ac4a9ea3dddb")
 	)
-	(gr_line
-		(start 23.15 89.97)
-		(end 23.15 39.57)
-		(stroke
-			(width 0.15)
-			(type default)
+	(gr_text "A26"
+		(at 83.185 109.22 0)
+		(layer "F.SilkS")
+		(uuid "0f22afe8-d712-4db5-b13f-1cb7b6b9ffc9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
 		)
-		(layer "User.2")
-		(uuid "1f4588c8-13db-436d-9268-01f02a069088")
 	)
-	(gr_line
-		(start 66.85 39.57)
-		(end 66.85 89.97)
-		(stroke
-			(width 0.15)
-			(type default)
+	(gr_text "A25"
+		(at 83.185 111.76 0)
+		(layer "F.SilkS")
+		(uuid "395293dd-ba39-4bd9-951f-32f1547f6fa4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
 		)
-		(layer "User.2")
-		(uuid "708932de-779c-4a88-a98f-0296514352e0")
 	)
-	(gr_line
-		(start 23.15 89.97)
-		(end 66.85 89.97)
-		(stroke
-			(width 0.15)
-			(type default)
+	(gr_text "A29"
+		(at 83.185 101.6 0)
+		(layer "F.SilkS")
+		(uuid "4b78dc01-c47c-4c23-ada5-0b86b6b0b10b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
 		)
-		(layer "User.2")
-		(uuid "7501eb56-1376-4929-a8f8-fa415166ef4e")
 	)
-	(gr_line
-		(start 66.85 39.57)
-		(end 23.15 39.57)
-		(stroke
-			(width 0.15)
-			(type default)
+	(gr_text "A27"
+		(at 83.185 106.68 0)
+		(layer "F.SilkS")
+		(uuid "4cf43313-e0bd-440c-811d-49cf2abe37cf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
 		)
-		(layer "User.2")
-		(uuid "d590a308-9a78-4108-9b2f-e51c4c010284")
 	)
-	(gr_line
-		(start 23.15 86.97)
-		(end 66.85 86.97)
-		(stroke
-			(width 0.15)
-			(type default)
+	(gr_text "Card\nAddress"
+		(at 80.01 113.665 0)
+		(layer "F.SilkS")
+		(uuid "540236c4-cf70-4aa1-9d07-8a6cd12f1ea0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify top)
 		)
-		(layer "User.3")
-		(uuid "3f969e69-6c27-447f-bb0f-0ecb9cc801a8")
 	)
-	(gr_line
-		(start 23.15 42.57)
-		(end 66.85 42.57)
-		(stroke
-			(width 0.15)
-			(type default)
+	(gr_text "A30"
+		(at 83.185 99.06 0)
+		(layer "F.SilkS")
+		(uuid "5c37d703-e7db-42e9-b24f-0e732b8c8791")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
 		)
-		(layer "User.3")
-		(uuid "44c5f483-8cdb-4863-9151-b4f97b87447d")
 	)
-	(gr_line
-		(start 63.85 39.57)
-		(end 63.85 89.97)
-		(stroke
-			(width 0.15)
-			(type default)
+	(gr_text "A31"
+		(at 83.185 96.52 0)
+		(layer "F.SilkS")
+		(uuid "5ded4158-174e-40c7-9a21-a55bf8e39283")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
 		)
-		(layer "User.3")
-		(uuid "74ca7d4d-9157-4ece-98d2-67ccadffb7c4")
 	)
-	(gr_line
-		(start 66.85 89.97)
-		(end 23.15 39.57)
-		(stroke
-			(width 0.15)
-			(type default)
+	(gr_text "1"
+		(at 78.74 93.98 0)
+		(layer "F.SilkS")
+		(uuid "82094023-9f25-46fa-932e-3cedb38df5b3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
 		)
-		(layer "User.3")
-		(uuid "a56dcdf0-7b99-4cf2-814f-352ae971e921")
 	)
-	(gr_line
-		(start 23.15 89.97)
-		(end 66.85 39.57)
-		(stroke
-			(width 0.15)
-			(type default)
+	(gr_text "A28"
+		(at 83.185 104.14 0)
+		(layer "F.SilkS")
+		(uuid "bf6a59b7-75ff-45b0-922c-0a16bf71e363")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
 		)
-		(layer "User.3")
-		(uuid "d751e56a-613e-43d4-8886-a5e6f029482e")
-	)
-	(gr_line
-		(start 26.15 39.57)
-		(end 26.15 89.97)
-		(stroke
-			(width 0.15)
-			(type default)
-		)
-		(layer "User.3")
-		(uuid "f386f4af-4028-4b77-8a44-1f5f43a01333")
 	)
 	(gr_text "SR[15:15] Reserved\nSR[17:16] ~{CAS}/~{OE} Adjust\nSR[18]    ~{RAS} Timing\nSR[19]    ~{RAS} Pre-charge\nSR[23:20] Reserved\nSR[24]    Trio LPB Mode\nSR[25]    Serial Address\nSR[26]    MMIO Serial\nSR[28:27] ~{WE} Delay"
 		(at 120.65 85.09 0)
@@ -98236,16 +98221,6 @@
 		(uuid "c03ab4e6-6ff5-4f35-b251-b70875b06831")
 		(members "3e4c7cb7-b74c-4cb6-b1f5-d486e1bfb3d9" "b55ae744-9ea0-408e-a500-6ea9ea81631b"
 			"c0794067-5037-4fa8-a184-0f8eb64c48f0"
-		)
-	)
-	(group ""
-		(uuid "03055497-6c4e-4eb5-89e9-ff0cf8aee8af")
-		(members "1f4588c8-13db-436d-9268-01f02a069088" "3f969e69-6c27-447f-bb0f-0ecb9cc801a8"
-			"4199aa02-bd0a-4f9d-9ee8-4bd1605c11e3" "44c5f483-8cdb-4863-9151-b4f97b87447d"
-			"5d5e2638-9819-4c1e-8c54-5f082c90af25" "708932de-779c-4a88-a98f-0296514352e0"
-			"74ca7d4d-9157-4ece-98d2-67ccadffb7c4" "7501eb56-1376-4929-a8f8-fa415166ef4e"
-			"a56dcdf0-7b99-4cf2-814f-352ae971e921" "d590a308-9a78-4108-9b2f-e51c4c010284"
-			"d751e56a-613e-43d4-8886-a5e6f029482e" "f386f4af-4028-4b77-8a44-1f5f43a01333"
 		)
 	)
 	(embedded_fonts no)

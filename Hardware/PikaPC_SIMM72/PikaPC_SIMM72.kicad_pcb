@@ -29770,7 +29770,7 @@
 		(path "/54d9eb5c-7043-47a7-b450-9250370da176")
 		(sheetname "/")
 		(sheetfile "PikaPC_SIMM72.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start 1.38 1.27)
 			(end 1.38 1.38)
@@ -33679,7 +33679,7 @@
 		(path "/c631c9d3-a87b-4634-8786-388164774208")
 		(sheetname "/")
 		(sheetfile "PikaPC_SIMM72.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start 1.38 1.27)
 			(end 1.38 1.38)
@@ -34351,7 +34351,7 @@
 		(path "/53adb8fb-728b-442a-9a83-ccd03b3de471")
 		(sheetname "/")
 		(sheetfile "PikaPC_SIMM72.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start 1.38 1.27)
 			(end 1.38 1.38)
@@ -37281,7 +37281,7 @@
 		(path "/75a464e3-95bc-4862-bd7a-4dcff851c5f4")
 		(sheetname "/")
 		(sheetfile "PikaPC_SIMM72.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start 1.38 1.27)
 			(end 1.38 1.38)
@@ -41348,7 +41348,7 @@
 		(path "/8f5f9fea-0b08-4418-83af-a86d29c4b38c")
 		(sheetname "/")
 		(sheetfile "PikaPC_SIMM72.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start 1.38 1.27)
 			(end 1.38 1.38)
@@ -52810,7 +52810,7 @@
 		(path "/57efd50d-df2a-4eae-80e1-e8b2068a7b8c")
 		(sheetname "/")
 		(sheetfile "PikaPC_SIMM72.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start 1.38 1.27)
 			(end 1.38 1.38)
@@ -53844,7 +53844,7 @@
 		(path "/23abc60e-3e6f-4d62-bd36-787a683c962e")
 		(sheetname "/")
 		(sheetfile "PikaPC_SIMM72.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start 1.38 1.27)
 			(end 1.38 1.38)
