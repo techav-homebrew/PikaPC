@@ -11250,6 +11250,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 119.38 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "74fc14f9-d4c5-4513-b221-86fdedd66956")
 		)
@@ -12784,6 +12793,15 @@
 		)
 		(property "Description" ""
 			(at 104.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 104.14 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14447,7 +14465,7 @@
 				)
 			)
 		)
-		(property "Value" "25M"
+		(property "Value" "16M"
 			(at 116.84 144.78 0)
 			(effects
 				(font
@@ -15702,6 +15720,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 132.08 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 132.08 25.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)

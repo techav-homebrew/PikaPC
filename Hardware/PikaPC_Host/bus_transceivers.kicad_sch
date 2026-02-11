@@ -8773,6 +8773,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 43.18 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f6ffdbee-8880-42d9-9b06-315e24e20076")
 		)
@@ -8902,6 +8911,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 195.58 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 195.58 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9171,6 +9189,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 55.88 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 55.88 25.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10201,6 +10228,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 119.38 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6a21bdb5-14dc-4d15-b8f8-76d29246b7b6")
 		)
@@ -11090,6 +11126,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 132.08 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0337d35d-0c3b-45d7-868e-38272a7d600a")
 		)
@@ -11644,6 +11689,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 208.28 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0d2acf2c-db78-43a9-8377-816007f4ffc0")
 		)
@@ -12151,6 +12205,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 119.38 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7c02a8fa-72a7-4448-9e03-c93d9e0b663c")
 		)
@@ -12213,6 +12276,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 208.28 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 208.28 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12423,6 +12495,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 55.88 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "27617039-a58e-4a53-9c14-cfad6dbcc243")
 		)
@@ -12553,6 +12634,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 195.58 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 195.58 25.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12695,6 +12785,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 43.18 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "557bf19e-b351-43dd-a1b2-d573834d4442")
 		)
@@ -12757,6 +12856,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 132.08 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 132.08 25.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -2289,6 +2289,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "804-39VF0107INHE-T "
+			(at 139.7 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "f6d8c1da-0ded-40e4-ad99-1acaf5fe0f6d")
 		)
@@ -2507,6 +2516,15 @@
 		)
 		(property "Description" ""
 			(at 154.94 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 154.94 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
