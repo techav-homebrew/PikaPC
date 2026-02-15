@@ -6217,6 +6217,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 109.22 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a3bf3649-b006-4311-8ca3-908e598e2be4")
 		)
@@ -6237,9 +6246,9 @@
 		(at 241.3 71.12 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "23abc60e-3e6f-4d62-bd36-787a683c962e")
 		(property "Reference" "IO83"
 			(at 246.38 71.12 90)
@@ -6665,6 +6674,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 109.22 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "24f3e208-4fad-4aa7-8b97-73fcb31253e8")
 		)
@@ -6799,6 +6817,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 109.22 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d3820745-2d51-46f3-8a85-9c241ed18150")
 		)
@@ -6886,9 +6913,9 @@
 		(at 241.3 60.96 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "53adb8fb-728b-442a-9a83-ccd03b3de471")
 		(property "Reference" "IO73"
 			(at 246.38 60.96 90)
@@ -6953,9 +6980,9 @@
 		(at 241.3 63.5 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "54d9eb5c-7043-47a7-b450-9250370da176")
 		(property "Reference" "IO75"
 			(at 246.38 63.5 90)
@@ -7020,9 +7047,9 @@
 		(at 241.3 76.2 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "57efd50d-df2a-4eae-80e1-e8b2068a7b8c")
 		(property "Reference" "IO86"
 			(at 246.38 76.2 90)
@@ -7200,6 +7227,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 109.22 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e8cf3502-4f6d-4a4d-a7d0-2cb64ca8f465")
 		)
@@ -7220,9 +7256,9 @@
 		(at 241.3 68.58 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "75a464e3-95bc-4862-bd7a-4dcff851c5f4")
 		(property "Reference" "IO80"
 			(at 246.38 68.58 90)
@@ -7420,9 +7456,9 @@
 		(at 241.3 66.04 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "8f5f9fea-0b08-4418-83af-a86d29c4b38c")
 		(property "Reference" "IO77"
 			(at 246.38 66.04 90)
@@ -7769,6 +7805,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 109.22 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "75b1710e-57dc-4964-8a3e-e7baafe64e03")
 		)
@@ -7789,9 +7834,9 @@
 		(at 241.3 73.66 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "c631c9d3-a87b-4634-8786-388164774208")
 		(property "Reference" "IO85"
 			(at 246.38 73.66 90)
@@ -7906,6 +7951,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 152.4 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "30960e93-4c10-4d12-b0e1-65536528ff0e")
 		)
@@ -7966,6 +8020,15 @@
 		)
 		(property "Description" ""
 			(at 109.22 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 109.22 68.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8099,6 +8162,15 @@
 		)
 		(property "Description" ""
 			(at 109.22 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 109.22 60.96 90)
 			(effects
 				(font
 					(size 1.27 1.27)

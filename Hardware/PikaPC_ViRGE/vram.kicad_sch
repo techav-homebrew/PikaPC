@@ -12372,6 +12372,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 147.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0929fdce-d1a1-4e33-91b3-b9e42ac9700f")
 		)
@@ -12504,6 +12513,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "196df007-dff6-4d41-8cbd-acc5ef490a79")
 		)
@@ -12564,6 +12582,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 35.56 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12638,6 +12665,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "55a59dd2-b38c-4b30-b621-acc0b3898344")
 		)
@@ -12698,6 +12734,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 127 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12775,6 +12820,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 245.11 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "04c7f1d2-45bc-4c0b-aa4d-10ef42941210")
 		)
@@ -12835,6 +12889,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12974,6 +13037,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7b7c7c3d-09b6-48aa-af26-5cc7694f12ab")
 		)
@@ -13034,6 +13106,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 175.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13108,6 +13189,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bebc8f6c-6ddb-41eb-93c1-65c794c4c18f")
 		)
@@ -13175,6 +13265,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "71f64396-db4d-4b25-b319-d41893319f8f")
 		)
@@ -13235,6 +13334,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 114.3 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13312,6 +13420,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 181.61 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bdeae65f-8b0a-4696-8d65-2302ba713b4f")
 		)
@@ -13372,6 +13489,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 25.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13513,6 +13639,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 157.48 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4bcee7c5-e7f5-4f94-9ed1-adc5a57f23da")
 		)
@@ -13576,6 +13711,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 172.72 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 172.72 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13834,6 +13978,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 30.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "64c0a4e6-c299-4043-b045-0c423eb21c3e")
 		)
@@ -13894,6 +14047,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 38.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14033,6 +14195,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3e63ab50-a692-401b-8a34-2edaf9654e3a")
 		)
@@ -14093,6 +14264,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 167.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14232,6 +14412,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f9f085c1-eb61-422e-9d55-be0d20231523")
 		)
@@ -14292,6 +14481,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 139.7 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14369,6 +14567,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 181.61 104.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5b039f05-2b5e-4544-ad7c-9d0059d220b6")
 		)
@@ -14429,6 +14636,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 157.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14503,6 +14719,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 165.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d459ac91-6707-4049-9f3a-d655852710ef")
 		)
@@ -14570,6 +14795,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "68ebbab3-6976-47c5-b9f0-57c16e8ca059")
 		)
@@ -14630,6 +14864,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14772,6 +15015,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 236.22 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "79bdd155-009a-46a6-8e3d-44a47025fdb6")
 		)
@@ -14832,6 +15084,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 177.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14964,6 +15225,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15106,6 +15376,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 172.72 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "89836ed8-fd24-4d20-86de-3cb79dc4e431")
 		)
@@ -15166,6 +15445,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 60.96 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15240,6 +15528,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "24adbe97-bca0-4049-bc9f-32c841abfcab")
 		)
@@ -15300,6 +15597,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 132.08 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15439,6 +15745,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9776bea4-39d9-47db-beaa-544eaeadd9be")
 		)
@@ -15499,6 +15814,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 66.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15757,6 +16081,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 160.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8fc5983a-3ca4-44ea-97ea-35ace8562732")
 		)
@@ -15882,6 +16215,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 43.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16324,6 +16666,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "135c883e-6f1b-4cf4-8dfe-0e0ad5a863bd")
 		)
@@ -16521,6 +16872,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "285fad75-e329-4a4c-bb6d-20ebbc26b0ab")
 		)
@@ -16653,6 +17013,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "89d6dc72-84cc-45fe-9721-58a8f11c8615")
 		)
@@ -16723,6 +17092,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 172.72 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "aff889e9-8cbe-43df-8f7d-da5eff33abd4")
 		)
@@ -16783,6 +17161,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 129.54 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16922,6 +17309,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "aee4fef2-489c-4d44-9dde-9cd3a8894a36")
 		)
@@ -17054,6 +17450,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 149.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f9148fd7-ab5b-4bdd-b175-c1cb298019f5")
 		)
@@ -17114,6 +17519,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 170.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17256,6 +17670,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 236.22 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1d9e6c1d-0932-4242-9865-4254582de2b7")
 		)
@@ -17326,6 +17749,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 245.11 104.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2c01fc88-9c69-4678-aaa8-fc0cac48eb91")
 		)
@@ -17386,6 +17818,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 182.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17462,6 +17903,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 220.98 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "fd8ec305-310b-4d92-98dc-554927f5853e")
 		)
@@ -17529,6 +17979,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "96516d47-13b9-4db7-99c0-aecbdd74733e")
 		)
@@ -17589,6 +18048,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 180.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17988,6 +18456,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c75f5f68-0392-4fa4-805e-48f6394a0fd3")
 		)
@@ -18120,6 +18597,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6c979d34-5fbb-4287-8d85-1393b5ea8346")
 		)
@@ -18180,6 +18666,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 172.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18254,6 +18749,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 33.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2aa7e34e-6df1-4846-a9c6-06f3dd3a5622")
 		)
@@ -18321,6 +18825,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 152.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d2547fd9-068b-4026-9e4e-d717e7be7b46")
 		)
@@ -18381,6 +18894,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18458,6 +18980,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 236.22 22.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f349779a-40ab-4c81-aeec-6d065549d06b")
 		)
@@ -18520,6 +19051,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 157.48 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 157.48 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18662,6 +19202,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 172.72 22.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c0c151da-071b-4f1f-ad98-83b511eb9d87")
 		)
@@ -18724,6 +19273,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 220.98 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 220.98 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18928,6 +19486,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 88.9 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1840698a-7270-4bc3-b1ae-4f4857ddc9c0")
 		)
@@ -19053,6 +19620,15 @@
 		)
 		(property "Description" ""
 			(at 91.44 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 91.44 116.84 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19188,6 +19764,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 236.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 236.22 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)

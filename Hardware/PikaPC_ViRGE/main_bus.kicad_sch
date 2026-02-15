@@ -15950,6 +15950,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 88.9 175.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d6f6f11d-09ca-49aa-b874-098e2ceca891")
 		)
@@ -16740,6 +16749,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 88.9 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6b6beeff-7fea-4585-a2d5-ea9f3ee1bcfe")
 		)
@@ -16867,6 +16885,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 88.9 180.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18971,6 +18998,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 88.9 172.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "51dc6340-c224-44eb-9a1d-318ded767ce7")
 		)
@@ -19302,6 +19338,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 132.08 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 132.08 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20112,6 +20157,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 88.9 165.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "19f6a70e-0daa-413b-b23a-bab8a909cd01")
 		)
@@ -20857,6 +20911,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 88.9 167.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21739,6 +21802,15 @@
 		)
 		(property "Description" ""
 			(at 88.9 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 88.9 177.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)

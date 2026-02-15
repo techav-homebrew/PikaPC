@@ -5929,16 +5929,16 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "RSET Target: 147R"
+	(text "R38 is ideal value for RSET\nR16 & R17 are alternates \nthat approximate 147Ω"
 		(exclude_from_sim no)
-		(at 64.77 105.41 0)
+		(at 85.09 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
-		(uuid "aabedcc1-48a5-4398-938d-15dcb6a4ab44")
+		(uuid "f96544ad-f20c-4b11-b94f-8715744e88dd")
 	)
 	(junction
 		(at 96.52 71.12)
@@ -6420,7 +6420,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 101.6) (xy 83.82 101.6)
+			(xy 73.66 101.6) (xy 83.82 101.6)
 		)
 		(stroke
 			(width 0)
@@ -6527,6 +6527,16 @@
 			(type default)
 		)
 		(uuid "48308ed6-ded3-41af-a5db-a180d7519fe6")
+	)
+	(wire
+		(pts
+			(xy 73.66 106.68) (xy 83.82 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "490e9a36-96ca-4324-af36-b7b949260d77")
 	)
 	(wire
 		(pts
@@ -6710,7 +6720,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 101.6) (xy 66.04 101.6)
+			(xy 63.5 101.6) (xy 68.58 101.6)
 		)
 		(stroke
 			(width 0)
@@ -6740,7 +6750,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 104.14) (xy 66.04 104.14)
+			(xy 63.5 104.14) (xy 68.58 104.14)
 		)
 		(stroke
 			(width 0)
@@ -7250,6 +7260,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 106.68) (xy 68.58 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd7cddce-2983-496d-9cd0-1c68d4adb18b")
+	)
+	(wire
+		(pts
 			(xy 93.98 58.42) (xy 96.52 58.42)
 		)
 		(stroke
@@ -7370,13 +7390,23 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 104.14) (xy 83.82 104.14)
+			(xy 73.66 104.14) (xy 83.82 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "feff8865-c30d-4df0-abb9-699ec42dbcd9")
+	)
+	(label "RSET"
+		(at 83.82 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3ab5cdff-bb84-4241-8fac-df14c11d107c")
 	)
 	(label "RSET"
 		(at 45.72 86.36 0)
@@ -7487,13 +7517,13 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 68.58 104.14 270)
+		(at 71.12 104.14 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "062f2e2a-04eb-41a0-9c24-f00bcac89f63")
 		(property "Reference" "R17"
 			(at 66.04 102.87 90)
@@ -7504,7 +7534,7 @@
 			)
 		)
 		(property "Value" "470R"
-			(at 72.39 102.87 90)
+			(at 76.2 102.87 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7512,7 +7542,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
-			(at 68.58 104.14 0)
+			(at 71.12 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7521,7 +7551,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 104.14 0)
+			(at 71.12 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7530,7 +7560,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 104.14 0)
+			(at 71.12 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7875,6 +7905,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 220.98 30.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b483ea20-2cbf-4087-a1c0-ae125f5d5c5f")
 		)
@@ -8005,6 +8044,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 101.6 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 101.6 68.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8214,6 +8262,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 101.6 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b94dcaa1-e10a-474d-a3c8-4d0b2b0b81e7")
 		)
@@ -8411,6 +8468,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 127 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 127 45.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9444,6 +9510,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 101.6 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5710fd79-c584-4102-ba4f-d9a8b9b889f8")
 		)
@@ -10309,6 +10384,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 101.6 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6c5ebcaf-af8d-497f-92d7-1d6a190fa6f9")
 		)
@@ -10645,6 +10729,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 111.76 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ec431cbe-6951-4dba-b2f5-fb518aae26eb")
 		)
@@ -10708,6 +10801,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 220.98 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 220.98 35.56 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10843,6 +10945,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 210.82 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 210.82 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11053,6 +11164,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 233.68 30.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "583d9975-5dc3-4825-ba3b-d4ddd9d8fef8")
 		)
@@ -11188,6 +11308,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 101.6 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1883a4e0-a8b0-44eb-8792-bffe49128bfa")
 		)
@@ -11198,6 +11327,82 @@
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/9b83794d-ac83-444e-b108-8beac34e7e90"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 71.12 106.68 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "980960f3-9bb7-4937-8ae0-9b654888c256")
+		(property "Reference" "R38"
+			(at 66.04 105.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "147R"
+			(at 76.2 105.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 71.12 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 71.12 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-AC0805FR-07147RL "
+			(at 71.12 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8b3e7af3-f649-404e-8960-3cebe1f3a389")
+		)
+		(pin "2"
+			(uuid "1022e6c1-4e33-46c5-a4ef-efce365ff2c9")
+		)
+		(instances
+			(project "PikaPC_ViRGE"
+				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/9b83794d-ac83-444e-b108-8beac34e7e90"
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -11248,6 +11453,15 @@
 		)
 		(property "Description" "Inductor"
 			(at 156.21 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "708-RMCF1210ZT0R00 "
+			(at 156.21 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11390,6 +11604,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 111.76 35.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4d77f834-f5c8-49b6-93a4-d7ffa1abbc96")
 		)
@@ -11453,6 +11676,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 111.76 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 111.76 30.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11858,6 +12090,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 132.08 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "754cca14-6503-4cf5-8e88-fec933675e61")
 		)
@@ -12062,6 +12303,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 101.6 33.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "40ed691a-3d95-4b07-a9c4-19c87db54c97")
 		)
@@ -12125,6 +12375,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 111.76 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 111.76 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12202,6 +12461,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 101.6 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4b4ea70d-4ea2-4ae8-a5cb-1c9ad6489f77")
 		)
@@ -12212,6 +12480,73 @@
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/9b83794d-ac83-444e-b108-8beac34e7e90"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDA")
+		(at 63.5 106.68 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c40356c3-b347-4c9c-8f83-f9304af2e45f")
+		(property "Reference" "#PWR035"
+			(at 57.15 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 60.3251 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.5 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 63.5 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aaacae3d-1713-4ffa-b981-53bbd0fb7dc6")
+		)
+		(instances
+			(project "PikaPC_ViRGE"
+				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/9b83794d-ac83-444e-b108-8beac34e7e90"
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -12265,6 +12600,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 43.18 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 43.18 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12413,6 +12757,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 111.76 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 111.76 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12571,13 +12924,13 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 68.58 101.6 270)
+		(at 71.12 101.6 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "d01cc0cd-0443-495c-b1f9-d2fad84871e0")
 		(property "Reference" "R16"
 			(at 66.04 100.33 90)
@@ -12588,7 +12941,7 @@
 			)
 		)
 		(property "Value" "220R"
-			(at 72.39 100.33 90)
+			(at 76.2 100.33 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12596,7 +12949,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
-			(at 68.58 101.6 0)
+			(at 71.12 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12605,7 +12958,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 101.6 0)
+			(at 71.12 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12614,7 +12967,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 101.6 0)
+			(at 71.12 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12822,6 +13175,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "708-RMCF1210ZT0R00 "
+			(at 156.21 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "dae10943-0f1c-4171-bd64-e1cba46611d0")
 		)
@@ -13019,6 +13381,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 210.82 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 210.82 33.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)

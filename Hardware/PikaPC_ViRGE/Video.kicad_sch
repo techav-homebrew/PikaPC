@@ -1293,7 +1293,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:FerriteBead"
+		(symbol "Device:FerriteBead_Small"
 			(pin_numbers
 				(hide yes)
 			)
@@ -1304,19 +1304,21 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "FB"
-				(at -3.81 0.635 90)
+				(at 1.905 1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "FerriteBead"
-				(at 3.81 0 90)
+			(property "Value" "FerriteBead_Small"
+				(at 1.905 -1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -1337,7 +1339,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Ferrite bead"
+			(property "Description" "Ferrite bead, small symbol"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1364,10 +1366,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "FerriteBead_0_1"
+			(symbol "FerriteBead_Small_0_1"
 				(polyline
 					(pts
-						(xy -2.7686 0.4064) (xy -1.7018 2.2606) (xy 2.7686 -0.3048) (xy 1.6764 -2.159) (xy -2.7686 0.4064)
+						(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
 					)
 					(stroke
 						(width 0)
@@ -1379,7 +1381,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 1.27) (xy 0 1.2954)
+						(xy 0 0.889) (xy 0 1.2954)
 					)
 					(stroke
 						(width 0)
@@ -1391,7 +1393,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -1.27) (xy 0 -1.2192)
+						(xy 0 -1.27) (xy 0 -0.7874)
 					)
 					(stroke
 						(width 0)
@@ -1402,10 +1404,10 @@
 					)
 				)
 			)
-			(symbol "FerriteBead_1_1"
+			(symbol "FerriteBead_Small_1_1"
 				(pin passive line
-					(at 0 3.81 270)
-					(length 2.54)
+					(at 0 2.54 270)
+					(length 1.27)
 					(name "~"
 						(effects
 							(font
@@ -1422,8 +1424,8 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.54)
+					(at 0 -2.54 90)
+					(length 1.27)
 					(name "~"
 						(effects
 							(font
@@ -6421,7 +6423,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 68.58) (xy 71.12 68.58)
+			(xy 53.34 68.58) (xy 66.04 68.58)
 		)
 		(stroke
 			(width 0)
@@ -6441,7 +6443,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 58.42) (xy 71.12 58.42)
+			(xy 53.34 58.42) (xy 66.04 58.42)
 		)
 		(stroke
 			(width 0)
@@ -6471,7 +6473,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 63.5) (xy 45.72 63.5)
+			(xy 35.56 63.5) (xy 48.26 63.5)
 		)
 		(stroke
 			(width 0)
@@ -6491,7 +6493,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 63.5) (xy 71.12 63.5)
+			(xy 53.34 63.5) (xy 66.04 63.5)
 		)
 		(stroke
 			(width 0)
@@ -6671,7 +6673,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 68.58) (xy 45.72 68.58)
+			(xy 35.56 68.58) (xy 48.26 68.58)
 		)
 		(stroke
 			(width 0)
@@ -6681,7 +6683,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 58.42) (xy 45.72 58.42)
+			(xy 35.56 58.42) (xy 48.26 58.42)
 		)
 		(stroke
 			(width 0)
@@ -7010,7 +7012,7 @@
 		(uuid "2cb508f4-a899-4c60-8f29-44b2846187be")
 	)
 	(label "Vid-G-Out"
-		(at 71.12 63.5 180)
+		(at 66.04 63.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7020,7 +7022,7 @@
 		(uuid "2e436ee7-bb6b-4440-92d0-8641efa6f292")
 	)
 	(label "Vid-G"
-		(at 33.02 63.5 0)
+		(at 35.56 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7080,7 +7082,7 @@
 		(uuid "5c4aa3b0-102b-4115-b710-ff617bdfec75")
 	)
 	(label "Vid-B"
-		(at 33.02 68.58 0)
+		(at 35.56 68.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7160,7 +7162,7 @@
 		(uuid "8c409188-fa72-4fbe-9a29-daea9a2f2e24")
 	)
 	(label "Vid-R"
-		(at 33.02 58.42 0)
+		(at 35.56 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7250,7 +7252,7 @@
 		(uuid "dc5eefb3-345a-4217-b296-3d95dc217459")
 	)
 	(label "Vid-B-Out"
-		(at 71.12 68.58 180)
+		(at 66.04 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7260,7 +7262,7 @@
 		(uuid "e3debf3b-08a9-46cb-ad8e-20ce86ce4aca")
 	)
 	(label "Vid-R-Out"
-		(at 71.12 58.42 180)
+		(at 66.04 58.42 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7334,6 +7336,15 @@
 		)
 		(property "Description" ""
 			(at 218.44 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 218.44 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8115,8 +8126,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:FerriteBead")
-		(at 49.53 58.42 270)
+		(lib_id "Device:FerriteBead_Small")
+		(at 50.8 58.42 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8124,7 +8135,7 @@
 		(dnp no)
 		(uuid "22afb2b9-d7e7-4e4b-91f2-88cf71cdbeab")
 		(property "Reference" "FB1"
-			(at 46.99 57.15 90)
+			(at 48.26 57.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8132,15 +8143,15 @@
 			)
 		)
 		(property "Value" "FerriteBead"
-			(at 55.88 59.69 90)
+			(at 57.15 59.69 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P5.08mm_Vertical_Fastron_MICC"
-			(at 49.53 56.642 90)
+		(property "Footprint" "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P2.54mm_Vertical_Vishay_IM-1"
+			(at 50.8 56.642 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8149,7 +8160,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 49.53 58.42 0)
+			(at 50.8 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8157,8 +8168,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Ferrite bead"
-			(at 49.53 58.42 0)
+		(property "Description" "Ferrite bead, small symbol"
+			(at 50.8 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8361,6 +8372,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 147.32 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 147.32 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8573,6 +8593,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 218.44 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7e0ffd2d-a1c2-45b8-870d-6e498d82fdf4")
 		)
@@ -8655,8 +8684,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:FerriteBead")
-		(at 49.53 63.5 270)
+		(lib_id "Device:FerriteBead_Small")
+		(at 50.8 63.5 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8664,7 +8693,7 @@
 		(dnp no)
 		(uuid "4a603ea5-dc81-4af6-9e8e-c91fe19feae6")
 		(property "Reference" "FB2"
-			(at 46.99 62.23 90)
+			(at 48.26 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8672,15 +8701,15 @@
 			)
 		)
 		(property "Value" "FerriteBead"
-			(at 55.88 64.77 90)
+			(at 57.15 64.77 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P5.08mm_Vertical_Fastron_MICC"
-			(at 49.53 61.722 90)
+		(property "Footprint" "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P2.54mm_Vertical_Vishay_IM-1"
+			(at 50.8 61.722 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8689,7 +8718,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 49.53 63.5 0)
+			(at 50.8 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8697,8 +8726,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Ferrite bead"
-			(at 49.53 63.5 0)
+		(property "Description" "Ferrite bead, small symbol"
+			(at 50.8 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8766,6 +8795,15 @@
 		)
 		(property "Description" ""
 			(at 218.44 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 218.44 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8900,6 +8938,15 @@
 		)
 		(property "Description" ""
 			(at 85.09 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805FR-1375RL"
+			(at 85.09 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9108,6 +9155,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 218.44 104.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d9f4f3ff-299d-4801-ad5b-15f81c9542c5")
 		)
@@ -9168,6 +9224,15 @@
 		)
 		(property "Description" ""
 			(at 82.55 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "603-RC0805FR-1375RL"
+			(at 82.55 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9322,8 +9387,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:FerriteBead")
-		(at 49.53 68.58 270)
+		(lib_id "Device:FerriteBead_Small")
+		(at 50.8 68.58 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9331,7 +9396,7 @@
 		(dnp no)
 		(uuid "9e01ba82-27db-43a2-a0f5-0eff73dcc1b5")
 		(property "Reference" "FB3"
-			(at 46.99 67.31 90)
+			(at 48.26 67.31 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9339,15 +9404,15 @@
 			)
 		)
 		(property "Value" "FerriteBead"
-			(at 55.88 69.85 90)
+			(at 57.15 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P5.08mm_Vertical_Fastron_MICC"
-			(at 49.53 66.802 90)
+		(property "Footprint" "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P2.54mm_Vertical_Vishay_IM-1"
+			(at 50.8 66.802 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9356,7 +9421,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 49.53 68.58 0)
+			(at 50.8 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9364,8 +9429,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Ferrite bead"
-			(at 49.53 68.58 0)
+		(property "Description" "Ferrite bead, small symbol"
+			(at 50.8 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9678,7 +9743,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Dsub:DSUB-15-HD_Socket_Horizontal_P2.29x1.90mm_EdgePinOffset3.03mm_Housed_MountingHolesOffset4.94mm"
+		(property "Footprint" "PikaPC_ViRGE:DE15 (EDAC 634-015)"
 			(at 34.29 114.3 0)
 			(effects
 				(font
@@ -9697,6 +9762,15 @@
 			)
 		)
 		(property "Description" "15-pin D-SUB connector, socket (female), High density (3 columns), Triple Row, Generic, VGA-connector, Mounting Hole"
+			(at 58.42 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "587-634-015-263-032 "
 			(at 58.42 124.46 0)
 			(effects
 				(font
@@ -10658,7 +10732,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f34dce91-8886-4c0f-a14a-e05258b9e1dc")
 		(property "Reference" "J3"
@@ -10878,6 +10952,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "603-RC0805FR-1375RL"
+			(at 87.63 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9bb9b891-45cd-4b7a-9465-78822640a76f")
 		)
@@ -10938,6 +11021,15 @@
 		)
 		(property "Description" ""
 			(at 218.44 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 218.44 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)

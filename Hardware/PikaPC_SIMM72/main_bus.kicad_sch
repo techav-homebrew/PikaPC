@@ -9655,6 +9655,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 55.88 152.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "42650c47-01f1-4317-9f8e-70eaa28a16f1")
 		)
@@ -10124,6 +10133,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 106.68 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "99ebec92-d8f2-4516-bc3a-b8612f04727f")
 		)
@@ -10449,6 +10467,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 170.18 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "e9bdd7f9-45d3-41e3-8601-7fd091eb814e")
 		)
@@ -10700,6 +10727,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 119.38 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 119.38 152.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11311,6 +11347,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 233.68 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "480b4d20-4422-4a20-bc11-94303eb254ed")
 		)
@@ -11695,6 +11740,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 246.38 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 246.38 152.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12921,6 +12975,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 43.18 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "fa17f985-659c-44dd-8d21-77df649a12c6")
 		)
@@ -13389,6 +13452,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 182.88 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 182.88 152.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)

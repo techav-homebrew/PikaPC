@@ -1302,6 +1302,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "These address latches probably\naren't necessary, because ViRGE\nis supposed to latch the address\nbus one clock after ~{ADS}. "
+		(exclude_from_sim no)
+		(at 88.9 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2b224419-1163-450d-be50-1975feefd3f8")
+	)
 	(bus_entry
 		(at 208.28 78.74)
 		(size 2.54 2.54)
@@ -6807,6 +6818,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 58.42 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0f7fa7d6-973a-4d7e-bfb8-f134d34b36a7")
 		)
@@ -7001,6 +7021,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 185.42 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 185.42 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7342,6 +7371,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 236.22 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "99ebec92-d8f2-4516-bc3a-b8612f04727f")
 		)
@@ -7532,6 +7570,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 172.72 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "e9bdd7f9-45d3-41e3-8601-7fd091eb814e")
 		)
@@ -7649,6 +7696,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 58.42 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 58.42 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7784,6 +7840,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 248.92 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 248.92 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8125,6 +8190,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 236.22 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "480b4d20-4422-4a20-bc11-94303eb254ed")
 		)
@@ -8391,71 +8465,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 109.22 71.12 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "aae61b9a-346c-4d59-9353-75f1bbccbc8b")
-		(property "Reference" "#PWR0147"
-			(at 109.22 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 109.22 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 109.22 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 109.22 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 109.22 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "627ecb50-4337-483a-9157-88896517b99c")
-		)
-		(instances
-			(project "PikaPC_ViRGE"
-				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/b87e7203-ea3a-46a7-9e06-4b89d81b9033/5b9289f9-33c5-4aee-a588-cd93e23243f9"
-					(reference "#PWR0147")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small_US")
 		(at 248.92 106.68 0)
 		(mirror y)
@@ -8503,6 +8512,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 248.92 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 248.92 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8704,6 +8722,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 121.92 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 121.92 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9308,6 +9335,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 172.72 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "fa17f985-659c-44dd-8d21-77df649a12c6")
 		)
@@ -9490,6 +9526,15 @@
 		)
 		(property "Description" "capacitor, small US symbol"
 			(at 185.42 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 185.42 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)

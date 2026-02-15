@@ -90,9 +90,9 @@
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
 			(disableapertmacros no)
-			(usegerberextensions no)
-			(usegerberattributes yes)
-			(usegerberadvancedattributes yes)
+			(usegerberextensions yes)
+			(usegerberattributes no)
+			(usegerberadvancedattributes no)
 			(creategerberjobfile yes)
 			(dashed_line_dash_ratio 12.000000)
 			(dashed_line_gap_ratio 3.000000)
@@ -121,9 +121,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "Gerbers/")
 		)
 	)
 	(net 0 "")
@@ -11837,7 +11837,7 @@
 			)
 		)
 		(property "Value" "ATF1508AS"
-			(at 0 15.24 0)
+			(at 18.125 -4.445 0)
 			(layer "F.SilkS")
 			(uuid "0248e460-fa52-4136-82c2-8074ad303145")
 			(effects
@@ -11845,6 +11845,7 @@
 					(size 1 1)
 					(thickness 0.15)
 				)
+				(justify left)
 			)
 		)
 		(property "Datasheet" ""
@@ -15235,7 +15236,7 @@
 		(descr "SOIC, 20 Pin (JEDEC MS-013AC, https://www.analog.com/media/en/package-pcb-resources/package/233848rw_20.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
 		(property "Reference" "U1"
-			(at 0 -7.35 90)
+			(at -4.445 -7.62 90)
 			(layer "F.SilkS")
 			(uuid "c9ace7a8-2208-49ca-a9e0-a7e0c75d4508")
 			(effects
@@ -15246,7 +15247,7 @@
 			)
 		)
 		(property "Value" "74F521"
-			(at 0 0 180)
+			(at 6.35 -5.715 180)
 			(layer "F.SilkS")
 			(uuid "ae52b762-225a-4503-a87e-cef02cea1673")
 			(effects
@@ -15254,6 +15255,7 @@
 					(size 1 1)
 					(thickness 0.15)
 				)
+				(justify right)
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd54hc688.pdf"
@@ -22231,7 +22233,7 @@
 		(descr "SOIC, 20 Pin (JEDEC MS-013AC, https://www.analog.com/media/en/package-pcb-resources/package/233848rw_20.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
 		(property "Reference" "U4"
-			(at 0 -7.35 90)
+			(at -4.445 -7.62 90)
 			(layer "F.SilkS")
 			(uuid "17b9e4c1-eba1-41b6-ac23-448246c7cd5b")
 			(effects
@@ -22242,7 +22244,7 @@
 			)
 		)
 		(property "Value" "74FCT2245"
-			(at 0 0 180)
+			(at 6.35 -5.715 180)
 			(layer "F.SilkS")
 			(uuid "163868be-aeb5-43ae-8cb9-7f73bcb40148")
 			(effects
@@ -22250,6 +22252,7 @@
 					(size 1 1)
 					(thickness 0.15)
 				)
+				(justify right)
 			)
 		)
 		(property "Datasheet" ""
@@ -22272,6 +22275,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7ca6b58d-df01-488e-9515-53521bb250f8")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -23842,7 +23858,7 @@
 		(descr "SOIC, 20 Pin (JEDEC MS-013AC, https://www.analog.com/media/en/package-pcb-resources/package/233848rw_20.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
 		(property "Reference" "U5"
-			(at 0 -7.35 90)
+			(at -4.445 -7.62 90)
 			(layer "F.SilkS")
 			(uuid "44f46cb5-f962-466a-909e-75e2cfd2643a")
 			(effects
@@ -23853,7 +23869,7 @@
 			)
 		)
 		(property "Value" "74FCT2245"
-			(at 0 0 180)
+			(at 6.35 -5.715 180)
 			(layer "F.SilkS")
 			(uuid "4be11a03-39c0-4462-9ce5-7add9754464c")
 			(effects
@@ -23861,6 +23877,7 @@
 					(size 1 1)
 					(thickness 0.15)
 				)
+				(justify right)
 			)
 		)
 		(property "Datasheet" ""
@@ -23883,6 +23900,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7e9f59ab-aae4-4ba0-9cf4-d57646247dc4")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -32807,7 +32837,7 @@
 		(descr "SOIC, 20 Pin (JEDEC MS-013AC, https://www.analog.com/media/en/package-pcb-resources/package/233848rw_20.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
 		(property "Reference" "U3"
-			(at 0 -7.35 90)
+			(at -4.445 -7.62 90)
 			(layer "F.SilkS")
 			(uuid "55e4c5e1-befc-4457-9ac1-1776ebdef311")
 			(effects
@@ -32818,7 +32848,7 @@
 			)
 		)
 		(property "Value" "74FCT2245"
-			(at 0 0 180)
+			(at 6.35 -5.715 180)
 			(layer "F.SilkS")
 			(uuid "f2b22c5a-8734-4e94-b3ab-fa32ba2735db")
 			(effects
@@ -32826,6 +32856,7 @@
 					(size 1 1)
 					(thickness 0.15)
 				)
+				(justify right)
 			)
 		)
 		(property "Datasheet" ""
@@ -32848,6 +32879,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "26f36e85-4121-4d21-80e6-26b80e0fdfb0")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -37632,7 +37676,7 @@
 		(descr "SOIC, 20 Pin (JEDEC MS-013AC, https://www.analog.com/media/en/package-pcb-resources/package/233848rw_20.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
 		(property "Reference" "U6"
-			(at 0 -7.35 90)
+			(at -4.445 -7.62 90)
 			(layer "F.SilkS")
 			(uuid "f4c6d5eb-9fef-4858-bab4-7548945ead44")
 			(effects
@@ -37643,7 +37687,7 @@
 			)
 		)
 		(property "Value" "74FCT2245"
-			(at 0 0 180)
+			(at 6.35 -5.715 180)
 			(layer "F.SilkS")
 			(uuid "d98bb6de-32c0-4afb-ad86-de2a3c4e50b7")
 			(effects
@@ -37651,6 +37695,7 @@
 					(size 1 1)
 					(thickness 0.15)
 				)
+				(justify right)
 			)
 		)
 		(property "Datasheet" ""
@@ -37673,6 +37718,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Mouser" "595-CY74FCT2245TSOCT "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eb30e467-ce50-4328-ae4d-fc76ec7162cf")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -56739,6 +56797,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1bfbbe88-aa38-4adb-b255-96ac034bc01b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/fa4d3595-80ff-4fff-94c1-18b58cc8f4d2/ae74947b-0957-4cdb-ae6c-e841c4b62cfa")
 		(sheetname "/Main Bus/")
@@ -56938,6 +57010,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "bd305306-a0df-4634-8616-e4b3aa13d5c7")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -57147,6 +57233,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6fd51d36-2611-4b76-bf41-459d81bcf5f2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/dd4345b6-4f8f-4dfb-bd8e-0cbdb504509a")
 		(sheetname "/SIMM Sockets/")
@@ -57346,6 +57446,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b9d2b45d-8435-4ff6-af6d-c6df7052c033")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -57555,6 +57669,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3826cebc-869e-48a8-9342-f68b54f3d9be")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/223e67b0-4b0c-49a0-9661-3842b134a3c9")
 		(sheetname "/")
@@ -57754,6 +57882,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "25b13285-0708-4b73-988b-a0090d8ce148")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -57963,6 +58105,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "282eb64d-fb31-4b3d-aead-ddf30071e640")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/a52e0d92-28f0-44e5-9a7b-954b7e1c5224")
 		(sheetname "/SIMM Sockets/")
@@ -58162,6 +58318,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "501bcbb9-6bde-4336-bd1c-6c064f737a60")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -58371,6 +58541,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1de1506d-6754-4b36-955a-431f89cb02eb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/f08f441e-9334-4ce3-a8e8-87d19a6e6497")
 		(sheetname "/SIMM Sockets/")
@@ -58570,6 +58754,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "60c62f1e-cdcc-4f11-883b-ffacd06d78d5")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -58779,6 +58977,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0159aa25-03d3-47b3-a7c0-8582d0f7d32c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/558841ab-db0b-42d0-a656-5b610189cc46")
 		(sheetname "/SIMM Sockets/")
@@ -58978,6 +59190,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "269b7080-6278-4c72-8328-201f60e50404")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -59187,6 +59413,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "437f2ee3-325c-40a6-bb81-a03ff46b18ef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/385e84a3-1b92-4298-9907-7a282f3b3ca6")
 		(sheetname "/")
@@ -59386,6 +59626,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "187463d6-303f-4bb7-8b97-0aa2ef615978")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -59595,6 +59849,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fc03fa5a-5e82-4257-9681-99ed952568a5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/13af3394-b5f5-4f17-9e81-2767beca1063")
 		(sheetname "/SIMM Sockets/")
@@ -59794,6 +60062,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fccaac30-d0ec-4880-9c87-7453d90aecd7")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -60003,6 +60285,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7d165b5f-a259-445e-b749-a830f06d1658")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/e211233b-31b2-441f-a053-cd3017ed7bc7")
 		(sheetname "/SIMM Sockets/")
@@ -60202,6 +60498,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0512bfc4-402b-4b69-9bcf-1f6768fc5ea5")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -60411,6 +60721,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "49ad5e36-136d-4f2d-9e6b-db875b7fdf5d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/ec5e99d0-494d-4309-af6d-3877708042b4")
 		(sheetname "/SIMM Sockets/")
@@ -60610,6 +60934,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "56e7d311-339b-4a42-ace1-2389ba97c7dd")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -60819,6 +61157,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "31baa31e-fb50-4ca3-8636-e62d16d2a7a6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/ae4a3791-8388-4d03-adb9-bd544b7be441")
 		(sheetname "/SIMM Sockets/")
@@ -61018,6 +61370,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0ae759ac-9542-429d-9fa9-e3aaa95dbcb0")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -61227,6 +61593,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9d70bc07-003f-40a0-85a0-963bae1d3698")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/e98c8944-8986-4af0-af11-a74a21d7d7de")
 		(sheetname "/")
@@ -61426,6 +61806,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6bf800ac-7c97-486b-97d6-765c0b993fd9")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -61635,6 +62029,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9c98a3e9-cb7e-4def-b9b7-ba771618bfee")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/728e453d-aa2b-4ea5-8e81-1a0aeccd7721")
 		(sheetname "/SIMM Sockets/")
@@ -61834,6 +62242,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ec767689-af3a-4f2e-8e85-b0d75ae1c881")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -62043,6 +62465,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7d02f433-2894-476a-9b28-0c4107400aee")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/eb5bd292-50ce-44a6-9c8d-fff544de8cfc")
 		(sheetname "/SIMM Sockets/")
@@ -62242,6 +62678,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0636fab5-438f-46a6-abca-58c8bcb01773")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -62451,6 +62901,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c801e938-8b2b-4b60-afd7-cb32dc393056")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/b5c1b27d-1eb2-47ee-a586-653012342cd0/f1cf0791-3e0f-4676-a49d-a674ab482c5e")
 		(sheetname "/Power/")
@@ -62650,6 +63114,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "12215942-7921-4840-aa68-ed81ba25be5b")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -62859,6 +63337,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d716b8a0-f829-419b-a901-6f424720aadf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/63f49dda-72c3-40ed-bbc6-bf34e7519fc1")
 		(sheetname "/SIMM Sockets/")
@@ -63058,6 +63550,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e82dfc77-a6a8-4031-995f-a8cb4ef98dde")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -63267,6 +63773,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2225a987-1b19-4d7c-916d-dfe53c36f7d6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/9236f8fc-40b6-4183-ae34-3bef43b2f06c")
 		(sheetname "/SIMM Sockets/")
@@ -63466,6 +63986,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "398870f1-d179-4ba7-81cf-5fa7553de20f")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -63675,6 +64209,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "efaafce4-3779-445a-ad1d-a59052d51cb9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/b5c1b27d-1eb2-47ee-a586-653012342cd0/8d4bc37b-a0a1-4fda-8959-1b3c3332317c")
 		(sheetname "/Power/")
@@ -63874,6 +64422,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "60b5fdcd-3bca-4da9-b661-cfa007f3e831")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -64083,6 +64645,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e42834a1-1877-4100-9169-88819a7685d9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/fa4d3595-80ff-4fff-94c1-18b58cc8f4d2/86d55b1d-8fea-4449-a7a2-ef020820220f")
 		(sheetname "/Main Bus/")
@@ -64282,6 +64858,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "31de7d43-d265-49b8-91f1-db19ae0c0279")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -64491,6 +65081,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "52646db6-3527-4dc4-bafd-2b96ec4dfbb5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/b5c1b27d-1eb2-47ee-a586-653012342cd0/252f4965-aab7-47d8-b501-a9c440dd6b4e")
 		(sheetname "/Power/")
@@ -64690,6 +65294,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1cf2c272-6c35-4685-894f-b9b21509a5df")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -64899,6 +65517,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e1121603-d626-4bcf-a9ef-3e50ef3f745a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/cc51fedd-9a2d-4e82-a0b3-fdc31733d9e9")
 		(sheetname "/SIMM Sockets/")
@@ -65098,6 +65730,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "303-0805W8J0472T5E"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "988ddacd-2cc4-456a-b19c-09a86a786f11")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -65307,6 +65953,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "920c1f93-a50f-4b01-8703-be90694d8b82")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/e47b5b2f-ad55-4f39-9224-3d3c11908e26")
 		(sheetname "/")
@@ -65506,6 +66166,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ca473c3d-abcc-431e-ab38-b4588c2cd0d0")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -65715,6 +66389,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "187-CL21B105KOFNNNG "
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e1fbdb17-e061-468c-bce5-cb30f5812896")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/b5c1b27d-1eb2-47ee-a586-653012342cd0/b953a6cb-7bbd-4f43-8211-4586fc0950b2")
 		(sheetname "/Power/")
@@ -65914,6 +66602,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "698c873e-031e-464b-aeac-3494fcfc1cc1")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -66123,6 +66825,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser" "603-RC0805JR-1033RL "
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "37d66ea4-6d86-4d32-9dc5-042f37c86d0d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/fcaed039-e13a-421a-b55f-f77e5d1e949e/71cba693-4ab7-4cff-840d-56b29ef4441d")
 		(sheetname "/SIMM Sockets/")
@@ -66322,6 +67038,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Mouser" "187-CL21B104KACNNNC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2800e19f-b4ff-4297-8ce3-5198f571e73a")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -68118,6 +68848,18 @@
 				(thickness 0.15)
 			)
 			(justify right)
+		)
+	)
+	(gr_text "72-PIN SIMM"
+		(at 177.165 87.63 0)
+		(layer "F.SilkS")
+		(uuid "5ae77828-00a3-474f-8fcc-ba5132ca5cf6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify right top)
 		)
 	)
 	(gr_text "Card Address"
