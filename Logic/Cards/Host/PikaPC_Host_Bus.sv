@@ -41,6 +41,17 @@ parameter
     sCEND   =   4;  // bus cycle end
 reg [2:0] busState;
 wire [2:0] busNext;
+wire activeCycle;
+
+always_comb begin
+    if(!cpuCSn[2] || !cpuCSn[3] || ! cpuCSn[4] || !cpuCSn[5] 
+        || !cpuCSn[6] || !cpuCSn[7])
+    begin
+        activeCycle = 1'b1;
+    end else begin
+        activeCycle = 1'b0;
+    end
+end
 
 always_comb begin
     case(busState)
@@ -58,7 +69,7 @@ always_comb begin
             busNext = sWAIT;
         end
         sWAIT: begin
-            if(!busACKn) busNext = sWAIT;
+            if(busACKn) busNext = sWAIT;
             else busNext = sTERM;
         end
         sTERM: begin
@@ -76,6 +87,7 @@ end
 
 always @(negedge busClk or negedge busRESETn) begin
     if(!busRESETn) busState <= sIDLE;
+    else if(!activeCycle) busState <= sIDLE;
     else busState <= busNext;
 end
 
@@ -83,8 +95,10 @@ end
 // main bus cycle control signals
 
 // START
-always @(negedge busClk or negedge busRESETn) begin
-    if(!busRESETn) busSTARTn <= 1'b1;
+/*always @(negedge busClk or negedge busRESETn) begin
+    if(!busRESETn) busSTARTn <= 1'b1;*/
+always @(negedge busClk or negedge activeCycle) begin
+    if(!activeCycle) busSTARTn <= 1'b1;
     else begin
         if(busNext == sADDR || busNext == sWAIT 
             || busNext == sTERM || busNext == sCEND)
@@ -172,7 +186,7 @@ always @(negedge busClk or negedge busRESETn) begin
     if(!busRESETn) begin
         busBEn <= 4'b1111;
     end else begin
-        if(busNext == sWAIT || busNext == sCEND) begin
+        if(busNext == sADDR || busNext == sWAIT || busNext == sTERM) begin
             if(!cpuCSn[2] || !cpuCSn[6] || !cpuCSn[7]) begin
                 // 32-bit cycle
                 if(cpuRWn) begin
