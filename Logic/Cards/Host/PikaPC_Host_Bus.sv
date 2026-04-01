@@ -45,7 +45,7 @@ wire activeCycle;
 
 always_comb begin
     if(!cpuCSn[2] || !cpuCSn[3] || ! cpuCSn[4] || !cpuCSn[5] 
-        || !cpuCSn[6] || !cpuCSn[7])
+        || !cpuCSn[6] || !cpuCSn[7] || !cpuCSn[1])
     begin
         activeCycle = 1'b1;
     end else begin
@@ -56,9 +56,9 @@ end
 always_comb begin
     case(busState)
         sIDLE: begin
-            // ignore CS0 & CS1 for now
+            // ignore CS0 for now
             if(!cpuCSn[2] || !cpuCSn[3] || ! cpuCSn[4] || !cpuCSn[5] 
-                || !cpuCSn[6] || !cpuCSn[7])
+                || !cpuCSn[6] || !cpuCSn[7] || !cpuCSn[1])
             begin
                 busNext = sADDR;
             end else begin
@@ -127,7 +127,7 @@ always @(negedge busClk or negedge busRESETn) begin
         busBEN8n  <= 3'b111;
     end else begin
         if(busNext == sWAIT || busNext == sCEND || busNext == sTERM) begin
-            if (!cpuCSn[2] || !cpuCSn[6] || !cpuCSn[7]) begin
+            if (!cpuCSn[2] || !cpuCSn[6] || !cpuCSn[7] || !cpuCSn[1]) begin
                 // 32-bit cycle
                 busBEN32n <= 1'b0;
                 busBEN16n <= 1'b1;
@@ -187,7 +187,7 @@ always @(negedge busClk or negedge busRESETn) begin
         busBEn <= 4'b1111;
     end else begin
         if(busNext == sADDR || busNext == sWAIT || busNext == sTERM) begin
-            if(!cpuCSn[2] || !cpuCSn[6] || !cpuCSn[7]) begin
+            if(!cpuCSn[2] || !cpuCSn[6] || !cpuCSn[7] || !cpuCSn[1]) begin
                 // 32-bit cycle
                 if(cpuRWn) begin
                     busBEn <= 4'b0000;

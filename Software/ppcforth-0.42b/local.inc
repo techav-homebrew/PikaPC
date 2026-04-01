@@ -13,11 +13,13 @@
 
 ; CHANGE THIS <<<<<<<<<<<---------------------------------------|
 b_of_4th equ    0x7fe74000      ; bottom of forth system (RAM)  |
-rambase equ     0x7fe00000      ; base of system ram            |
+;rambase equ     0x7fe00000      ; base of system ram            |
+rambase equ     0x7c000000      ; base of system RAM            |
 rombase equ     0x7ff00000      ; base of system rom            |
 loadpt	equ	0x7fe60000	; used for loads to RAM		|
 				; (if rom is not defined!)	|
-ramsize equ     0x100000        ; 1M of RAM			|
+;ramsize equ     0x100000        ; 1M of RAM			|
+ramsize equ     0x1000000       ; 16M of RAM                    |
 romsize	equ	0x20000		; 128K of ROM	 		|
 ledaddr	equ	0x70110000	; latch (to LED) here		|
 szbtblk	equ	0x10000		; 64K boot block (size of block	|

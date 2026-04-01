@@ -125,7 +125,8 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
         mtspr   tblo,r3         ; set time base to 0
 	mtspr	tbhi,r3
         mtspr   sgr,r3          ; update sgr
-        li      r3,2            ; f0000000-f7ffffff d-cacheable
+;        li      r3,2            ; f0000000-f7ffffff d-cacheable
+	li      r3,1 		; f8000000-ffffffff d-cacheable
         mtspr   dccr,r3
         li      r3,-1           ; all inst cacheable
         mtspr   iccr,r3         ; update iccr (all inst cacheable)
@@ -141,20 +142,47 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 ;	br6	[unused]	
 ;	br7	Expansion Bus	$7800,0000; 64MB; 32b; no burst; 2WS;	hold 1; 
 
-	lwa     r3,0xff1e0fa0   ; set br0 (ROM)
-        mtdcr   br0,r3          ;
-	lwa 	r3,0xfe1e8500	; set br1 (RAM)
-        mtdcr   br1,r3          ;
-	lwa 	r3,0x00dd4200	; set br2 (Video)
-	mtdcr 	br2,r3		;
-	lwa 	r3,0x40dc4200	; set br3 (Video Alt)
-	mtdcr 	br3,r3		;
-	lwa 	r3,0xc01c0101	; set br4 (SD Card)
-	mtdcr 	br4,r3		;
-	lwa 	r3,0xc11c0485	; set br5 (PS/2)
-	mtdcr 	br5,r3		;
-	lwa	r3,0x80dd0283	; set br7 (Expansion)
-	mtdcr	br7,r3		;
+;	lwa     r3,0xff1e0fa0   ; set br0 (ROM)
+;        mtdcr   br0,r3          ;
+;	lwa 	r3,0xfe1e8500	; set br1 (RAM)
+;        mtdcr   br1,r3          ;
+;	lwa 	r3,0x00dd4200	; set br2 (Video)
+;	mtdcr 	br2,r3		;
+;	lwa 	r3,0x40dc4200	; set br3 (Video Alt)
+;	mtdcr 	br3,r3		;
+;	lwa 	r3,0xc01c0101	; set br4 (SD Card)
+;	mtdcr 	br4,r3		;
+;	lwa 	r3,0xc11c0485	; set br5 (PS/2)
+;	mtdcr 	br5,r3		;
+;	lwa	r3,0x80dd0283	; set br7 (Expansion)
+;	mtdcr	br7,r3		;
+
+
+;	br0	ROM		$7e00,0000; 32MB;  8b; burst;    2/2WS; hold 0;
+;	br1	RAM		$7c00,0000; 32MB; 32b; burst;    1/1WS; hold 0; ready
+;	br2	Video Memory	$7a00,0000; 32MB; 32b; no burst; 1WS;   hold 0; ready
+;	br3	Video I/O	$7800,0000; 32MB;  8b; no burst; 1WS;   hold 0; ready
+; 	br4	IDE		$7600,0000; 32MB; 16b; no burst; 1WS;   hold 0; ready
+;	br5	PS/2 Controller	$7400,0000; 32MB;  8b; no burst; 1WS;   hold 0; ready
+;	br6	[spare]		$7200,0000; 32MB; 32b; no burst; 1WS;   hold 0; ready
+;	br7	[spare]		$7000,0000; 32MB; 32b; no burst; 1WS; 	hold 0; ready
+
+	lwa 	r3,0xe0be0a21	; set br0
+	mtdcr	br0,r3
+	lwa 	r3,0xc0bf4501	; set br1
+	mtdcr	br1,r3
+	lwa 	r3,0xa0bd4101	; set br2
+	mtdcr	br2,r3
+	lwa 	r3,0x80bc4101	; set br3
+	mtdcr	br3,r3
+	lwa 	r3,0x60bcc101	; set br4
+	mtdcr	br4,r3
+	lwa 	r3,0x40bc4101	; set br5
+	mtdcr	br5,r3
+	lwa 	r3,0x20bd4101	; set br6
+	mtdcr	br6,r3
+	lwa 	r3,0x00bd4101	; set br7
+	mtdcr	br7,r3
 
 
 ;        lwa     r3,0xff1e0fa0   ; get br0 value 3/3 ws ff1e0fa0 ff1c05a0
