@@ -40584,6 +40584,16 @@
 	)
 	(wire
 		(pts
+			(xy 469.9 261.62) (xy 457.2 261.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "790ae842-e35e-407a-a30e-d60e16ea4691")
+	)
+	(wire
+		(pts
 			(xy 160.02 116.84) (xy 160.02 114.3)
 		)
 		(stroke
@@ -44984,6 +44994,16 @@
 	)
 	(wire
 		(pts
+			(xy 469.9 256.54) (xy 457.2 256.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef22364a-fde4-4b67-bdb8-dfbb2f00d3ff")
+	)
+	(wire
+		(pts
 			(xy 73.66 215.9) (xy 73.66 218.44)
 		)
 		(stroke
@@ -45721,6 +45741,16 @@
 			(justify right bottom)
 		)
 		(uuid "06d9b801-ab93-4b33-92b4-7c3abc1be9e4")
+	)
+	(label "XA31"
+		(at 457.2 256.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "06f537a9-e4fa-402a-80e6-9c98b3d8ac70")
 	)
 	(label "D28"
 		(at 342.9 332.74 0)
@@ -47442,6 +47472,16 @@
 		)
 		(uuid "4e17c5e8-fbf7-4e29-9b1a-ee9d15508ff7")
 	)
+	(label "XA30"
+		(at 406.4 327.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4efa9cc6-1f55-4f71-9c2e-c6e5124427be")
+	)
 	(label "A2"
 		(at 342.9 104.14 0)
 		(effects
@@ -47771,6 +47811,16 @@
 			(justify right bottom)
 		)
 		(uuid "5de60915-a8d5-4223-8dfd-72370edf3e83")
+	)
+	(label "XA31"
+		(at 406.4 325.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e62581a-628c-4b28-a077-00f7f35b3d15")
 	)
 	(label "~{CS4}"
 		(at 142.24 119.38 180)
@@ -48681,6 +48731,16 @@
 			(justify right bottom)
 		)
 		(uuid "848ed929-d48d-4a58-aad4-30dd65e29097")
+	)
+	(label "XA30"
+		(at 457.2 261.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "84caa076-b781-4c68-9cd6-35512f9d4500")
 	)
 	(label "~{CINT}"
 		(at 508 187.96 180)
@@ -53437,73 +53497,6 @@
 			(project "PikaPC_Mainboard"
 				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
 					(reference "J13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 406.4 325.12 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "140fce9f-cb61-4abe-a61a-5da135f8ff40")
-		(property "Reference" "#PWR062"
-			(at 400.05 325.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 403.2251 325.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 406.4 325.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 406.4 325.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 406.4 325.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "676d997a-4e96-4a93-a40b-b3d742ea7f2b")
-		)
-		(instances
-			(project "PikaPC_Mainboard"
-				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
-					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -72932,73 +72925,6 @@
 			(project "PikaPC_Mainboard"
 				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
 					(reference "#PWR0113")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 406.4 327.66 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f2cefca2-7bdb-4579-8fe1-447b7ed7165e")
-		(property "Reference" "#PWR063"
-			(at 400.05 327.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 403.2251 327.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 406.4 327.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 406.4 327.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 406.4 327.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "15b796e9-4a72-4f15-a061-3d12ba48ec21")
-		)
-		(instances
-			(project "PikaPC_Mainboard"
-				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
-					(reference "#PWR063")
 					(unit 1)
 				)
 			)

@@ -19,7 +19,8 @@ module HostBus (
     input   wire            busACKn,        // bus cycle acknowledge
     output  reg             busSTARTn,      // bus cycle start
     output  reg  [3:0]      busBEn,         // bus byte enables
-    output  wire [3:1]      busXA,          // bus X Address
+    output  wire [3:1]      busXAhi,        // bus X Address high bits
+    output  wire [31:30]    busXAlo,        // bus X Address low bits
     output  reg             busAENn,        // buss address enable
     output  reg             busBDIR,        // bus data direction
     output  reg  [2:0]      busBEN8n,       // 8-bit bus enables
@@ -257,9 +258,29 @@ end
 assign cpuREADY = !busACKn;
 
 // bus X address
-assign busXA[1] = (!cpuCSn[0] || !cpuCSn[1] || !cpuCSn[2] || !cpuCSn[3]);
-assign busXA[2] = (!cpuCSn[0] || !cpuCSn[1] || !cpuCSn[4] || !cpuCSn[5]);
-assign busXA[3] = (!cpuCSn[0] || !cpuCSn[2] || !cpuCSn[4] || !cpuCSn[6]);
+assign busXAhi[1] = (!cpuCSn[0] || !cpuCSn[1] || !cpuCSn[2] || !cpuCSn[3]);
+assign busXAhi[2] = (!cpuCSn[0] || !cpuCSn[1] || !cpuCSn[4] || !cpuCSn[5]);
+assign busXAhi[3] = (!cpuCSn[0] || !cpuCSn[2] || !cpuCSn[4] || !cpuCSn[6]);
+
+always_comb begin
+    if (!cpuCSn[2] || !cpuCSn[6] || !cpuCSn[7]) begin
+        // 32-bit port
+        case(cpuWBEn)
+            4'b0000: busXAlo = 2'b00;
+            4'b1100: busXAlo = 2'b01;
+            4'b0011: busXAlo = 2'b00;
+            4'b1110: busXAlo = 2'b11;
+            4'b1101: busXAlo = 2'b01;
+            4'b1011: busXAlo = 2'b10;
+            4'b0111: busXAlo = 2'b00;
+            default: busXAlo = 2'b00;
+        endcase
+    end else begin
+        // 8-bit port, 16-bit port, or no active cycle
+        busXAlo[30] = cpuWBEn[2];
+        busXAlo[31] = cpuWBEn[3];
+    end
+end
 
 // interrupt requests
 always_comb begin

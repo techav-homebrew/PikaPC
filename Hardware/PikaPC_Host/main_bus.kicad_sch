@@ -6664,6 +6664,15 @@
 		(uuid "2a01b8f7-82be-4e0f-9456-f8d28c2b811f")
 	)
 	(bus_entry
+		(at 22.86 147.32)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fa5e1d4-73c2-468c-9422-42a39147a524")
+	)
+	(bus_entry
 		(at 78.74 104.14)
 		(size -2.54 2.54)
 		(stroke
@@ -6869,6 +6878,15 @@
 			(type default)
 		)
 		(uuid "adbbf182-a098-4ca1-9796-ec6be26643aa")
+	)
+	(bus_entry
+		(at 22.86 142.24)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af853c64-236d-4966-b196-5e14257ea3bb")
 	)
 	(bus_entry
 		(at 78.74 99.06)
@@ -7333,6 +7351,16 @@
 	)
 	(bus
 		(pts
+			(xy 22.86 142.24) (xy 22.86 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "260d254b-1eb2-4455-b615-11a7b9b0a0da")
+	)
+	(bus
+		(pts
 			(xy 25.4 43.18) (xy 38.1 43.18)
 		)
 		(stroke
@@ -7670,6 +7698,16 @@
 			(type default)
 		)
 		(uuid "45a373e1-57e8-476b-8f11-eb5888ee91f5")
+	)
+	(wire
+		(pts
+			(xy 25.4 149.86) (xy 38.1 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45bf0f2f-5f89-4f74-a412-3cce327e39f7")
 	)
 	(wire
 		(pts
@@ -8953,6 +8991,16 @@
 	)
 	(wire
 		(pts
+			(xy 25.4 144.78) (xy 38.1 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbd77fd4-5b72-461e-aa86-0b573dd7c275")
+	)
+	(wire
+		(pts
 			(xy 25.4 139.7) (xy 38.1 139.7)
 		)
 		(stroke
@@ -9590,6 +9638,16 @@
 			(justify left bottom)
 		)
 		(uuid "079cc15d-0491-4d85-8a40-faf64127fc9f")
+	)
+	(label "XA31"
+		(at 25.4 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "097bd752-1805-49f1-933c-1c1519f5f4b2")
 	)
 	(label "~{Bus-BE3}"
 		(at 175.26 78.74 0)
@@ -10431,6 +10489,16 @@
 		)
 		(uuid "a6b3a007-dd52-4e64-a92c-e150f9c3991c")
 	)
+	(label "XA[31..0]"
+		(at 22.86 142.24 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a6cb8e41-6724-4a5d-ba29-842d04d55dc0")
+	)
 	(label "AD15"
 		(at 175.26 48.26 0)
 		(effects
@@ -10880,6 +10948,16 @@
 			(justify left bottom)
 		)
 		(uuid "ecc47c9a-0840-4d42-b8ec-7dba7ed1c439")
+	)
+	(label "XA30"
+		(at 25.4 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed356066-49ce-442e-b8bd-168f5deccf37")
 	)
 	(label "~{Bus-REQ}"
 		(at 241.3 71.12 0)
@@ -16572,7 +16650,7 @@
 	)
 	(sheet
 		(at 38.1 20.32)
-		(size 25.4 30.48)
+		(size 25.4 27.94)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -16596,7 +16674,7 @@
 			)
 		)
 		(property "Sheetfile" "bus_transceivers.kicad_sch"
-			(at 38.1 51.3846 0)
+			(at 38.1 48.8446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
