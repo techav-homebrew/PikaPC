@@ -10988,6 +10988,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 109.22) (xy 160.02 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "269f1cb1-dc50-4885-984c-39b18d6a3181")
+	)
+	(wire
+		(pts
 			(xy 38.1 144.78) (xy 50.8 144.78)
 		)
 		(stroke
@@ -11138,7 +11148,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 109.22) (xy 149.86 109.22)
+			(xy 137.16 109.22) (xy 152.4 109.22)
 		)
 		(stroke
 			(width 0)
@@ -11325,6 +11335,16 @@
 			(type default)
 		)
 		(uuid "42c494bb-5989-45f6-a27b-143b637cb040")
+	)
+	(wire
+		(pts
+			(xy 157.48 109.22) (xy 160.02 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "448d6a39-87ff-49b3-9deb-7de9fb549224")
 	)
 	(wire
 		(pts
@@ -18465,6 +18485,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 154.94 109.22 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6be465de-e27a-430f-90ee-de73546bf9db")
+		(property "Reference" "R41"
+			(at 151.13 107.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 158.75 107.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 154.94 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "303-0805S8J0103T5E "
+			(at 154.94 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e51f5a16-e93b-46ad-8f4f-c4c74eb7053c")
+		)
+		(pin "2"
+			(uuid "b8abbc76-5737-41a0-b52d-1fa09489f58a")
+		)
+		(instances
+			(project "PikaPC_ViRGE"
+				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/b87e7203-ea3a-46a7-9e06-4b89d81b9033"
+					(reference "R41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 241.3 27.94 270)
 		(unit 1)
@@ -18995,6 +19091,72 @@
 			(project "PikaPC_ViRGE"
 				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/b87e7203-ea3a-46a7-9e06-4b89d81b9033"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 160.02 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "901c0cd7-8081-4cf1-af94-c6e82248675f")
+		(property "Reference" "#PWR0147"
+			(at 160.02 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 160.02 102.5469 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 160.02 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "241a47c8-34b4-4eeb-b3e5-cbfa741cab6d")
+		)
+		(instances
+			(project "PikaPC_ViRGE"
+				(path "/dd18a86c-f3c8-46f4-a73e-5b02d2ebb148/b87e7203-ea3a-46a7-9e06-4b89d81b9033"
+					(reference "#PWR0147")
 					(unit 1)
 				)
 			)
