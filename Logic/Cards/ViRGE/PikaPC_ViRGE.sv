@@ -118,7 +118,7 @@ always @(posedge busClk or negedge busRESETn) begin
                 cardBENn <= 1'b1;
                 cardWENn <= busRWn;
                 vidMIOn  <= cardA23;
-                cardOEn  <= busRWn;
+                cardOEn  <= !busRWn;
                 vidSAUP1 <= !cardA24;
                 vidSAUP2 <= cardA24;
             end
