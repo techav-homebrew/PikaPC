@@ -90,6 +90,26 @@ i $740003ca ac!
 loop
 ;
 
+\ set palette to 256 blues
+: blue256
+$ff $0 do
+i $740003cb ac!
+0 $740003ca ac!
+0 $740003ca ac!
+i $740003ca ac!
+loop
+;
+
+\ set palette to 256 cyans
+: cyan256
+$ff $0 do
+i $740003cb ac!
+0 $740003ca ac!
+i $740003ca ac!
+i $740003ca ac!
+loop
+;
+
 \ fill screen with color 0xff
 : clearScreen
 $140 $c8 * $0 do
