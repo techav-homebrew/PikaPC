@@ -1,0 +1,21 @@
+CC = C:\Users\techav\Documents\GitHub\PikaPC403\Utilities\MinGW-powerpc-eabi-13.1.0\bin\powerpc-eabi-gcc.exe
+CFLAGS = -v -mcpu=403 -nostdlib -nodefaultlibs -fno-builtin -nostartfiles
+
+TARGET = vMandelbrot
+
+var = "asdf"
+
+
+.PHONY: all
+all:
+	$(info $$var is [${var}])echo Hello world
+
+
+vMandelbrot: vMandelbrot.c
+	$(info VAR="$(CC)")
+	$(CC) $(CFLAGS) -o vMandelbrot.o vMandelbrot.c
+
+# all: $(TARGET)
+
+# $(TARGET): $(TARGET).c
+# 	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c

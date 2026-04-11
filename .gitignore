@@ -8,6 +8,13 @@ SPI
 *.lst
 *.p
 *.bin
+*.o
+*.map
+*.i
+*.srec
+
+# don't include intermediary files
+Software/vMandelbrot/*.s
 
 # exclude WinCupl output files
 
