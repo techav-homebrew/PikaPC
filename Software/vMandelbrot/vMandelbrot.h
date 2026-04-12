@@ -321,12 +321,14 @@ static inline void delay(unsigned long ms)
 #define WCrt(ba, idx, val) \
     do { vgaw(ba, CRT_ADDRESS, idx); vgaw(ba, CRT_ADDRESS_W , val); } while (0) */
 
-#define WAttr(ba, idx, val) \
-    do {	\
-        unsigned char tmp;\
+/*
+unsigned char tmp;\
         tmp = vgar(ba, ACT_ADDRESS_RESET);\
         __USE(tmp);\
-        delay(1);\
+*/
+
+#define WAttr(ba, idx, val) \
+    do {	\
         vgaw(ba, ACT_ADDRESS_W, idx);\
         delay(1);\
         vgaw(ba, ACT_ADDRESS_W, val);\
@@ -342,7 +344,7 @@ static inline void delay(unsigned long ms)
             reg-1,                  \
             ((unsigned short)val << 8) | ((unsigned short)idx & 0x0ff)  \
         );                          \
-        delay(1);                   \
+        delay(10);                   \
     } while(0)
 
 #define WGfx(ba, idx, val) WIdxReg(ba, GCT_ADDRESS, idx, val)
@@ -413,8 +415,10 @@ RGfx(volatile void *ba, short idx)
 
 
 
-int main();
-void vga_init();
+int main() __attribute__ ((section(".mainentry")));
+void vga_init13h();
 
-
+void putc(const char);
+void prints(const char *);
+void println(const char *);
 

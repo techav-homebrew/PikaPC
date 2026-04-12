@@ -1,14 +1,179 @@
+// some of this code is adapted from NetBSD amiga cv driver
+// https://github.com/NetBSD/src/blob/trunk/sys/arch/amiga/dev/grf_cvreg.h
+
 #include "vMandelbrot.h"
 
 int main()
 {
-    vga_init();
+/*     // disable interrupts
+    __asm__(
+        "stwu 3,-4(1)\n\t"
+        "li 3,0\n\t"
+        "mtexier 3\n\t"
+        "lwzu 3,4(1)\n\t"
+    ); */
+    println("vMandelbrot");
+
+    vga_init13h();
 
     return 0;
 }
 
-// this code is adapted from NetBSD amiga cv driver
-// https://github.com/NetBSD/src/blob/trunk/sys/arch/amiga/dev/grf_cvreg.h
+void vga_init13h()
+{
+    volatile void *ba;
+    unsigned char test;
+    //int i;
+
+    println("VGA Initializing ...");
+
+    ba = (volatile void *)VGA_IO32;
+
+    // vga enable (must be first; chip will not respond before this is sent)
+    vgaw(ba, GREG_VGA_ENABLE, 0x01);
+    delay(100);
+
+    // reset index
+    test = vgar(ba, GREG_MISC_OUTPUT_R);
+    __USE(test);
+    delay(100);
+
+    // disable output
+    vgaw(ba, ACT_ADDRESS_W, 0x00);
+    delay(100);
+
+    // initial attribute configuration
+    prints("\tInitial attributes:");
+    prints(" 10");
+    WAttr(ba, ACT_ID_ATTR_MODE_CNTL, 0x41);     // 256 color, gfx mode
+    prints(" 11");
+    WAttr(ba, ACT_ID_OVERSCAN_COLOR, 0x00);     // black border
+    prints(" 12");
+    WAttr(ba, ACT_ID_COLOR_PLANE_ENA, 0x0f);    // enable all planes
+    prints(" 13");
+    WAttr(ba, ACT_ID_HOR_PEL_PANNING, 0x00);    // no hoz panning
+    prints(" 14");
+    WAttr(ba, ACT_ID_COLOR_SELECT, 0x00);       // no pix padding
+    println(" done");
+
+    // misc output register
+    vgaw(ba, GREG_MISC_OUTPUT_W, 0x63);
+    delay(100);
+
+    // sequence registers
+    println("\tSequence");
+    WSeq(ba, SEQ_ID_RESET, 0x03);               // legacy VGA reset
+    WSeq(ba, SEQ_ID_CLOCKING_MODE, 0x01);       // 8 char clks, no pix double
+    WSeq(ba, SEQ_ID_MAP_MASK, 0x0f);            // enable all planes
+    WSeq(ba, SEQ_ID_CHAR_MAP_SELECT, 0x00);     // font plane 0
+    WSeq(ba, SEQ_ID_MEMORY_MODE, 0x0e);         // 256kB; sequential; chain 4
+    WSeq(ba, SEQ_ID_UNLOCK_EXT, 0x06);          // unlock ext SR regs $09-$1c
+
+    // crtc registers
+    println("\tUnlock");
+    WCrt(ba, CRT_ID_END_VER_RETR, 0x0e);        // unlock CRTC regs
+    WCrt(ba, CRT_ID_REGISTER_LOCK_1, 0x48);     // unlock CRTC regs $2d-$3f
+    WCrt(ba, CRT_ID_REGISTER_LOCK_2, 0xa0);     // unlock CRTC regs $40+
+    WCrt(ba, CRT_ID_SYSTEM_CONFIG, 0x01);       // unlock enhanced regs
+
+    vgaw16(ba, 0x42e8, 0x08000);                // reset gfx engine
+    delay(1);
+    vgaw16(ba, 0x42e8, 0x04000);                // enable gfx, no irq
+    delay(100);
+
+    println("\tCRTC");
+    WCrt(ba, CRT_ID_HOR_TOTAL,        0x5f);    // h total
+    WCrt(ba, CRT_ID_HOR_DISP_ENA_END, 0x4f);    // h enable end
+    WCrt(ba, CRT_ID_START_HOR_BLANK,  0x50);    // h blank start
+    WCrt(ba, CRT_ID_END_HOR_BLANK,    0x82);    // h blank end
+    WCrt(ba, CRT_ID_START_HOR_RETR,   0x54);    // h retrace start
+    WCrt(ba, CRT_ID_END_HOR_RETR,     0x80);    // h retrace end
+    WCrt(ba, CRT_ID_VER_TOTAL,        0xbf);    // v total
+    WCrt(ba, CRT_ID_OVERFLOW,         0x1f);    // overflow
+    WCrt(ba, CRT_ID_PRESET_ROW_SCAN,  0x00);    // preset row scan
+    WCrt(ba, CRT_ID_MAX_SCAN_LINE,    0x41);    // max scanline
+    WCrt(ba, CRT_ID_CURSOR_START,     0x00);    // cursor start 0
+    WCrt(ba, CRT_ID_CURSOR_END,       0x00);    // cursor end 0
+    WCrt(ba, CRT_ID_START_ADDR_HIGH,  0x00);    // start addr hi
+    WCrt(ba, CRT_ID_START_ADDR_LOW,   0x00);    // start addr lo
+    WCrt(ba, CRT_ID_CURSOR_LOC_HIGH,  0x00);    // cursor addr hi
+    WCrt(ba, CRT_ID_CURSOR_LOC_LOW,   0x00);    // cursor addr lo
+    WCrt(ba, CRT_ID_START_VER_RETR,   0x9c);    // v retrace start
+    WCrt(ba, CRT_ID_VER_DISP_ENA_END, 0x8f);    // v display end
+    WCrt(ba, CRT_ID_SCREEN_OFFSET,    0x28);    // screen width
+    WCrt(ba, CRT_ID_UNDERLINE_LOC,    0x40);    // ??
+    WCrt(ba, CRT_ID_START_VER_BLANK,  0x96);    // v blank start
+    WCrt(ba, CRT_ID_END_VER_BLANK,    0xb9);    // v blank end
+    WCrt(ba, CRT_ID_MODE_CONTROL,     0xa3);    // ??
+    WCrt(ba, CRT_ID_LINE_COMPARE,     0xff);    // line compare pos
+
+    // graphics registers
+    println("\tGfx");
+    WGfx(ba, GCT_ID_SET_RESET,        0x00);    // reset data
+    WGfx(ba, GCT_ID_ENABLE_SET_RESET, 0x00);    // reset data
+    WGfx(ba, GCT_ID_COLOR_COMPARE,    0x00);    // no color compare
+    WGfx(ba, GCT_ID_DATA_ROTATE,      0x00);    // rotate count 0
+    WGfx(ba, GCT_ID_READ_MAP_SELECT,  0x00);    // read plane 0
+    WGfx(ba, GCT_ID_GRAPHICS_MODE,    0x40);    // write mode 0; 256 color
+    WGfx(ba, GCT_ID_MISC,             0x05);    // gfx mode, 64k@0xA0000
+    WGfx(ba, GCT_ID_COLOR_XCARE,      0x0f);    // color compare all
+    WGfx(ba, GCT_ID_BITMASK,          0xff);    // allow write all
+
+    // colors for text mode
+    println("\tPalette16");
+    for (int i = 0; i <= 0xf; i++)
+        WAttr (ba, i, i);
+    
+    println("\tDAC Mask");
+    vgaw(ba, VDAC_MASK, 0xFF);              //DAC Mask
+    delay(100);
+    
+    // reset index
+    __USE(vgar(ba, 0x3cf));
+    delay(100);
+
+    // enable output (normal operation)
+    println("\tEnable");
+    vgaw(ba, ACT_ADDRESS_W, 0x20);
+    delay(100);
+    vgaw(ba, ACT_ADDRESS_W, 0x20);
+    delay(100);
+    vgaw(ba, ACT_ADDRESS_W, 0x20);
+    
+    println("\tComplete.");
+}
+
+
+void putc(const char c)
+{
+    volatile char * com_spls = (char *)0x40000000;
+    volatile char * com_sptb = (char *)0x40000009;
+    while(!(*com_spls & 0x04));
+    *com_sptb = c;
+}
+
+void prints(const char * str)
+{
+    int i=0;
+    while(str[i] != 0)
+    {
+        putc(str[i++]);
+    }
+}
+
+void println(const char * str)
+{
+    prints(str);
+    putc(0x0d);
+    putc(0x0a);
+}
+
+
+
+
+
+
+/* 
 void vga_init()
 {
     volatile void *ba;
@@ -38,21 +203,21 @@ void vga_init()
     WCrt(ba, CRT_ID_SYSTEM_CONFIG, 0x01);   // unlock enhanced regs
     delay(1);
 
-    /*
-     * bit 1=1: enable enhanced mode functions
-     * bit 4=1: enable linear addressing
-     */
+    //
+    // bit 1=1: enable enhanced mode functions
+    // bit 4=1: enable linear addressing
+    //
     vgaw(ba, ECR_ADV_FUNC_CNTL, 0x11);
 
-    /* enable color mode (bit0), CPU access (bit1), high 64k page (bit5) */
+    // enable color mode (bit0), CPU access (bit1), high 64k page (bit5)
     delay(1);
     vgaw(ba, GREG_MISC_OUTPUT_W, 0xe3);
     delay(1);
 
-    /* CPU base addr */
+    // CPU base addr
     WCrt(ba, CRT_ID_EXT_SYS_CNTL_4, 0x00);
 
-    /* Reset. This does nothing, but everyone does it:) */
+    // Reset. This does nothing, but everyone does it:)
     WSeq(ba, SEQ_ID_RESET, 0x03);
 
     WSeq(ba, SEQ_ID_CLOCKING_MODE, 0x01);   // 8 Dot Clock
@@ -88,15 +253,15 @@ void vga_init()
     WCrt(ba, CRT_ID_CURSOR_START, 0x00);
     WCrt(ba, CRT_ID_CURSOR_END, 0x00);
 
-    /* Display start address */
+    // Display start address
     WCrt(ba, CRT_ID_START_ADDR_HIGH, 0x00);
     WCrt(ba, CRT_ID_START_ADDR_LOW, 0x00);
 
-    /* Cursor location */
+    // Cursor location
     WCrt(ba, CRT_ID_CURSOR_LOC_HIGH, 0x00);
     WCrt(ba, CRT_ID_CURSOR_LOC_LOW, 0x00);
 
-    /* Vertical retrace */
+    // Vertical retrace
     WCrt(ba, CRT_ID_START_VER_RETR, 0x9C);
     WCrt(ba, CRT_ID_END_VER_RETR, 0x0E);
 
@@ -114,18 +279,18 @@ void vga_init()
 
     WCrt(ba, CRT_ID_BACKWAD_COMP_3, 0x10);  //  FIFO enabled
 
-    /* Refresh count 1, High speed text font, enhanced color mode */
+    // Refresh count 1, High speed text font, enhanced color mode
     WCrt(ba, CRT_ID_MISC_1, 0x35);
 
-    /* start fifo position */
+    // start fifo position
     WCrt(ba, CRT_ID_DISPLAY_FIFO, 0x5a);
 
     WCrt(ba, CRT_ID_EXT_MEM_CNTL_2, 0x70);
 
-    /* address window position */
+    // address window position
     WCrt(ba, CRT_ID_LAW_POS_LO, 0x40);
 
-    /* N Parameter for Display FIFO */
+    // N Parameter for Display FIFO
     WCrt(ba, CRT_ID_EXT_MEM_CNTL_3, 0xFF);
 
     WGfx(ba, GCT_ID_SET_RESET, 0x00);
@@ -138,7 +303,7 @@ void vga_init()
     WGfx(ba, GCT_ID_COLOR_XCARE, 0x0F);
     WGfx(ba, GCT_ID_BITMASK, 0xFF);
 
-    /* colors for text mode */
+    // colors for text mode
     for (i = 0; i <= 0xf; i++)
         WAttr (ba, i, i);
 
@@ -150,7 +315,7 @@ void vga_init()
 
     vgaw(ba, VDAC_MASK, 0xFF);              //DAC Mask
 
-    /* initialize greyscale color palette */
+    // initialize greyscale color palette
     vgaw(ba, VDAC_ADDRESS_W, 0);
     delay(1);
     for (i = 255; i >= 0 ; i--) {
@@ -167,4 +332,4 @@ void vga_init()
     // skip Initialize graphics engine 
 }
 
-
+ */
