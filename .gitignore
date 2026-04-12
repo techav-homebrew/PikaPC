@@ -2,6 +2,7 @@
 Utilities
 Documentation
 SPI
+*old*
 
 # don't include compiler output
 *.hex
@@ -12,6 +13,7 @@ SPI
 *.map
 *.i
 *.srec
+*.out
 
 # don't include intermediary files
 Software/vMandelbrot/*.s

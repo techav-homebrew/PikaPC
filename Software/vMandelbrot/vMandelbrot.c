@@ -1,125 +1,170 @@
-#include "pikapc_print.h"
-#include "vgareg.h"
 #include "vMandelbrot.h"
-
-#define VID_BASE 0x708a0000
-#define SCREEN_W 320
-#define SCREEN_H 200
-
-#define FIXED_POINT 1000
-#define LIMIT 4 * FIXED_POINT
 
 int main()
 {
-    // disable interrupts
-    __asm__(
-        "stwu 3,-4(1)\n\t"
-        "li 3,0\n\t"
-        "mtexier 3\n\t"
-        "lwzu 3,4(1)\n\t"
-    );
+    vga_init();
 
-    // vga_init();
-    println("Initializing video ...");
-
-    cv_boardinit();
-
-    println("Starting render ...");
-    mandel();
-
-    // re-enable interrupts before returning
-    __asm__(
-        "stwu 3,-4(1)\n\t"
-        "lis 3,0x800\n\t"
-        "mtexier 3\r\n"
-        "lwzu 3,4(1)\n\t"
-    );
     return 0;
 }
 
-void mandel()
-{
-    int i1 = -1 * FIXED_POINT;
-    int i2 = 1 * FIXED_POINT;
-    int r1 = -2 * FIXED_POINT;
-    int r2 = 1 * FIXED_POINT;
-    int s1 = (r2 - r1) / SCREEN_W;
-    int s2 = (i2 - i1) / SCREEN_H;
-    int n;
-    for(int y=0; y<SCREEN_H; y++)
-    {
-        int i3 = s2 * y / FIXED_POINT + i1;
-        for(int x=0; x<SCREEN_W; x++)
-        {
-            int r3 = s1 * x / FIXED_POINT + r1;
-            int z1 = r3;
-            int z2 = i3;
-            for(n=0; n<256; n++)
-            {
-                int a = z1 * z1 / FIXED_POINT;
-                int b = z2 * z2 / FIXED_POINT;
-                if((a+b) > LIMIT) break;
-                z2 = (z1 * z2 / FIXED_POINT) * 2 + i3;
-                z1 = a - b + r3;
-            }
-            draw_pixel(x, y, (unsigned char)(255-n));
-        }
-    }
-}
-
-void draw_pixel(int x, int y, unsigned char color)
-{
-    unsigned char* vbuf;
-    vbuf = (unsigned char*)((VID_BASE + (y * SCREEN_W) + x) ^ 0x03);
-    *vbuf = color;
-}
-
-/*
-void vga_index_write(reg16 reg, unsigned char idx, unsigned char value)
-{
-    unsigned short x;
-    x = ((unsigned short)(value) << 8);
-    x |= ((unsigned short)(idx)) & 0x0ff;
-
-    *reg = x;
-}
-
-void vga_regset_write(unsigned char * regset, reg16 reg, int size)
-{
-    for(int i=0; i<size; i++)
-    {
-        vga_index_write(reg, (unsigned char)i, regset[i]);
-    }
-}
-
-void vga_unlock_regs()
-{
-    vga_index_write(vga_crtc, 0x11, 0x0e);
-    vga_index_write(vga_crtc, 0x38, 0x48);
-    vga_index_write(vga_crtc, 0x39, 0xa0);
-    vga_index_write(vga_crtc, 0x40, 0x01);
-    vga_index_write(vga_seq,  0x08, 0x06);
-}
-
+// this code is adapted from NetBSD amiga cv driver
+// https://github.com/NetBSD/src/blob/trunk/sys/arch/amiga/dev/grf_cvreg.h
 void vga_init()
 {
-    unsigned char i;
-    *vga_enable = 0x01;     // enable VGA
-    i = *vga_misc_out_r;    // reset index
-    *vga_attr = 0x00;       // disable output
+    volatile void *ba;
+    unsigned char test;
+    int i;
 
-    vga_unlock_regs();
+    ba = (volatile void *)VGA_IO32;
 
-    vga_regset_write(&vga_mode13_sr, vga_seq, REGSET_SR);
-    vga_regset_write(&vga_mode13_cr, vga_crtc, REGSET_CR);
-    vga_regset_write(&vga_mode13_gr, vga_gfx, REGSET_GR);
-    vga_regset_write(&vga_mode13_ar, vga_attr, REGSET_AR);
+    // vga enable (must be first; chip will not respond before this is sent)
+    vgaw(ba, GREG_VGA_ENABLE, 0x01);
 
-    *vga_dac_mask = 0xff;
+    delay(100);
 
-    i = *vga_misc_out_r;
+    test = vgar(ba, GREG_MISC_OUTPUT_R);
+    __USE(test);
 
-    *((volatile unsigned char*)vga_attr) = (unsigned char)0x20;    // normal operation
+    // configure for color emulation & enable CPU access
+    vgaw(ba, GREG_MISC_OUTPUT_W, 0x03);
+
+    // unlock registers
+    delay(1);
+    WCrt(ba, CRT_ID_END_VER_RETR, 0x0e);    // unlock CR 0-7
+    delay(1);
+    WCrt(ba, CRT_ID_REGISTER_LOCK_1, 0x48);	// unlock S3 VGA regs
+    WCrt(ba, CRT_ID_REGISTER_LOCK_2, 0xA5);	// unlock syscontrol
+    delay(1);
+    WCrt(ba, CRT_ID_SYSTEM_CONFIG, 0x01);   // unlock enhanced regs
+    delay(1);
+
+    /*
+     * bit 1=1: enable enhanced mode functions
+     * bit 4=1: enable linear addressing
+     */
+    vgaw(ba, ECR_ADV_FUNC_CNTL, 0x11);
+
+    /* enable color mode (bit0), CPU access (bit1), high 64k page (bit5) */
+    delay(1);
+    vgaw(ba, GREG_MISC_OUTPUT_W, 0xe3);
+    delay(1);
+
+    /* CPU base addr */
+    WCrt(ba, CRT_ID_EXT_SYS_CNTL_4, 0x00);
+
+    /* Reset. This does nothing, but everyone does it:) */
+    WSeq(ba, SEQ_ID_RESET, 0x03);
+
+    WSeq(ba, SEQ_ID_CLOCKING_MODE, 0x01);   // 8 Dot Clock
+    WSeq(ba, SEQ_ID_MAP_MASK, 0x0f);	    // Enable write planes
+    WSeq(ba, SEQ_ID_CHAR_MAP_SELECT, 0x00);	// Character Font
+
+    WSeq(ba, SEQ_ID_MEMORY_MODE, 0x02);	    // Complete mem access
+
+    WSeq(ba, SEQ_ID_UNLOCK_EXT, 0x06);	    // Unlock extensions
+
+    WSeq(ba, SEQ_ID_BUS_REQ_CNTL, 0x00);    // 2MB, 3 clock writes
+
+    WSeq(ba, SEQ_ID_RAMDAC_CNTL, 0xC0);     // faster LUT write
+
+    // skip mem clock setup; we'll leave it at default
+
+    // initialize text mode
+    
+    WCrt(ba, CRT_ID_HOR_TOTAL, 0x5F);
+    WCrt(ba, CRT_ID_HOR_DISP_ENA_END, 0x4F);
+    WCrt(ba, CRT_ID_START_HOR_BLANK, 0x50);
+    WCrt(ba, CRT_ID_END_HOR_BLANK, 0x82);
+    WCrt(ba, CRT_ID_START_HOR_RETR, 0x54);
+    WCrt(ba, CRT_ID_END_HOR_RETR, 0x80);
+    WCrt(ba, CRT_ID_VER_TOTAL, 0xBF);
+
+    WCrt(ba, CRT_ID_OVERFLOW, 0x1F);	    // overflow reg
+
+    WCrt(ba, CRT_ID_PRESET_ROW_SCAN, 0x00); // no panning
+
+    WCrt(ba, CRT_ID_MAX_SCAN_LINE, 0x40);   // vscan
+
+    WCrt(ba, CRT_ID_CURSOR_START, 0x00);
+    WCrt(ba, CRT_ID_CURSOR_END, 0x00);
+
+    /* Display start address */
+    WCrt(ba, CRT_ID_START_ADDR_HIGH, 0x00);
+    WCrt(ba, CRT_ID_START_ADDR_LOW, 0x00);
+
+    /* Cursor location */
+    WCrt(ba, CRT_ID_CURSOR_LOC_HIGH, 0x00);
+    WCrt(ba, CRT_ID_CURSOR_LOC_LOW, 0x00);
+
+    /* Vertical retrace */
+    WCrt(ba, CRT_ID_START_VER_RETR, 0x9C);
+    WCrt(ba, CRT_ID_END_VER_RETR, 0x0E);
+
+    WCrt(ba, CRT_ID_VER_DISP_ENA_END, 0x8F);
+    WCrt(ba, CRT_ID_SCREEN_OFFSET, 0x50);
+
+    WCrt(ba, CRT_ID_UNDERLINE_LOC, 0x00);
+
+    WCrt(ba, CRT_ID_START_VER_BLANK, 0x96);
+    WCrt(ba, CRT_ID_END_VER_BLANK, 0xB9);
+
+    WCrt(ba, CRT_ID_MODE_CONTROL, 0xE3);
+
+    WCrt(ba, CRT_ID_LINE_COMPARE, 0xFF);
+
+    WCrt(ba, CRT_ID_BACKWAD_COMP_3, 0x10);  //  FIFO enabled
+
+    /* Refresh count 1, High speed text font, enhanced color mode */
+    WCrt(ba, CRT_ID_MISC_1, 0x35);
+
+    /* start fifo position */
+    WCrt(ba, CRT_ID_DISPLAY_FIFO, 0x5a);
+
+    WCrt(ba, CRT_ID_EXT_MEM_CNTL_2, 0x70);
+
+    /* address window position */
+    WCrt(ba, CRT_ID_LAW_POS_LO, 0x40);
+
+    /* N Parameter for Display FIFO */
+    WCrt(ba, CRT_ID_EXT_MEM_CNTL_3, 0xFF);
+
+    WGfx(ba, GCT_ID_SET_RESET, 0x00);
+    WGfx(ba, GCT_ID_ENABLE_SET_RESET, 0x00);
+    WGfx(ba, GCT_ID_COLOR_COMPARE, 0x00);
+    WGfx(ba, GCT_ID_DATA_ROTATE, 0x00);
+    WGfx(ba, GCT_ID_READ_MAP_SELECT, 0x00);
+    WGfx(ba, GCT_ID_GRAPHICS_MODE, 0x40);
+    WGfx(ba, GCT_ID_MISC, 0x01);
+    WGfx(ba, GCT_ID_COLOR_XCARE, 0x0F);
+    WGfx(ba, GCT_ID_BITMASK, 0xFF);
+
+    /* colors for text mode */
+    for (i = 0; i <= 0xf; i++)
+        WAttr (ba, i, i);
+
+    WAttr(ba, ACT_ID_ATTR_MODE_CNTL, 0x41);
+    WAttr(ba, ACT_ID_OVERSCAN_COLOR, 0x01);
+    WAttr(ba, ACT_ID_COLOR_PLANE_ENA, 0x0F);
+    WAttr(ba, ACT_ID_HOR_PEL_PANNING, 0x00);
+    WAttr(ba, ACT_ID_COLOR_SELECT, 0x00);
+
+    vgaw(ba, VDAC_MASK, 0xFF);              //DAC Mask
+
+    /* initialize greyscale color palette */
+    vgaw(ba, VDAC_ADDRESS_W, 0);
+    delay(1);
+    for (i = 255; i >= 0 ; i--) {
+        vgaw(ba, VDAC_DATA, i);
+        delay(1);
+        vgaw(ba, VDAC_DATA, i);
+        delay(1);
+        vgaw(ba, VDAC_DATA, i);
+        delay(1);
+    }
+
+    WCrt(ba, CRT_ID_LAW_CNTL, 0x12);        // set LAW size 22MB
+
+    // skip Initialize graphics engine 
 }
-    */
+
 
