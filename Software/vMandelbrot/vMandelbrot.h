@@ -413,12 +413,64 @@ RGfx(volatile void *ba, short idx)
     return vgar(ba, GCT_ADDRESS_R);
 }
 
+static inline void WPix(int x, int y, char c)
+{
+    *(volatile char *)((VGA_MEM + (y * 320) + x + 0x0a0000) ^ 0x03) = c;
+}
 
 
 int main() __attribute__ ((section(".mainentry")));
+
 void vga_init13h();
 
-void putc(const char);
-void prints(const char *);
-void println(const char *);
+void putc(char);
+void prints(char *);
+void println(char *);
 
+static inline void pHexNyb(char c)
+{
+    putc(c + ((c > 0x09) ? 0x37 : 0x30));
+}
+static inline void pHexByte(char c)
+{
+    pHexNyb((c & 0x0f0) >> 4);
+    pHexNyb(c & 0x0f);
+}
+static inline void pHexHalf(short s)
+{
+    pHexByte((s & 0x0ff00) >> 8);
+    pHexByte((s & 0x00ff));
+}
+static inline void pHexWord(int i)
+{
+    pHexHalf((i & 0xffff0000) >> 16);
+    pHexHalf(i & 0x0000ffff);
+}
+
+void printHexByte(char c) 
+{
+    putc('0');
+    putc('x');
+    pHexByte(c);
+    putc(' ');
+}
+void printHexHalf(short s)
+{
+    putc('0');
+    putc('x');
+    pHexHalf(s);
+    putc(' ');
+}
+void printHexWord(int i)
+{
+    putc('0');
+    putc('x');
+    pHexWord(i);
+    putc(' ');
+}
+
+
+
+#define FIXEDPOINT 1000
+#define LIMIT 4 * FIXEDPOINT
+void mandel();

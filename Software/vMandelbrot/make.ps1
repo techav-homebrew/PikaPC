@@ -15,7 +15,8 @@ $objcopy = "$bindir\$target-objcopy.exe"
 
 $files = "vMandelbrot.c"
 
-$gccop = "-std=gnu99 -mcpu=403 -nostdlib -nodefaultlibs -Wall"
+$gccop = "-std=gnu99 -mcpu=403 -Wall"
+# $gccop+= " -nostdlib -nodefaultlibs"
 $gccop+= " -save-temps -O1 -Xlinker --entry=main"
 # $gccop+= " -Xlinker -Ttext=0x7fe60000"
 $gccop+= " -Xlinker -T -Xlinker linker.ld"

@@ -14,11 +14,14 @@ int main()
     ); */
     println("vMandelbrot");
 
-    vga_init13h();
+    // vga_init13h();
+    
+    mandel();
 
     return 0;
 }
 
+/*
 void vga_init13h()
 {
     volatile void *ba;
@@ -142,9 +145,9 @@ void vga_init13h()
     
     println("\tComplete.");
 }
+*/
 
-
-void putc(const char c)
+void putc(char c)
 {
     volatile char * com_spls = (char *)0x40000000;
     volatile char * com_sptb = (char *)0x40000009;
@@ -152,7 +155,7 @@ void putc(const char c)
     *com_sptb = c;
 }
 
-void prints(const char * str)
+void prints(char * str)
 {
     int i=0;
     while(str[i] != 0)
@@ -161,7 +164,7 @@ void prints(const char * str)
     }
 }
 
-void println(const char * str)
+void println(char * str)
 {
     prints(str);
     putc(0x0d);
@@ -169,9 +172,100 @@ void println(const char * str)
 }
 
 
+void mandel()
+{
+    int x1 = 320;
+    int y1 = 200;
+    float i1 = -1.0;
+    float i2 =  1.0;
+    float r1 = -2.0;
+    float r2 =  1.0;
+    float s1 = (r2 - r1) / x1;
+    float s2 = (i2 - i1) / y1;
+    int n;
+
+    for(int y=0; y<x1; y++)
+    {
+/*         prints("Y:");
+        printHexHalf((short)y);
+        println(""); */
+
+        float i3 = i1 + s2 * y;
+        for(int x=0; x<x1; x++)
+        {
+/*             prints("\tX:");
+            printHexHalf((short)x); */
+
+            float r3 = r1 + s1 * x;
+            float z1 = r3;
+            float z2 = i3;
+            for(n=0; n<256; n++)
+            {
+                float a = z1 * z1;
+                float b = z2 * z2;
+                if((a + b) > 4.0) break;
+                z2 = 2 * z1 * z2 + i3;
+                z1 = a - b + r3;
+            }
+
+/*             prints("\tN:");
+            printHexByte((char)n);
+            println(""); */
+            WPix(x, y, (char)(255 - n));
+        }
+    }
+}
 
 
 
+/* 
+void mandel()
+{
+    int x1 = 320;
+    int y1 = 200;
+    int i1 = -1 * FIXEDPOINT;
+    int i2 =  1 * FIXEDPOINT;
+    int r1 = -2 * FIXEDPOINT;
+    int r2 =  1 * FIXEDPOINT;
+    int s1 = (r2 - r1) / x1;
+    int s2 = (i2 - i1) / y1;
+    int n;
+
+    for(int y=0; y<y1; y++)
+    {
+        prints("Y:");
+        printHexHalf((short)y);
+        println("");
+
+        int i3 = s2 * y / FIXEDPOINT + i1;
+        for(int x=0; x<x1; x++)
+        {
+            prints("\tX:");
+            printHexHalf((short)x);
+
+            int r3 = s1 * x / FIXEDPOINT + r1;
+            int z1 = r3;
+            int z2 = i3;
+            for(n=0; n<256; n++)
+            {
+                int a = z1 * z1 / FIXEDPOINT;
+                int b = z2 * z2 / FIXEDPOINT;
+                prints("\tA:");
+                printHexWord(a);
+                prints("\tB:");
+                printHexWord(b);
+                if((a + b) > LIMIT) break;
+                z2 = (z1 * z2 / FIXEDPOINT) * 2 + i3;
+                z1 = a - b + r3;
+            }
+            prints("\tN:");
+            printHexByte((char)n);
+            println("");
+            WPix(x, y, (char)(255 - n));
+        }
+    }
+}
+ */
 
 /* 
 void vga_init()
