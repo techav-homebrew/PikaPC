@@ -80,6 +80,10 @@ $740003cf ac@                    \ reset index
 $20 $740003c3 ac!                 \ normal operation
 ;
 
+: init
+mode13 mode13 mode13 mode13 mode13
+;
+
 \ set palette to 256 greys
 : grey256
 $ff $0 do
@@ -87,6 +91,16 @@ i $740003cb ac!
 i $740003ca ac!
 i $740003ca ac!
 i $740003ca ac!
+loop
+;
+
+: colors
+$100 $0 do
+i $740003cb ac!
+i $3 and $40 * dup . $740003ca ac!
+i $1c and 8 * dup . $740003ca ac!
+i $c0 and dup . $740003ca ac!
+cr
 loop
 ;
 
@@ -153,6 +167,3 @@ variable Y
   loop
 ;
 
-: init
-mode13 mode13 mode13 mode13 mode13
-;

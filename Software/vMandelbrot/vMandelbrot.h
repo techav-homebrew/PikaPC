@@ -471,6 +471,36 @@ void printHexWord(int i)
 
 
 
+/* let's define some fixed-point arithmetic functions */
+
+typedef int fixed;
+
+#define FIXED_POINT 20
+
+static inline fixed fix_mul(fixed a, fixed b)
+{
+    int sign = (a & 0x80000000) ^ (b & 0x80000000);
+    fixed product = (fixed)(((long long)a * (long long)b) >> FIXED_POINT);
+    product &= 0x7fffffff;
+    product |= sign;
+    return product;
+}
+
+static inline fixed fix_dev(fixed a, fixed b)
+{
+    return (fixed)(a / ((b >> FIXED_POINT) | ((b & 0x80000000) ? 0xfffff800 : 0)));
+}
+
+static inline fixed int2fix(int a)
+{
+    return ((a & 0x7ff) << FIXED_POINT) | (a & 0x80000000);
+}
+
+static inline int fix2int(fixed a)
+{
+    return (a >> FIXED_POINT) | ((a & 0x80000000) ? 0xfffff800 : 0);
+}
+
 #define FIXEDPOINT 1000
 #define LIMIT 4 * FIXEDPOINT
-void mandel();
+void mandel(int, int, float, float, float, float, int);

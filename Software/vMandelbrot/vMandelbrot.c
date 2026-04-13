@@ -15,8 +15,45 @@ int main()
     println("vMandelbrot");
 
     // vga_init13h();
-    
-    mandel();
+
+    int width = 320;
+    int height = 200;
+
+    float startLeft = -2.0;
+    float startRight = 1.0;
+    float startTop = 1.0;
+    float startBottom = -1.0;
+
+    /* float endLeft = -0.523356464;
+    float endRight = -0.518160358;
+    float endTop = 0.512174106;
+    float endBottom = 0.508285156; */
+    float endLeft = -1.285109837;
+    float endRight = -1.283125163;
+    float endTop = -0.427345611;
+    float endBottom = -0.42808363;
+
+    int steps = 10;
+
+    int escape = 256;
+
+    float stepLeft = (endLeft - startLeft) / steps;
+    float stepRight = (endRight - startRight) / steps;
+    float stepTop = (endTop - startTop) / steps;
+    float stepBottom = (endBottom - startBottom) / steps;
+
+    for(int i=0; i<steps; i++)
+    {
+        mandel(
+            width,
+            height,
+            startLeft + (i * stepLeft),
+            startRight + (i * stepRight),
+            startTop + (i * stepTop),
+            startBottom + (i * stepBottom),
+            escape
+        );
+    }
 
     return 0;
 }
@@ -171,51 +208,74 @@ void println(char * str)
     putc(0x0a);
 }
 
-
-void mandel()
+/* void mandel()
 {
     int x1 = 320;
     int y1 = 200;
-    float i1 = -1.0;
-    float i2 =  1.0;
-    float r1 = -2.0;
-    float r2 =  1.0;
+    fixed i1 = int2fix(-1);
+    fixed i2 = int2fix(1);
+    fixed r1 = int2fix(-2);
+    fixed r2 = int2fix(1);
+    fixed s1 = fix_dev((r2 - r1), int2fix(x1));
+    fixed s2 = fix_dev((i2 - i1), int2fix(y1));
+    int n;
+
+    for(int y=0; y<y1; y++)
+    {
+        fixed i3 = i1 + fix_mul(s2, int2fix(y));
+        for(int x=0; x<x1; x++)
+        {
+            fixed r3 = r1 + fix_mul(s1, int2fix(x));
+            fixed z1 = r3;
+            fixed z2 = i3;
+            for(n=0; n<256; n++)
+            {
+                fixed a = fix_mul(z1, z1);
+                fixed b = fix_mul(z2, z2);
+                if((a + b) > (int2fix(4))) break;
+                z2 = fix_mul(2, fix_mul(z1, z2)) + i3;
+                z1 = a - b + r3;
+            }
+            WPix(x, y, (char)(255 - n));
+        }
+    }
+} */
+
+
+void mandel(int width, int height, float left, 
+    float right, float top, float bottom, int escape)
+{
+    int x1 = width;     // 320
+    int y1 = height;    // 200
+    float i1 = bottom;  // -1.0;
+    float i2 = top;     // 1.0;
+    float r1 = left;    // -2.0;
+    float r2 = right;   //  1.0;
     float s1 = (r2 - r1) / x1;
     float s2 = (i2 - i1) / y1;
     int n;
 
-    for(int y=0; y<x1; y++)
+    for(int y=0; y<y1; y++)
     {
-/*         prints("Y:");
-        printHexHalf((short)y);
-        println(""); */
-
         float i3 = i1 + s2 * y;
         for(int x=0; x<x1; x++)
         {
-/*             prints("\tX:");
-            printHexHalf((short)x); */
-
             float r3 = r1 + s1 * x;
             float z1 = r3;
             float z2 = i3;
-            for(n=0; n<256; n++)
+            for(n=0; n<escape; n++)
             {
+                WPix(x, y, (char)(escape - 1 -n));
                 float a = z1 * z1;
                 float b = z2 * z2;
                 if((a + b) > 4.0) break;
                 z2 = 2 * z1 * z2 + i3;
                 z1 = a - b + r3;
             }
-
-/*             prints("\tN:");
-            printHexByte((char)n);
-            println(""); */
-            WPix(x, y, (char)(255 - n));
+            WPix(x, y, (char)(escape - 1 - n));
         }
     }
 }
-
 
 
 /* 
