@@ -471,24 +471,103 @@ void printHexWord(int i)
 
 
 
-/* let's define some fixed-point arithmetic functions */
+/* let's define some fixed-point arithmetic functions 
+ * derived from https://github.com/PetteriAimonen/libfixmath/
+ */
 
 typedef int fixed;
+typedef unsigned long long ulong;
+typedef long long slong;
 
 #define FIXED_POINT 20
 
-static inline fixed fix_mul(fixed a, fixed b)
+static inline unsigned int fix_abs(fixed in)
 {
-    int sign = (a & 0x80000000) ^ (b & 0x80000000);
-    fixed product = (fixed)(((long long)a * (long long)b) >> FIXED_POINT);
-    product &= 0x7fffffff;
-    product |= sign;
-    return product;
+    if(in == 0x80000000)
+        return in;
+    else
+        return ((in > 0) ? (in) : (-in));
 }
 
-static inline fixed fix_dev(fixed a, fixed b)
+// get number of zeros
+#ifdef __GNUC__
+#define clz(x) (__builtin_clzl(x) - (8 * sizeof(slong) - 32))
+#else
+static inline unsigned char clz(unsigned int x)
 {
-    return (fixed)(a / ((b >> FIXED_POINT) | ((b & 0x80000000) ? 0xfffff800 : 0)));
+    unsigned char result = 0;
+    if(x == 0) return 32;
+    while(!(x & 0xf0000000)) { result += 4; x <<= 4; }
+    while(!(x & 0x80000000)) { result += 1; x <<= 1; }
+    return result;
+}
+#endif
+
+static inline fixed fix_mul(fixed a, fixed b)
+{
+    return (fixed)(((slong)a * b) >> FIXED_POINT);
+}
+
+/*
+// i like this division routine better but we're missing long long divide
+// https://github.com/kokke/tiny-fixedpoint-c
+static inline fixed fix_div(fixed a, fixed b)
+{
+    slong result = ((slong)a * (1 << FIXED_POINT));
+    int correction = b / 2;
+    result += (slong)correction;
+    result /= (slong)b;
+    return (fixed)(result & 0x0ffffffff);
+}
+*/
+
+static inline fixed fix_div(fixed a, fixed b)
+{
+    if(b == 0) return 0x80000000;
+
+    unsigned int remainder = fix_abs(a);
+    unsigned int divider = fix_abs(b);
+    ulong quotient = 0;
+    int bit_pos = FIXED_POINT + 1;
+
+    if(divider & 0xff000000)
+    {
+        unsigned int shifted_dev = ((divider >> (FIXED_POINT + 1)) + 1);
+        quotient = remainder / shifted_dev;
+        ulong tmp = (ulong)quotient * (ulong)divider >> (FIXED_POINT + 1);
+        remainder -= (unsigned int)(tmp);
+    }
+
+    while(!(divider & 0xf) && bit_pos >= 4)
+    {
+        divider >>= 4;
+        bit_pos -= 4;
+    }
+
+    while(remainder && bit_pos >= 0)
+    {
+        int shift = clz(remainder);
+        if (shift > bit_pos) shift = bit_pos;
+        remainder <<= shift;
+        bit_pos -= shift;
+
+        unsigned int div = remainder / divider;
+        remainder = remainder % divider;
+        quotient += (ulong)div << bit_pos;
+
+        remainder <<= 1;
+        bit_pos--;
+    }
+
+    quotient++;
+
+    fixed result = quotient >> 1;
+
+    if((a ^ b) & 0x80000000)
+    {
+        result = -result;
+    }
+    return result;
 }
 
 static inline fixed int2fix(int a)
@@ -501,6 +580,14 @@ static inline int fix2int(fixed a)
     return (a >> FIXED_POINT) | ((a & 0x80000000) ? 0xfffff800 : 0);
 }
 
+static inline fixed float2fix(float a)
+{
+    float temp = a * (1 << FIXED_POINT);
+    return (fixed)temp;
+}
+
+
 #define FIXEDPOINT 1000
 #define LIMIT 4 * FIXEDPOINT
-void mandel(int, int, float, float, float, float, int);
+//void mandel(int, int, float, float, float, float, int);
+void mandel(int, int, fixed, fixed, fixed, fixed, int);

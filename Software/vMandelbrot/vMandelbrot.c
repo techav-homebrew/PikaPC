@@ -12,6 +12,8 @@ int main()
         "mtexier 3\n\t"
         "lwzu 3,4(1)\n\t"
     ); */
+    restart:
+
     println("vMandelbrot");
 
     // vga_init13h();
@@ -19,30 +21,55 @@ int main()
     int width = 320;
     int height = 200;
 
-    float startLeft = -2.0;
+    /* float startLeft = -2.0;
     float startRight = 1.0;
     float startTop = 1.0;
-    float startBottom = -1.0;
+    float startBottom = -1.0; */
+
+    fixed startLeft = int2fix(-2);
+    fixed startRight = int2fix(1);
+    fixed startTop = int2fix(1);
+    fixed startBottom = int2fix(-1);
+
+    /* fixed endLeft = float2fix(-1.285109837);
+    fixed endRight = float2fix(-1.283125163);
+    fixed endTop = float2fix(-0.427345611);
+    fixed endBottom = float2fix(-0.42808363); */
+
+    /* fixed endLeft   = (0xFFEB7031); // (-1.285109837)
+    fixed endRight  = (0xFFEB7859); // (-1.283125163)
+    fixed endTop    = (0xFFF4A65F); // (-0.427345611)
+    fixed endBottom = (0xFFF49A48); // (-0.42808363) */
 
     /* float endLeft = -0.523356464;
     float endRight = -0.518160358;
     float endTop = 0.512174106;
     float endBottom = 0.508285156; */
-    float endLeft = -1.285109837;
+    /* float endLeft = -1.285109837;
     float endRight = -1.283125163;
     float endTop = -0.427345611;
-    float endBottom = -0.42808363;
-
-    int steps = 10;
+    float endBottom = -0.42808363; */
+    int isteps = 10;
+    //fixed steps = int2fix(isteps);
 
     int escape = 256;
 
-    float stepLeft = (endLeft - startLeft) / steps;
+    /* fixed stepLeft = fix_div((endLeft - startLeft), steps);
+    fixed stepRight = fix_div((endRight - startRight), steps);
+    fixed stepTop = fix_div((endTop - startTop), steps);
+    fixed stepBottom = fix_div((endBottom - startBottom), steps); */
+
+    fixed stepLeft = 0x000124d1;
+    fixed stepRight = 0xfffc58d5;
+    fixed stepTop = 0xfffdb75c;
+    fixed stepBottom = 0x0000ea41;
+
+    /* float stepLeft = (endLeft - startLeft) / steps;
     float stepRight = (endRight - startRight) / steps;
     float stepTop = (endTop - startTop) / steps;
-    float stepBottom = (endBottom - startBottom) / steps;
+    float stepBottom = (endBottom - startBottom) / steps; */
 
-    for(int i=0; i<steps; i++)
+    for(int i=0; i<isteps; i++)
     {
         mandel(
             width,
@@ -55,9 +82,106 @@ int main()
         );
     }
 
+    goto restart;
     return 0;
 }
 
+
+void putc(char c)
+{
+    volatile char * com_spls = (char *)0x40000000;
+    volatile char * com_sptb = (char *)0x40000009;
+    while(!(*com_spls & 0x04));
+    *com_sptb = c;
+}
+
+void prints(char * str)
+{
+    int i=0;
+    while(str[i] != 0)
+    {
+        putc(str[i++]);
+    }
+}
+
+void println(char * str)
+{
+    prints(str);
+    putc(0x0d);
+    putc(0x0a);
+}
+
+void mandel(int width, int height, fixed left,
+    fixed right, fixed top, fixed bottom, int escape)
+{
+    int x1 = width;
+    int y1 = height;
+    fixed i1 = bottom;
+    fixed i2 = top;
+    fixed r1 = left;
+    fixed r2 = right;
+    fixed s1 = fix_div((r2 - r1), int2fix(x1));
+    fixed s2 = fix_div((i2 - i1), int2fix(y1));
+    int n;
+
+    for(int y=0; y<y1; y++)
+    {
+        fixed i3 = i1 + fix_mul(s2, int2fix(y));
+        for(int x=0; x<x1; x++)
+        {
+            fixed r3 = r1 + fix_mul(s1, int2fix(x));
+            fixed z1 = r3;
+            fixed z2 = i3;
+            for(n=0; n<escape; n++)
+            {
+                WPix(x, y, (char)(escape - 1 - n));
+                fixed a = fix_mul(z1, z1);
+                fixed b = fix_mul(z2, z2);
+                if((a + b) > int2fix(4)) break;
+                z2 = i3 + fix_mul((z1 + z1), z2);
+                z1 = a - b + r3;
+            }
+            WPix(x, y, (char)(escape - 1 - n));
+        }
+    }
+}
+
+
+/* void mandel(int width, int height, float left, 
+    float right, float top, float bottom, int escape)
+{
+    int x1 = width;     // 320
+    int y1 = height;    // 200
+    float i1 = bottom;  // -1.0;
+    float i2 = top;     // 1.0;
+    float r1 = left;    // -2.0;
+    float r2 = right;   //  1.0;
+    float s1 = (r2 - r1) / x1;
+    float s2 = (i2 - i1) / y1;
+    int n;
+
+    for(int y=0; y<y1; y++)
+    {
+        float i3 = i1 + s2 * y;
+        for(int x=0; x<x1; x++)
+        {
+            float r3 = r1 + s1 * x;
+            float z1 = r3;
+            float z2 = i3;
+            for(n=0; n<escape; n++)
+            {
+                WPix(x, y, (char)(escape - 1 - n));
+                float a = z1 * z1;
+                float b = z2 * z2;
+                if((a + b) > 4.0) break;
+                z2 = 2 * z1 * z2 + i3;
+                z1 = a - b + r3;
+            }
+            WPix(x, y, (char)(escape - 1 - n));
+        }
+    }
+} */
+ 
 /*
 void vga_init13h()
 {
@@ -184,306 +308,3 @@ void vga_init13h()
 }
 */
 
-void putc(char c)
-{
-    volatile char * com_spls = (char *)0x40000000;
-    volatile char * com_sptb = (char *)0x40000009;
-    while(!(*com_spls & 0x04));
-    *com_sptb = c;
-}
-
-void prints(char * str)
-{
-    int i=0;
-    while(str[i] != 0)
-    {
-        putc(str[i++]);
-    }
-}
-
-void println(char * str)
-{
-    prints(str);
-    putc(0x0d);
-    putc(0x0a);
-}
-
-/* void mandel()
-{
-    int x1 = 320;
-    int y1 = 200;
-    fixed i1 = int2fix(-1);
-    fixed i2 = int2fix(1);
-    fixed r1 = int2fix(-2);
-    fixed r2 = int2fix(1);
-    fixed s1 = fix_dev((r2 - r1), int2fix(x1));
-    fixed s2 = fix_dev((i2 - i1), int2fix(y1));
-    int n;
-
-    for(int y=0; y<y1; y++)
-    {
-        fixed i3 = i1 + fix_mul(s2, int2fix(y));
-        for(int x=0; x<x1; x++)
-        {
-            fixed r3 = r1 + fix_mul(s1, int2fix(x));
-            fixed z1 = r3;
-            fixed z2 = i3;
-            for(n=0; n<256; n++)
-            {
-                fixed a = fix_mul(z1, z1);
-                fixed b = fix_mul(z2, z2);
-                if((a + b) > (int2fix(4))) break;
-                z2 = fix_mul(2, fix_mul(z1, z2)) + i3;
-                z1 = a - b + r3;
-            }
-            WPix(x, y, (char)(255 - n));
-        }
-    }
-} */
-
-
-void mandel(int width, int height, float left, 
-    float right, float top, float bottom, int escape)
-{
-    int x1 = width;     // 320
-    int y1 = height;    // 200
-    float i1 = bottom;  // -1.0;
-    float i2 = top;     // 1.0;
-    float r1 = left;    // -2.0;
-    float r2 = right;   //  1.0;
-    float s1 = (r2 - r1) / x1;
-    float s2 = (i2 - i1) / y1;
-    int n;
-
-    for(int y=0; y<y1; y++)
-    {
-        float i3 = i1 + s2 * y;
-        for(int x=0; x<x1; x++)
-        {
-            float r3 = r1 + s1 * x;
-            float z1 = r3;
-            float z2 = i3;
-            for(n=0; n<escape; n++)
-            {
-                WPix(x, y, (char)(escape - 1 -n));
-                float a = z1 * z1;
-                float b = z2 * z2;
-                if((a + b) > 4.0) break;
-                z2 = 2 * z1 * z2 + i3;
-                z1 = a - b + r3;
-            }
-            WPix(x, y, (char)(escape - 1 - n));
-        }
-    }
-}
-
-
-/* 
-void mandel()
-{
-    int x1 = 320;
-    int y1 = 200;
-    int i1 = -1 * FIXEDPOINT;
-    int i2 =  1 * FIXEDPOINT;
-    int r1 = -2 * FIXEDPOINT;
-    int r2 =  1 * FIXEDPOINT;
-    int s1 = (r2 - r1) / x1;
-    int s2 = (i2 - i1) / y1;
-    int n;
-
-    for(int y=0; y<y1; y++)
-    {
-        prints("Y:");
-        printHexHalf((short)y);
-        println("");
-
-        int i3 = s2 * y / FIXEDPOINT + i1;
-        for(int x=0; x<x1; x++)
-        {
-            prints("\tX:");
-            printHexHalf((short)x);
-
-            int r3 = s1 * x / FIXEDPOINT + r1;
-            int z1 = r3;
-            int z2 = i3;
-            for(n=0; n<256; n++)
-            {
-                int a = z1 * z1 / FIXEDPOINT;
-                int b = z2 * z2 / FIXEDPOINT;
-                prints("\tA:");
-                printHexWord(a);
-                prints("\tB:");
-                printHexWord(b);
-                if((a + b) > LIMIT) break;
-                z2 = (z1 * z2 / FIXEDPOINT) * 2 + i3;
-                z1 = a - b + r3;
-            }
-            prints("\tN:");
-            printHexByte((char)n);
-            println("");
-            WPix(x, y, (char)(255 - n));
-        }
-    }
-}
- */
-
-/* 
-void vga_init()
-{
-    volatile void *ba;
-    unsigned char test;
-    int i;
-
-    ba = (volatile void *)VGA_IO32;
-
-    // vga enable (must be first; chip will not respond before this is sent)
-    vgaw(ba, GREG_VGA_ENABLE, 0x01);
-
-    delay(100);
-
-    test = vgar(ba, GREG_MISC_OUTPUT_R);
-    __USE(test);
-
-    // configure for color emulation & enable CPU access
-    vgaw(ba, GREG_MISC_OUTPUT_W, 0x03);
-
-    // unlock registers
-    delay(1);
-    WCrt(ba, CRT_ID_END_VER_RETR, 0x0e);    // unlock CR 0-7
-    delay(1);
-    WCrt(ba, CRT_ID_REGISTER_LOCK_1, 0x48);	// unlock S3 VGA regs
-    WCrt(ba, CRT_ID_REGISTER_LOCK_2, 0xA5);	// unlock syscontrol
-    delay(1);
-    WCrt(ba, CRT_ID_SYSTEM_CONFIG, 0x01);   // unlock enhanced regs
-    delay(1);
-
-    //
-    // bit 1=1: enable enhanced mode functions
-    // bit 4=1: enable linear addressing
-    //
-    vgaw(ba, ECR_ADV_FUNC_CNTL, 0x11);
-
-    // enable color mode (bit0), CPU access (bit1), high 64k page (bit5)
-    delay(1);
-    vgaw(ba, GREG_MISC_OUTPUT_W, 0xe3);
-    delay(1);
-
-    // CPU base addr
-    WCrt(ba, CRT_ID_EXT_SYS_CNTL_4, 0x00);
-
-    // Reset. This does nothing, but everyone does it:)
-    WSeq(ba, SEQ_ID_RESET, 0x03);
-
-    WSeq(ba, SEQ_ID_CLOCKING_MODE, 0x01);   // 8 Dot Clock
-    WSeq(ba, SEQ_ID_MAP_MASK, 0x0f);	    // Enable write planes
-    WSeq(ba, SEQ_ID_CHAR_MAP_SELECT, 0x00);	// Character Font
-
-    WSeq(ba, SEQ_ID_MEMORY_MODE, 0x02);	    // Complete mem access
-
-    WSeq(ba, SEQ_ID_UNLOCK_EXT, 0x06);	    // Unlock extensions
-
-    WSeq(ba, SEQ_ID_BUS_REQ_CNTL, 0x00);    // 2MB, 3 clock writes
-
-    WSeq(ba, SEQ_ID_RAMDAC_CNTL, 0xC0);     // faster LUT write
-
-    // skip mem clock setup; we'll leave it at default
-
-    // initialize text mode
-    
-    WCrt(ba, CRT_ID_HOR_TOTAL, 0x5F);
-    WCrt(ba, CRT_ID_HOR_DISP_ENA_END, 0x4F);
-    WCrt(ba, CRT_ID_START_HOR_BLANK, 0x50);
-    WCrt(ba, CRT_ID_END_HOR_BLANK, 0x82);
-    WCrt(ba, CRT_ID_START_HOR_RETR, 0x54);
-    WCrt(ba, CRT_ID_END_HOR_RETR, 0x80);
-    WCrt(ba, CRT_ID_VER_TOTAL, 0xBF);
-
-    WCrt(ba, CRT_ID_OVERFLOW, 0x1F);	    // overflow reg
-
-    WCrt(ba, CRT_ID_PRESET_ROW_SCAN, 0x00); // no panning
-
-    WCrt(ba, CRT_ID_MAX_SCAN_LINE, 0x40);   // vscan
-
-    WCrt(ba, CRT_ID_CURSOR_START, 0x00);
-    WCrt(ba, CRT_ID_CURSOR_END, 0x00);
-
-    // Display start address
-    WCrt(ba, CRT_ID_START_ADDR_HIGH, 0x00);
-    WCrt(ba, CRT_ID_START_ADDR_LOW, 0x00);
-
-    // Cursor location
-    WCrt(ba, CRT_ID_CURSOR_LOC_HIGH, 0x00);
-    WCrt(ba, CRT_ID_CURSOR_LOC_LOW, 0x00);
-
-    // Vertical retrace
-    WCrt(ba, CRT_ID_START_VER_RETR, 0x9C);
-    WCrt(ba, CRT_ID_END_VER_RETR, 0x0E);
-
-    WCrt(ba, CRT_ID_VER_DISP_ENA_END, 0x8F);
-    WCrt(ba, CRT_ID_SCREEN_OFFSET, 0x50);
-
-    WCrt(ba, CRT_ID_UNDERLINE_LOC, 0x00);
-
-    WCrt(ba, CRT_ID_START_VER_BLANK, 0x96);
-    WCrt(ba, CRT_ID_END_VER_BLANK, 0xB9);
-
-    WCrt(ba, CRT_ID_MODE_CONTROL, 0xE3);
-
-    WCrt(ba, CRT_ID_LINE_COMPARE, 0xFF);
-
-    WCrt(ba, CRT_ID_BACKWAD_COMP_3, 0x10);  //  FIFO enabled
-
-    // Refresh count 1, High speed text font, enhanced color mode
-    WCrt(ba, CRT_ID_MISC_1, 0x35);
-
-    // start fifo position
-    WCrt(ba, CRT_ID_DISPLAY_FIFO, 0x5a);
-
-    WCrt(ba, CRT_ID_EXT_MEM_CNTL_2, 0x70);
-
-    // address window position
-    WCrt(ba, CRT_ID_LAW_POS_LO, 0x40);
-
-    // N Parameter for Display FIFO
-    WCrt(ba, CRT_ID_EXT_MEM_CNTL_3, 0xFF);
-
-    WGfx(ba, GCT_ID_SET_RESET, 0x00);
-    WGfx(ba, GCT_ID_ENABLE_SET_RESET, 0x00);
-    WGfx(ba, GCT_ID_COLOR_COMPARE, 0x00);
-    WGfx(ba, GCT_ID_DATA_ROTATE, 0x00);
-    WGfx(ba, GCT_ID_READ_MAP_SELECT, 0x00);
-    WGfx(ba, GCT_ID_GRAPHICS_MODE, 0x40);
-    WGfx(ba, GCT_ID_MISC, 0x01);
-    WGfx(ba, GCT_ID_COLOR_XCARE, 0x0F);
-    WGfx(ba, GCT_ID_BITMASK, 0xFF);
-
-    // colors for text mode
-    for (i = 0; i <= 0xf; i++)
-        WAttr (ba, i, i);
-
-    WAttr(ba, ACT_ID_ATTR_MODE_CNTL, 0x41);
-    WAttr(ba, ACT_ID_OVERSCAN_COLOR, 0x01);
-    WAttr(ba, ACT_ID_COLOR_PLANE_ENA, 0x0F);
-    WAttr(ba, ACT_ID_HOR_PEL_PANNING, 0x00);
-    WAttr(ba, ACT_ID_COLOR_SELECT, 0x00);
-
-    vgaw(ba, VDAC_MASK, 0xFF);              //DAC Mask
-
-    // initialize greyscale color palette
-    vgaw(ba, VDAC_ADDRESS_W, 0);
-    delay(1);
-    for (i = 255; i >= 0 ; i--) {
-        vgaw(ba, VDAC_DATA, i);
-        delay(1);
-        vgaw(ba, VDAC_DATA, i);
-        delay(1);
-        vgaw(ba, VDAC_DATA, i);
-        delay(1);
-    }
-
-    WCrt(ba, CRT_ID_LAW_CNTL, 0x12);        // set LAW size 22MB
-
-    // skip Initialize graphics engine 
-}
-
- */
