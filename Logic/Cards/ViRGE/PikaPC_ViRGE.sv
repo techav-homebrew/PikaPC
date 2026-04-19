@@ -73,6 +73,7 @@ end
 
 always @(posedge busClk or negedge busRESETn) begin
     if(!busRESETn) busState <= sIDLE;
+    else if(busSTARTn) busState <= sIDLE;
     else busState <= busNext;
 end
 
@@ -93,6 +94,13 @@ always_comb begin
     else busACKn <= 1'bZ;
 end
 
+// vlb address strobe (falling edge!)
+always @(negedge busClk or negedge busRESETn) begin
+    if(!busRESETn) vidADSn <= 1'b1;
+    else if (busState == sADDR) vidADSn <= 1'b0;
+    else vidADSn <= 1'b1;
+end
+
 // bus cycle control signals
 always @(posedge busClk or negedge busRESETn) begin
     if(!busRESETn) begin
@@ -103,7 +111,6 @@ always @(posedge busClk or negedge busRESETn) begin
         cardOEn  <= 1'b1;
         vidSAUP1 <= 1'b0;
         vidSAUP2 <= 1'b0;
-        vidADSn  <= 1'b1;
     end else begin
         case(busNext)
             sADDR: begin
@@ -111,10 +118,9 @@ always @(posedge busClk or negedge busRESETn) begin
                 cardBENn <= 1'b1;
                 cardWENn <= busRWn;
                 vidMIOn  <= cardA23;
-                cardOEn  <= busRWn;
+                cardOEn  <= !busRWn;
                 vidSAUP1 <= !cardA24;
                 vidSAUP2 <= cardA24;
-                vidADSn  <= 1'b0;
             end
             sDATA, sTERM, sCEND: begin
                 cardAENn <= 1'b0;
@@ -124,7 +130,6 @@ always @(posedge busClk or negedge busRESETn) begin
                 cardOEn  <= cardOEn;
                 vidSAUP1 <= vidSAUP1;
                 vidSAUP2 <= vidSAUP2;
-                vidADSn  <= 1'b1;
             end
             default: begin
                 cardAENn <= 1'b1;
@@ -134,7 +139,6 @@ always @(posedge busClk or negedge busRESETn) begin
                 cardOEn  <= cardOEn;
                 vidSAUP1 <= 1'b0;
                 vidSAUP2 <= 1'b0;
-                vidADSn  <= 1'b1;
             end
         endcase
     end
