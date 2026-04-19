@@ -18,56 +18,20 @@ int main()
 
     // vga_init13h();
 
-    int width = 320;
-    int height = 200;
-
-    /* float startLeft = -2.0;
-    float startRight = 1.0;
-    float startTop = 1.0;
-    float startBottom = -1.0; */
+    int width = 640;
+    int height = 480;
+    int escape = 0x0000200;
+    int isteps = 12;
 
     fixed startLeft = int2fix(-2);
     fixed startRight = int2fix(1);
     fixed startTop = int2fix(1);
     fixed startBottom = int2fix(-1);
 
-    /* fixed endLeft = float2fix(-1.285109837);
-    fixed endRight = float2fix(-1.283125163);
-    fixed endTop = float2fix(-0.427345611);
-    fixed endBottom = float2fix(-0.42808363); */
-
-    /* fixed endLeft   = (0xFFEB7031); // (-1.285109837)
-    fixed endRight  = (0xFFEB7859); // (-1.283125163)
-    fixed endTop    = (0xFFF4A65F); // (-0.427345611)
-    fixed endBottom = (0xFFF49A48); // (-0.42808363) */
-
-    /* float endLeft = -0.523356464;
-    float endRight = -0.518160358;
-    float endTop = 0.512174106;
-    float endBottom = 0.508285156; */
-    /* float endLeft = -1.285109837;
-    float endRight = -1.283125163;
-    float endTop = -0.427345611;
-    float endBottom = -0.42808363; */
-    int isteps = 10;
-    //fixed steps = int2fix(isteps);
-
-    int escape = 256;
-
-    /* fixed stepLeft = fix_div((endLeft - startLeft), steps);
-    fixed stepRight = fix_div((endRight - startRight), steps);
-    fixed stepTop = fix_div((endTop - startTop), steps);
-    fixed stepBottom = fix_div((endBottom - startBottom), steps); */
-
     fixed stepLeft = 0x000124d1;
     fixed stepRight = 0xfffc58d5;
     fixed stepTop = 0xfffdb75c;
     fixed stepBottom = 0x0000ea41;
-
-    /* float stepLeft = (endLeft - startLeft) / steps;
-    float stepRight = (endRight - startRight) / steps;
-    float stepTop = (endTop - startTop) / steps;
-    float stepBottom = (endBottom - startBottom) / steps; */
 
     for(int i=0; i<isteps; i++)
     {
@@ -111,6 +75,22 @@ void println(char * str)
     putc(0x0a);
 }
 
+void mandelPixel(int x, int y, short value)
+{
+    //short color = 0x1c63;
+    short color = 0;
+    color |= (value & 0x0007) << 2; // B
+    color |= (value & 0x0038) << 4; // G
+    color |= (value & 0x01c0) << 6; // R
+    color |= (value & 0x0100) << 7; // R'
+
+    //color |= (value & 0x0001) ? 0x0003 : 0; // B lsb
+    //color |= (value & 0x0008) ? 0x0060 : 0; // G lsb
+    //color |= (value & 0x0040) ? 0x0c00 : 0; // R lsb
+
+    WPix(x, y, color);
+}
+
 void mandel(int width, int height, fixed left,
     fixed right, fixed top, fixed bottom, int escape)
 {
@@ -134,14 +114,14 @@ void mandel(int width, int height, fixed left,
             fixed z2 = i3;
             for(n=0; n<escape; n++)
             {
-                WPix(x, y, (char)(escape - 1 - n));
+                mandelPixel(x, y, (short)(n));
                 fixed a = fix_mul(z1, z1);
                 fixed b = fix_mul(z2, z2);
                 if((a + b) > int2fix(4)) break;
                 z2 = i3 + fix_mul((z1 + z1), z2);
                 z1 = a - b + r3;
             }
-            WPix(x, y, (char)(escape - 1 - n));
+            mandelPixel(x, y, (short)(n));
         }
     }
 }

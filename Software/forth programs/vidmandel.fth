@@ -48,6 +48,7 @@ $9615 over ah!                  \ CR15: v blank start
 $b916 over ah!                  \ CR16: v blank end
 $a317 over ah!                  \ CR17: 
 $ff18 over ah!                  \ CR18: line compare pos
+\ $103a over ah!                  \ CR3A: enable 256+ color modes
 drop $700003cc                  \ GRAPHICS REGISTERS
 $0000 over ah!                  \ GR00: reset data
 $0001 over ah!                  \ GR01: reset data
@@ -67,14 +68,14 @@ $0404 over ah!
 $0505 over ah!
 $0606 over ah!
 $0707 over ah!
-$0808 over ah!
-$0909 over ah!
-$0a0a over ah!
-$0b0b over ah!
-$0c0c over ah!
-$0d0d over ah!
-$0e0e over ah!
-$0f0f over ah!
+$1008 over ah!
+$2009 over ah!
+$300a over ah!
+$400b over ah!
+$500c over ah!
+$600d over ah!
+$700e over ah!
+$ff0f over ah!
 drop $ff $740003c5 ac!            \ DAC mask
 $740003cf ac@                    \ reset index
 $20 $740003c3 ac!                 \ normal operation

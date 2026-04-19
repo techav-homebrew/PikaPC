@@ -34,6 +34,7 @@
 
 #define VGA_IO32 0x70000000
 #define VGA_MEM  0x70800000
+#define VGA_BUF  0x71800000
 
 #define	__USE(a) (/*LINTED*/(void)(a))
 
@@ -413,9 +414,9 @@ RGfx(volatile void *ba, short idx)
     return vgar(ba, GCT_ADDRESS_R);
 }
 
-static inline void WPix(int x, int y, char c)
+static inline void WPix(int x, int y, short c)
 {
-    *(volatile char *)((VGA_MEM + (y * 320) + x + 0x0a0000) ^ 0x03) = c;
+    *(volatile short *)((VGA_BUF + (y * 640 *2) + x * 2) ^ 0x02) = c;
 }
 
 
@@ -590,4 +591,5 @@ static inline fixed float2fix(float a)
 #define FIXEDPOINT 1000
 #define LIMIT 4 * FIXEDPOINT
 //void mandel(int, int, float, float, float, float, int);
+void mandelPixel(int, int, short);
 void mandel(int, int, fixed, fixed, fixed, fixed, int);

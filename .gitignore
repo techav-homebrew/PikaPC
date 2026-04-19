@@ -80,3 +80,5 @@ fp-info-cache
 # exclude plot output
 *_Gerbers.zip
 Gerbers
+*_bak
+.vscode/c_cpp_properties.json
