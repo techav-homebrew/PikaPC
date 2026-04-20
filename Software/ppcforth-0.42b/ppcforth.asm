@@ -159,7 +159,7 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 
 
 ;	br0	ROM		$7e00,0000; 32MB;  8b; burst;    2/2WS; hold 0;
-;	br1	RAM		$7c00,0000; 32MB; 32b; burst;    1/1WS; hold 0; ready
+;	br1	RAM		$7c00,0000; 32MB; 32b; no burst; 1WS;   hold 0; ready
 ;	br2	Video Memory	$7a00,0000; 32MB; 32b; no burst; 1WS;   hold 0; ready
 ;	br3	Video I/O	$7800,0000; 32MB;  8b; no burst; 1WS;   hold 0; ready
 ; 	br4	IDE		$7600,0000; 32MB; 16b; no burst; 1WS;   hold 0; ready
@@ -169,7 +169,7 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 
 	lwa 	r3,0xe0be0a21	; set br0
 	mtdcr	br0,r3
-	lwa 	r3,0xc0bf4501	; set br1
+	lwa 	r3,0xc0bd4101	; set br1
 	mtdcr	br1,r3
 	lwa 	r3,0xa0bd4101	; set br2
 	mtdcr	br2,r3

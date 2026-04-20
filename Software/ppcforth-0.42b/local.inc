@@ -12,12 +12,14 @@
 
 
 ; CHANGE THIS <<<<<<<<<<<---------------------------------------|
-b_of_4th equ    0x7fe74000      ; bottom of forth system (RAM)  |
+;b_of_4th equ    0x7fe74000      ; bottom of forth system (RAM)  |
+b_of_4th equ    0x7c074000      ;
 ;rambase equ     0x7fe00000      ; base of system ram            |
 rambase equ     0x7c000000      ; base of system RAM            |
-rombase equ     0x7ff00000      ; base of system rom            |
-loadpt	equ	0x7fe60000	; used for loads to RAM		|
+rombase equ     0x7ffe0000      ; base of system rom            |
+;loadpt	equ	0x7fe60000	; used for loads to RAM		|
 				; (if rom is not defined!)	|
+loadpt equ      0x7c060000      ;
 ;ramsize equ     0x100000        ; 1M of RAM			|
 ramsize equ     0x1000000       ; 16M of RAM                    |
 romsize	equ	0x20000		; 128K of ROM	 		|
@@ -50,5 +52,3 @@ vector	equ	rambase+0x70000
         org     (rombase+romsize)-4 ; first exec point in ROM after reset
         b       start
         endif
-
-

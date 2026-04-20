@@ -511,3 +511,14 @@ enddebug macro
 ;tlbsync	macro
 ;	dd	0x7c00046c
 ;	endm
+
+; 2026/04/18 techav
+; early boot macro for putch
+
+; mputch	macro
+;         lis     r8,0x4000	; load I/O address 0x40000000
+; mputchq lbz     r7,_spls(r8)	; get serial register address
+;         andi.   r7,r7,4		; check TX ready bit
+;         beq     0,mputchq	; loop until ready
+;         stb     r3,_sptb(r8)	; print byte
+;	endm
