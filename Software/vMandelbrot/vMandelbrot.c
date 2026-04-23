@@ -5,13 +5,6 @@
 
 int main()
 {
-/*     // disable interrupts
-    __asm__(
-        "stwu 3,-4(1)\n\t"
-        "li 3,0\n\t"
-        "mtexier 3\n\t"
-        "lwzu 3,4(1)\n\t"
-    ); */
     restart:
 
     println("vMandelbrot");
@@ -28,22 +21,32 @@ int main()
     fixed startTop = int2fix(1);
     fixed startBottom = int2fix(-1);
 
-    fixed stepLeft = 0x000124d1;
-    fixed stepRight = 0xfffc58d5;
-    fixed stepTop = 0xfffdb75c;
-    fixed stepBottom = 0x0000ea41;
+    fixed stopLeft = 0xfff616a1;
+    fixed stopRight = 0xfff61b7f;
+    fixed stopTop = 0x000abda2;
+    fixed stopBottom = 0x000ab9fc;
+
+    fixed left = startLeft;
+    fixed right = startRight;
+    fixed top = startTop;
+    fixed bottom = startBottom;
 
     for(int i=0; i<isteps; i++)
     {
         mandel(
             width,
             height,
-            startLeft + (i * stepLeft),
-            startRight + (i * stepRight),
-            startTop + (i * stepTop),
-            startBottom + (i * stepBottom),
+            left,
+            right,
+            top,
+            bottom,
             escape
         );
+
+        left = ((stopLeft - left) >> 2) + left;
+        right = ((stopRight - right) >> 2) + right;
+        top = ((stopTop - top) >> 2) + top;
+        bottom = ((stopBottom - bottom) >> 2) + bottom;
     }
 
     goto restart;
@@ -80,13 +83,8 @@ void mandelPixel(int x, int y, short value)
     //short color = 0x1c63;
     short color = 0;
     color |= (value & 0x0007) << 2; // B
-    color |= (value & 0x0038) << 4; // G
-    color |= (value & 0x01c0) << 6; // R
-    color |= (value & 0x0100) << 7; // R'
-
-    //color |= (value & 0x0001) ? 0x0003 : 0; // B lsb
-    //color |= (value & 0x0008) ? 0x0060 : 0; // G lsb
-    //color |= (value & 0x0040) ? 0x0c00 : 0; // R lsb
+    color |= (value & 0x0038) << 5; // G
+    color |= (value & 0x01c0) << 7; // R
 
     WPix(x, y, color);
 }
