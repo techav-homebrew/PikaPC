@@ -49,6 +49,17 @@ int main()
         bottom = ((stopBottom - bottom) >> 2) + bottom;
     }
 
+    // and let's go one more at the target
+    mandel(
+        width,
+        height,
+        stopLeft,
+        stopRight,
+        stopTop,
+        stopBottom,
+        escape
+    );
+
     goto restart;
     return 0;
 }
@@ -123,7 +134,6 @@ void mandel(int width, int height, fixed left,
         }
     }
 }
-
 
 /* void mandel(int width, int height, float left, 
     float right, float top, float bottom, int escape)

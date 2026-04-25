@@ -151,13 +151,34 @@ init
 clearScreen
 
 
+: whiteScreen 25800 0 do ffffffff 71800000 i 4 * + a! loop ;
+: clearScreen 25800 0 do 0 71800000 i 4 * + a! loop ;
 
+: highbit 25800 0 do 80008000 71800000 i 4 * + a! loop ;
 
+: fillscreen 25800 0 do dup 71800000 i 4 * + a! loop ;
 
+: testbits
+80008000 fillscreen
+40004000 fillscreen
+20002000 fillscreen
+10001000 fillscreen
+08000800 fillscreen
+04000400 fillscreen
+02000200 fillscreen
+01000100 fillscreen
+00800080 fillscreen
+00400040 fillscreen
+00200020 fillscreen
+00100010 fillscreen
+00080008 fillscreen
+00040004 fillscreen
+00020002 fillscreen
+00010001 fillscreen
+00000000 fillscreen
+;
 
-
-
-
+: testcolors 4b000 0 do i 0ffff and 71800000 i 2 * + ah! loop ;
 
 
 
