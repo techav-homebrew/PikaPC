@@ -16954,6 +16954,15 @@
 		(uuid "10bee10c-9732-4e3c-944d-0f252feedf25")
 	)
 	(bus_entry
+		(at 152.4 139.7)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13e92e52-8e4c-42d0-9188-0cd68c86af8b")
+	)
+	(bus_entry
 		(at 152.4 45.72)
 		(size 2.54 2.54)
 		(stroke
@@ -17089,6 +17098,15 @@
 		(uuid "4b8a35dd-c142-4342-865c-de1378236cbe")
 	)
 	(bus_entry
+		(at 152.4 134.62)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c99b3c6-c928-4540-8482-7ef238fa5aba")
+	)
+	(bus_entry
 		(at 76.2 33.02)
 		(size 2.54 2.54)
 		(stroke
@@ -17206,6 +17224,15 @@
 		(uuid "7245ab31-1ccd-412d-9a19-67610a791f10")
 	)
 	(bus_entry
+		(at 152.4 132.08)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7601f7e4-a1c7-4988-b10e-1cee79752a9b")
+	)
+	(bus_entry
 		(at 76.2 55.88)
 		(size 2.54 2.54)
 		(stroke
@@ -17213,6 +17240,15 @@
 			(type default)
 		)
 		(uuid "77b02bcd-af2f-40cc-ac12-3fa55ba6e509")
+	)
+	(bus_entry
+		(at 152.4 137.16)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7873cf6b-718b-4f71-b963-0a94e9a6d343")
 	)
 	(bus_entry
 		(at 152.4 127)
@@ -18413,6 +18449,16 @@
 		)
 		(uuid "42c80de9-2cf1-4880-8e4e-c6bbe8ec45d6")
 	)
+	(bus
+		(pts
+			(xy 154.94 142.24) (xy 157.48 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42debcac-3ee1-4446-ae09-663101fb27a5")
+	)
 	(wire
 		(pts
 			(xy 63.5 127) (xy 76.2 127)
@@ -18965,6 +19011,16 @@
 	)
 	(bus
 		(pts
+			(xy 154.94 139.7) (xy 154.94 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e5b31ec-42f1-4c3e-ac21-a7823984c0cf")
+	)
+	(bus
+		(pts
 			(xy 154.94 91.44) (xy 154.94 88.9)
 		)
 		(stroke
@@ -19472,6 +19528,26 @@
 			(type default)
 		)
 		(uuid "9e503583-f5e1-40c0-a26a-f3be49034478")
+	)
+	(bus
+		(pts
+			(xy 154.94 137.16) (xy 154.94 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e980f65-a6cd-4213-801e-faa883983d6a")
+	)
+	(bus
+		(pts
+			(xy 154.94 134.62) (xy 154.94 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f443c72-8960-4284-ae99-001c50be521e")
 	)
 	(wire
 		(pts
@@ -21948,6 +22024,17 @@
 		)
 		(uuid "6914666c-ad8e-4923-a4a5-e242143e9663")
 	)
+	(hierarchical_label "~{DRAM-OE}"
+		(shape input)
+		(at 152.4 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7228313c-8baf-4c5a-82b2-26ac8ee79d14")
+	)
 	(hierarchical_label "~{BusError}"
 		(shape input)
 		(at 96.52 114.3 180)
@@ -21958,6 +22045,17 @@
 			(justify right)
 		)
 		(uuid "808553a5-f448-4c47-9b31-99eb42df1aac")
+	)
+	(hierarchical_label "~{CAS[3..0]}"
+		(shape input)
+		(at 157.48 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "818cfbb9-c22a-4e5c-9a7e-040f2b156c19")
 	)
 	(hierarchical_label "~{CS[7..0]}"
 		(shape input)
@@ -22013,6 +22111,17 @@
 			(justify left)
 		)
 		(uuid "ad0094a0-6ee4-4fdd-a840-0feaaf4bad0c")
+	)
+	(hierarchical_label "~{DRAM-WE}"
+		(shape input)
+		(at 152.4 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c3146c0e-707c-4c59-8d2d-9603d054394a")
 	)
 	(hierarchical_label "CpuClk"
 		(shape input)
