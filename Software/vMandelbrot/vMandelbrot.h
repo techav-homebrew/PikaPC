@@ -313,28 +313,22 @@ static inline void delay(unsigned long ms)
     }
 }
 
-/* #define WGfx(ba, idx, val) \
-    do { vgaw(ba, GCT_ADDRESS, idx); vgaw(ba, GCT_ADDRESS_W , val); } while (0)
-
-#define WSeq(ba, idx, val) \
-    do { vgaw(ba, SEQ_ADDRESS, idx); vgaw(ba, SEQ_ADDRESS_W , val); } while (0)
-
-#define WCrt(ba, idx, val) \
-    do { vgaw(ba, CRT_ADDRESS, idx); vgaw(ba, CRT_ADDRESS_W , val); } while (0) */
-
-/*
-unsigned char tmp;\
-        tmp = vgar(ba, ACT_ADDRESS_RESET);\
-        __USE(tmp);\
-*/
-
-#define WAttr(ba, idx, val) \
+/* #define WAttr(ba, idx, val) \
     do {	\
         vgaw(ba, ACT_ADDRESS_W, idx);\
         delay(1);\
         vgaw(ba, ACT_ADDRESS_W, val);\
         delay(1);\
-    } while (0)
+    } while (0) */
+
+void WAttr(volatile void *ba, char idx, char val)
+{
+    vgaw(ba, ACT_ADDRESS_W, idx);
+    delay(1);
+    vgaw(ba, ACT_ADDRESS_W, val);
+    delay(1);
+}
+
 
 // let's turn these into 16-bit accesses
 
@@ -348,11 +342,25 @@ unsigned char tmp;\
         delay(10);                   \
     } while(0)
 
-#define WGfx(ba, idx, val) WIdxReg(ba, GCT_ADDRESS, idx, val)
+/* #define WGfx(ba, idx, val) WIdxReg(ba, GCT_ADDRESS, idx, val)
 #define WSeq(ba, idx, val) WIdxReg(ba, SEQ_ADDRESS, idx, val)
-#define WCrt(ba, idx, val) WIdxReg(ba, CRT_ADDRESS, idx, val)
+#define WCrt(ba, idx, val) WIdxReg(ba, CRT_ADDRESS, idx, val) */
 
-
+void WGfx(volatile void *ba, char idx, char val)
+{
+    WIdxReg(ba, GCT_ADDRESS, idx, val);
+    delay(1);
+}
+void WSeq(volatile void *ba, char idx, char val)
+{
+    WIdxReg(ba, SEQ_ADDRESS, idx, val);
+    delay(1);
+}
+void WCrt(volatile void *ba, char idx, char val)
+{
+    WIdxReg(ba, CRT_ADDRESS, idx, val);
+    delay(1);
+}
 
 
 #define SetTextPlane(ba, m) \
@@ -422,7 +430,7 @@ static inline void WPix(int x, int y, short c)
 
 int main() __attribute__ ((section(".mainentry")));
 
-void vga_init13h();
+void vga_init();
 
 void putc(char);
 void prints(char *);

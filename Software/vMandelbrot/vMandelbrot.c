@@ -5,9 +5,11 @@
 
 int main()
 {
+    vga_init();
+
     restart:
 
-    println("vMandelbrot");
+    prints("vMandelbrot ... ");
 
     // vga_init13h();
 
@@ -59,6 +61,10 @@ int main()
         stopBottom,
         escape
     );
+
+    println("Done");
+
+    delay(80000);   // hold last frame roughly 5 seconds
 
     goto restart;
     return 0;
@@ -135,53 +141,17 @@ void mandel(int width, int height, fixed left,
     }
 }
 
-/* void mandel(int width, int height, float left, 
-    float right, float top, float bottom, int escape)
-{
-    int x1 = width;     // 320
-    int y1 = height;    // 200
-    float i1 = bottom;  // -1.0;
-    float i2 = top;     // 1.0;
-    float r1 = left;    // -2.0;
-    float r2 = right;   //  1.0;
-    float s1 = (r2 - r1) / x1;
-    float s2 = (i2 - i1) / y1;
-    int n;
 
-    for(int y=0; y<y1; y++)
-    {
-        float i3 = i1 + s2 * y;
-        for(int x=0; x<x1; x++)
-        {
-            float r3 = r1 + s1 * x;
-            float z1 = r3;
-            float z2 = i3;
-            for(n=0; n<escape; n++)
-            {
-                WPix(x, y, (char)(escape - 1 - n));
-                float a = z1 * z1;
-                float b = z2 * z2;
-                if((a + b) > 4.0) break;
-                z2 = 2 * z1 * z2 + i3;
-                z1 = a - b + r3;
-            }
-            WPix(x, y, (char)(escape - 1 - n));
-        }
-    }
-} */
- 
-/*
-void vga_init13h()
+void vga_init()
 {
     volatile void *ba;
     unsigned char test;
-    //int i;
-
+    
     println("VGA Initializing ...");
 
     ba = (volatile void *)VGA_IO32;
 
-    // vga enable (must be first; chip will not respond before this is sent)
+    // enable vga
     vgaw(ba, GREG_VGA_ENABLE, 0x01);
     delay(100);
 
@@ -195,104 +165,164 @@ void vga_init13h()
     delay(100);
 
     // initial attribute configuration
-    prints("\tInitial attributes:");
-    prints(" 10");
-    WAttr(ba, ACT_ID_ATTR_MODE_CNTL, 0x41);     // 256 color, gfx mode
-    prints(" 11");
-    WAttr(ba, ACT_ID_OVERSCAN_COLOR, 0x00);     // black border
-    prints(" 12");
-    WAttr(ba, ACT_ID_COLOR_PLANE_ENA, 0x0f);    // enable all planes
-    prints(" 13");
-    WAttr(ba, ACT_ID_HOR_PEL_PANNING, 0x00);    // no hoz panning
-    prints(" 14");
-    WAttr(ba, ACT_ID_COLOR_SELECT, 0x00);       // no pix padding
-    println(" done");
+    prints("\tInitial attributes ... ");
+    WAttr(ba, ACT_ID_ATTR_MODE_CNTL, 0x41);
+    WAttr(ba, ACT_ID_OVERSCAN_COLOR, 0x00);
+    WAttr(ba, ACT_ID_COLOR_PLANE_ENA, 0x0f);
+    WAttr(ba, ACT_ID_HOR_PEL_PANNING, 0x00);
+    WAttr(ba, ACT_ID_COLOR_SELECT, 0x00);
+    println("OK");
 
-    // misc output register
-    vgaw(ba, GREG_MISC_OUTPUT_W, 0x63);
+    vgaw(ba, GREG_MISC_OUTPUT_W, 0xef);
     delay(100);
 
     // sequence registers
-    println("\tSequence");
-    WSeq(ba, SEQ_ID_RESET, 0x03);               // legacy VGA reset
-    WSeq(ba, SEQ_ID_CLOCKING_MODE, 0x01);       // 8 char clks, no pix double
-    WSeq(ba, SEQ_ID_MAP_MASK, 0x0f);            // enable all planes
-    WSeq(ba, SEQ_ID_CHAR_MAP_SELECT, 0x00);     // font plane 0
-    WSeq(ba, SEQ_ID_MEMORY_MODE, 0x0e);         // 256kB; sequential; chain 4
-    WSeq(ba, SEQ_ID_UNLOCK_EXT, 0x06);          // unlock ext SR regs $09-$1c
+    prints("\tProgramming sequencer ... ");
+    WSeq(ba, SEQ_ID_RESET, 0x10);               // $1000
+    WSeq(ba, SEQ_ID_CLOCKING_MODE, 0x01);       // $0101
+    WSeq(ba, SEQ_ID_MAP_MASK, 0x0f);            // $0f02
+    WSeq(ba, SEQ_ID_CHAR_MAP_SELECT, 0x00);     // $0003
+    WSeq(ba, SEQ_ID_MEMORY_MODE, 0x0e);         // $0e04
+    WSeq(ba, SEQ_ID_UNLOCK_EXT, 0x06);          // $0608
+    WSeq(ba, SEQ_ID_EXT_MISC_SEQ, 0x00);        // $000b
+    WSeq(ba, SEQ_ID_RAMDAC_CNTL, 0x40);         // $4018
+    WSeq(ba, SEQ_ID_CLKSYN_CNTL_2, 0x00);       // $0015
+    WSeq(ba, SEQ_ID_EXT_MISC_SEQ, 0x00);        // $000b
+    WSeq(ba, SEQ_ID_CLKSYN_CNTL_1, 0x00);       // $0014
+    WSeq(ba, SEQ_ID_RAMDAC_CNTL, 0x40);         // $4018
+    println("OK");
 
-    // crtc registers
-    println("\tUnlock");
-    WCrt(ba, CRT_ID_END_VER_RETR, 0x0e);        // unlock CRTC regs
-    WCrt(ba, CRT_ID_REGISTER_LOCK_1, 0x48);     // unlock CRTC regs $2d-$3f
-    WCrt(ba, CRT_ID_REGISTER_LOCK_2, 0xa0);     // unlock CRTC regs $40+
-    WCrt(ba, CRT_ID_SYSTEM_CONFIG, 0x01);       // unlock enhanced regs
+    // register unlock
+    prints("\tUnlocking registers ... ");
+    WCrt(ba, CRT_ID_END_VER_RETR, 0x0e);        // $0e11
+    WCrt(ba, CRT_ID_REGISTER_LOCK_1, 0x48);     // $4838
+    WCrt(ba, CRT_ID_REGISTER_LOCK_2, 0xa0);     // $a039
+    WCrt(ba, CRT_ID_SYSTEM_CONFIG, 0x01);       // $0140
+    println("OK");
 
+    // gfx engine
+/*     prints("\tInitializing graphics engine ... ");
     vgaw16(ba, 0x42e8, 0x08000);                // reset gfx engine
-    delay(1);
     vgaw16(ba, 0x42e8, 0x04000);                // enable gfx, no irq
-    delay(100);
+    println("OK"); */
 
-    println("\tCRTC");
-    WCrt(ba, CRT_ID_HOR_TOTAL,        0x5f);    // h total
-    WCrt(ba, CRT_ID_HOR_DISP_ENA_END, 0x4f);    // h enable end
-    WCrt(ba, CRT_ID_START_HOR_BLANK,  0x50);    // h blank start
-    WCrt(ba, CRT_ID_END_HOR_BLANK,    0x82);    // h blank end
-    WCrt(ba, CRT_ID_START_HOR_RETR,   0x54);    // h retrace start
-    WCrt(ba, CRT_ID_END_HOR_RETR,     0x80);    // h retrace end
-    WCrt(ba, CRT_ID_VER_TOTAL,        0xbf);    // v total
-    WCrt(ba, CRT_ID_OVERFLOW,         0x1f);    // overflow
-    WCrt(ba, CRT_ID_PRESET_ROW_SCAN,  0x00);    // preset row scan
-    WCrt(ba, CRT_ID_MAX_SCAN_LINE,    0x41);    // max scanline
-    WCrt(ba, CRT_ID_CURSOR_START,     0x00);    // cursor start 0
-    WCrt(ba, CRT_ID_CURSOR_END,       0x00);    // cursor end 0
-    WCrt(ba, CRT_ID_START_ADDR_HIGH,  0x00);    // start addr hi
-    WCrt(ba, CRT_ID_START_ADDR_LOW,   0x00);    // start addr lo
-    WCrt(ba, CRT_ID_CURSOR_LOC_HIGH,  0x00);    // cursor addr hi
-    WCrt(ba, CRT_ID_CURSOR_LOC_LOW,   0x00);    // cursor addr lo
-    WCrt(ba, CRT_ID_START_VER_RETR,   0x9c);    // v retrace start
-    WCrt(ba, CRT_ID_VER_DISP_ENA_END, 0x8f);    // v display end
-    WCrt(ba, CRT_ID_SCREEN_OFFSET,    0x28);    // screen width
-    WCrt(ba, CRT_ID_UNDERLINE_LOC,    0x40);    // ??
-    WCrt(ba, CRT_ID_START_VER_BLANK,  0x96);    // v blank start
-    WCrt(ba, CRT_ID_END_VER_BLANK,    0xb9);    // v blank end
-    WCrt(ba, CRT_ID_MODE_CONTROL,     0xa3);    // ??
-    WCrt(ba, CRT_ID_LINE_COMPARE,     0xff);    // line compare pos
+    // CRTC
+    prints("\tInitializing CRTC enhanced ... ");
+    WCrt(ba, CRT_ID_REGISTER_LOCK_1, 0x48);     // $4838
+    WCrt(ba, CRT_ID_REGISTER_LOCK_2, 0xa5);     // $a539
+    WCrt(ba, CRT_ID_BACKWAD_COMP_1, 0x40);      // $4032
+    WCrt(ba, CRT_ID_BACKWAD_COMP_2, 0x00);      // $0033
+    WCrt(ba, CRT_ID_REGISTER_LOCK, 0x00);       // $0035
+    WCrt(ba, CRT_ID_LACE_CONTROL, 0x00);        // $0042
+    WCrt(ba, CRT_ID_EXT_MODE, 0x00);            // $0043
+    WCrt(ba, CRT_ID_HWGC_MODE, 0x00);           // $0048
+    WCrt(ba, CRT_ID_EXT_MEM_CNTL_1, 0x00);      // $0053
+    WCrt(ba, CRT_ID_EX_SYNC_1, 0x00);           // $0055
+    WCrt(ba, CRT_ID_LAW_CNTL, 0x83);            // $8358
+    WCrt(ba, CRT_ID_EXT_MISC_CNTL, 0x00);       // $0065
+    WCrt(ba, CRT_ID_EXT_MISC_CNTL_1, 0x00);     // $0066
+    WCrt(ba, CRT_ID_EXT_SYS_CNTL_3, 0x00);      // $0069
+    WCrt(ba, CRT_ID_EXT_SYS_CNTL_4, 0x00);      // $006a
+    println("OK");
+
+    // legacy CRTC
+    prints("\tInitializing CRTC legacy ... ");
+    WCrt(ba, CRT_ID_HOR_TOTAL, 0xc2);           // $c200
+    WCrt(ba, CRT_ID_HOR_DISP_ENA_END, 0x9f);    // $9f01
+    WCrt(ba, CRT_ID_START_HOR_BLANK, 0xa0);     // $a002
+    WCrt(ba, CRT_ID_END_HOR_BLANK, 0x84);       // $8403
+    WCrt(ba, CRT_ID_START_HOR_RETR, 0xa3);      // $a304
+    WCrt(ba, CRT_ID_END_HOR_RETR, 0x1b);        // $1b05
+    WCrt(ba, CRT_ID_VER_TOTAL, 0x0c);           // $0c06
+    WCrt(ba, CRT_ID_OVERFLOW, 0x3e);            // $3e07
+    WCrt(ba, CRT_ID_PRESET_ROW_SCAN, 0x00);     // $0008
+    WCrt(ba, CRT_ID_MAX_SCAN_LINE, 0x40);       // $4009
+    WCrt(ba, CRT_ID_CURSOR_START, 0x00);        // $000A
+    WCrt(ba, CRT_ID_CURSOR_END, 0x00);          // $000B
+    WCrt(ba, CRT_ID_START_ADDR_HIGH, 0x00);     // $000C
+    WCrt(ba, CRT_ID_START_ADDR_LOW, 0x00);      // $000D
+    WCrt(ba, CRT_ID_CURSOR_LOC_HIGH, 0xff);     // $ff0E
+    WCrt(ba, CRT_ID_CURSOR_LOC_LOW, 0x00);      // $000F
+    WCrt(ba, CRT_ID_START_VER_RETR, 0xe9);      // $e910
+    WCrt(ba, CRT_ID_END_VER_RETR, 0x0b);        // $0b11
+    WCrt(ba, CRT_ID_VER_DISP_ENA_END, 0xdf);    // $df12
+    WCrt(ba, CRT_ID_SCREEN_OFFSET, 0xa0);       // $a013
+    WCrt(ba, CRT_ID_UNDERLINE_LOC, 0x60);       // $6014
+    WCrt(ba, CRT_ID_START_VER_BLANK, 0xe7);     // $e715
+    WCrt(ba, CRT_ID_END_VER_BLANK, 0x04);       // $4016
+    WCrt(ba, CRT_ID_MODE_CONTROL, 0xab);        // $ab17
+    WCrt(ba, CRT_ID_LINE_COMPARE, 0xff);        // $ff18
+    println("OK");
+
+    // more extended CRTC
+    prints("\tInitializing CRTC extended ... ");
+    WCrt(ba, CRT_ID_MEMORY_CONF, 0x09);         // $0931
+    WCrt(ba, CRT_ID_BACKWAD_COMP_3, 0x10);      // $1034
+    WCrt(ba, CRT_ID_MISC_1, 0x15);              // $153a
+    WCrt(ba, CRT_ID_DISPLAY_FIFO, 0x00);        // $003b
+    WCrt(ba, CRT_ID_LACE_RETR_START, 0x61);     // $613c
+    WCrt(ba, CRT_ID_SYSTEM_CONFIG, 0x01);       // $0140
+    WCrt(ba, CRT_ID_EXT_SYS_CNTL_1, 0x50);      // $5050
+    WCrt(ba, CRT_ID_EXT_SYS_CNTL_2, 0x00);      // $0051
+    WCrt(ba, CRT_ID_EXT_MEM_CNTL_2, 0xf8);      // $f854
+    WCrt(ba, CRT_ID_EXT_MEM_CNTL_3, 0xff);      // $ff60
+    WCrt(ba, CRT_ID_EXT_HOR_OVF, 0x00);         // $005d
+    WCrt(ba, CRT_ID_EXT_VER_OVF, 0x00);         // $005e
+    WCrt(ba, CRT_ID_EXT_MISC_CNTL_2, 0x50);     // $5067
+    println("OK");
 
     // graphics registers
-    println("\tGfx");
-    WGfx(ba, GCT_ID_SET_RESET,        0x00);    // reset data
-    WGfx(ba, GCT_ID_ENABLE_SET_RESET, 0x00);    // reset data
-    WGfx(ba, GCT_ID_COLOR_COMPARE,    0x00);    // no color compare
-    WGfx(ba, GCT_ID_DATA_ROTATE,      0x00);    // rotate count 0
-    WGfx(ba, GCT_ID_READ_MAP_SELECT,  0x00);    // read plane 0
-    WGfx(ba, GCT_ID_GRAPHICS_MODE,    0x40);    // write mode 0; 256 color
-    WGfx(ba, GCT_ID_MISC,             0x05);    // gfx mode, 64k@0xA0000
-    WGfx(ba, GCT_ID_COLOR_XCARE,      0x0f);    // color compare all
-    WGfx(ba, GCT_ID_BITMASK,          0xff);    // allow write all
+    prints("\tInitializing legacy graphics ... ");
+    WGfx(ba, GCT_ID_SET_RESET, 0x00);           // $0000
+    WGfx(ba, GCT_ID_ENABLE_SET_RESET, 0x00);    // $0001
+    WGfx(ba, GCT_ID_COLOR_COMPARE, 0x00);       // $0002
+    WGfx(ba, GCT_ID_DATA_ROTATE, 0x00);         // $0003
+    WGfx(ba, GCT_ID_READ_MAP_SELECT, 0x00);     // $0004
+    WGfx(ba, GCT_ID_GRAPHICS_MODE, 0x40);       // $4005
+    WGfx(ba, GCT_ID_MISC, 0x05);                // $0506
+    WGfx(ba, GCT_ID_COLOR_XCARE, 0x0f);         // $0f07
+    WGfx(ba, GCT_ID_BITMASK, 0xff);             // $ff08
+    println("OK");
 
-    // colors for text mode
-    println("\tPalette16");
-    for (int i = 0; i <= 0xf; i++)
-        WAttr (ba, i, i);
-    
-    println("\tDAC Mask");
-    vgaw(ba, VDAC_MASK, 0xFF);              //DAC Mask
-    delay(100);
-    
-    // reset index
-    __USE(vgar(ba, 0x3cf));
+    // attribute & legacy palette registers
+    prints("\tInitializing attributes ... ");
+    WAttr(ba, ACT_ID_PALETTE0, 0x00);           // $0000
+    WAttr(ba, ACT_ID_PALETTE1, 0x01);           // $0101
+    WAttr(ba, ACT_ID_PALETTE2, 0x02);           // $0202
+    WAttr(ba, ACT_ID_PALETTE3, 0x03);           // $0303
+    WAttr(ba, ACT_ID_PALETTE4, 0x04);           // $0404
+    WAttr(ba, ACT_ID_PALETTE5, 0x05);           // $0505
+    WAttr(ba, ACT_ID_PALETTE6, 0x06);           // $0606
+    WAttr(ba, ACT_ID_PALETTE7, 0x07);           // $0707
+    WAttr(ba, ACT_ID_PALETTE8, 0x10);           // $1008
+    WAttr(ba, ACT_ID_PALETTE9, 0x11);           // $1109
+    WAttr(ba, ACT_ID_PALETTE10, 0x12);          // $120a
+    WAttr(ba, ACT_ID_PALETTE11, 0x13);          // $130b
+    WAttr(ba, ACT_ID_PALETTE12, 0x14);          // $140c
+    WAttr(ba, ACT_ID_PALETTE13, 0x15);          // $150d
+    WAttr(ba, ACT_ID_PALETTE14, 0x16);          // $160e
+    WAttr(ba, ACT_ID_PALETTE15, 0x17);          // $170f
+    println("OK");
+
+    // enable linear addressing
+    prints("\tInitializing linear addressing window ... ");
+    WCrt(ba, CRT_ID_EXT_MEM_CNTL_1, 0x1c);      // $1c53
+    WCrt(ba, CRT_ID_EXT_MEM_CNTL_2, 0xfa);      // $fa54
+    WCrt(ba, CRT_ID_LAW_POS_HI, 0x00);          // $0059
+    WCrt(ba, CRT_ID_LAW_CNTL, 0x00);            // $0058
+    WCrt(ba, CRT_ID_LAW_CNTL, 0x92);            // $9258
+    println("OK");
+
+    // finish up
+    prints("\tFinishing up ... ");
+    vgaw(ba, VDAC_MASK, 0xff);                  // enable all DAC mask bits
     delay(100);
 
-    // enable output (normal operation)
-    println("\tEnable");
-    vgaw(ba, ACT_ADDRESS_W, 0x20);
+    test = vgar(ba, GREG_MISC_OUTPUT_R);        // reset attribute index
+    __USE(test);
     delay(100);
-    vgaw(ba, ACT_ADDRESS_W, 0x20);
-    delay(100);
-    vgaw(ba, ACT_ADDRESS_W, 0x20);
-    
-    println("\tComplete.");
+
+    vgaw(ba, ACT_ADDRESS_W, 0x20);              // enable normal operation
+    println("DONE");
 }
-*/
 
