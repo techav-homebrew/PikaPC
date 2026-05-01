@@ -6488,447 +6488,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R_Network08_US"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "RN"
-				(at -12.7 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R_Network08_US"
-				(at 10.16 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Resistor_THT:R_Array_SIP9"
-				(at 12.065 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "8 resistor network, star topology, bussed resistors, small US symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R network star-topology"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R?Array?SIP*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_Network08_US_0_1"
-				(rectangle
-					(start -11.43 -3.175)
-					(end 8.89 3.175)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center -10.16 2.286)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -10.16 2.286) (xy 7.62 2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -10.16 2.286) (xy -10.16 1.524) (xy -9.398 1.1684) (xy -10.922 0.508) (xy -9.398 -0.1524)
-						(xy -10.922 -0.8382) (xy -9.398 -1.524) (xy -10.922 -2.1844) (xy -10.16 -2.54) (xy -10.16 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -7.62 2.286)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -7.62 2.286) (xy -7.62 1.524) (xy -6.858 1.1684) (xy -8.382 0.508) (xy -6.858 -0.1524) (xy -8.382 -0.8382)
-						(xy -6.858 -1.524) (xy -8.382 -2.1844) (xy -7.62 -2.54) (xy -7.62 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -5.08 2.286)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 2.286) (xy -5.08 1.524) (xy -4.318 1.1684) (xy -5.842 0.508) (xy -4.318 -0.1524) (xy -5.842 -0.8382)
-						(xy -4.318 -1.524) (xy -5.842 -2.1844) (xy -5.08 -2.54) (xy -5.08 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -2.54 2.286)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 2.286) (xy -2.54 1.524) (xy -1.778 1.1684) (xy -3.302 0.508) (xy -1.778 -0.1524) (xy -3.302 -0.8382)
-						(xy -1.778 -1.524) (xy -3.302 -2.1844) (xy -2.54 -2.54) (xy -2.54 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 2.286)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 0 1.524) (xy 0.762 1.1684) (xy -0.762 0.508) (xy 0.762 -0.1524) (xy -0.762 -0.8382)
-						(xy 0.762 -1.524) (xy -0.762 -2.1844) (xy 0 -2.54) (xy 0 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.286) (xy 2.54 1.524) (xy 3.302 1.1684) (xy 1.778 0.508) (xy 3.302 -0.1524) (xy 1.778 -0.8382)
-						(xy 3.302 -1.524) (xy 1.778 -2.1844) (xy 2.54 -2.54) (xy 2.54 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 2.286)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 2.286) (xy 5.08 1.524) (xy 5.842 1.1684) (xy 4.318 0.508) (xy 5.842 -0.1524) (xy 4.318 -0.8382)
-						(xy 5.842 -1.524) (xy 4.318 -2.1844) (xy 5.08 -2.54) (xy 5.08 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 5.08 2.286)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 2.286) (xy 7.62 1.524) (xy 8.382 1.1684) (xy 6.858 0.508) (xy 8.382 -0.1524) (xy 6.858 -0.8382)
-						(xy 8.382 -1.524) (xy 6.858 -2.1844) (xy 7.62 -2.54) (xy 7.62 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_Network08_US_1_1"
-				(pin passive line
-					(at -10.16 5.08 270)
-					(length 2.54)
-					(name "common"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 -5.08 90)
-					(length 1.27)
-					(name "R1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 -5.08 90)
-					(length 1.27)
-					(name "R2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 90)
-					(length 1.27)
-					(name "R3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -2.54 -5.08 90)
-					(length 1.27)
-					(name "R4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 1.27)
-					(name "R5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 1.27)
-					(name "R6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -5.08 90)
-					(length 1.27)
-					(name "R7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -5.08 90)
-					(length 1.27)
-					(name "R8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R_Network09_US"
 			(pin_names
 				(offset 0)
@@ -36454,16 +36013,6 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 172.72) (xy 241.3 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "070ccd1f-d58a-4e2e-94cb-6eb960004ab2")
-	)
-	(wire
-		(pts
 			(xy 330.2 393.7) (xy 317.5 393.7)
 		)
 		(stroke
@@ -38004,16 +37553,6 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 170.18) (xy 241.3 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "301ed6f0-f2be-40c0-8618-ca599e5437b9")
-	)
-	(wire
-		(pts
 			(xy 165.1 335.28) (xy 152.4 335.28)
 		)
 		(stroke
@@ -38671,16 +38210,6 @@
 			(type default)
 		)
 		(uuid "430f4fa1-9296-4f95-a64d-2a3203511c06")
-	)
-	(wire
-		(pts
-			(xy 228.6 167.64) (xy 241.3 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4334cb36-05d5-4087-86a0-5b5ee81af11e")
 	)
 	(wire
 		(pts
@@ -43224,16 +42753,6 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 154.94) (xy 241.3 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "baa9dc23-23fb-4cdd-97a1-504789914646")
-	)
-	(wire
-		(pts
 			(xy 355.6 340.36) (xy 342.9 340.36)
 		)
 		(stroke
@@ -47532,16 +47051,6 @@
 		)
 		(uuid "3c49b5d5-ff35-43ba-b96b-d90866b09f8c")
 	)
-	(label "INT0"
-		(at 228.6 167.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3c78360c-2368-462f-8acc-1a23b95fe250")
-	)
 	(label "AD8"
 		(at 457.2 381 180)
 		(effects
@@ -48111,16 +47620,6 @@
 			(justify left bottom)
 		)
 		(uuid "5650ae56-d8a4-4570-a042-d460cb23f72a")
-	)
-	(label "VID-SAUP2"
-		(at 228.6 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "56750893-5e94-49ac-980b-ff84d614c64d")
 	)
 	(label "D30"
 		(at 152.4 327.66 0)
@@ -50372,16 +49871,6 @@
 		)
 		(uuid "baf65a2b-8f7e-498d-9022-1b932d690580")
 	)
-	(label "INT1"
-		(at 228.6 170.18 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bb27c671-fde8-44ff-9051-d0e1f0833cdb")
-	)
 	(label "AD13"
 		(at 266.7 330.2 180)
 		(effects
@@ -50731,16 +50220,6 @@
 			(justify left bottom)
 		)
 		(uuid "caa28c23-cbf7-4561-9c16-537a01b088fa")
-	)
-	(label "INT2"
-		(at 228.6 172.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cacccb8f-c9f0-4d1c-9d25-2d42b8462a0e")
 	)
 	(label "A7"
 		(at 276.86 52.07 0)
@@ -61122,95 +60601,6 @@
 				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
 					(reference "J5")
 					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Network08_US")
-		(at 246.38 165.1 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "68b8a043-71be-4ea3-86a2-d3e336af3406")
-		(property "Reference" "RN5"
-			(at 246.126 149.5255 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "9A103J"
-			(at 246.126 151.9498 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Array_SIP9"
-			(at 246.38 177.165 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
-			(at 246.38 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "8 resistor network, star topology, bussed resistors, small US symbol"
-			(at 246.38 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "dbe8b47d-e017-40bf-8c56-81f907c58fcf")
-		)
-		(pin "8"
-			(uuid "8e122bb8-cac4-44ca-aca4-a51f3fd67f38")
-		)
-		(pin "7"
-			(uuid "d7d4971c-dfe5-4af8-8d68-fbc745a82ecd")
-		)
-		(pin "3"
-			(uuid "9a0db5a1-94b8-461a-b4fa-b183899e733b")
-		)
-		(pin "1"
-			(uuid "60315d31-4d66-4b71-9b8f-e5a102e99b1e")
-		)
-		(pin "4"
-			(uuid "c20a3089-dca3-4d07-a060-17a64bacbe0c")
-		)
-		(pin "6"
-			(uuid "c6f4b590-5675-4eeb-bcbb-67194fadb107")
-		)
-		(pin "2"
-			(uuid "fd898615-1e42-45ca-b316-39fb128e8a41")
-		)
-		(pin "9"
-			(uuid "3662bf4c-1191-4ca6-8d17-5ec273ea06b5")
-		)
-		(instances
-			(project "PikaPC_Mainboard"
-				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
-					(reference "RN5")
-					(unit 1)
 				)
 			)
 		)
@@ -73159,71 +72549,6 @@
 			(project "PikaPC_Mainboard"
 				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
 					(reference "#PWR0123")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 251.46 154.94 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e4246820-bebb-4735-b23d-5b5698327a1e")
-		(property "Reference" "#PWR034"
-			(at 257.81 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 256.54 154.94 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 251.46 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 251.46 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 251.46 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3813d054-4aa6-45c2-bbbe-d043c9f88db0")
-		)
-		(instances
-			(project "PikaPC_Mainboard"
-				(path "/31647a00-1631-4687-a4ca-8a073377aae5"
-					(reference "#PWR034")
 					(unit 1)
 				)
 			)
