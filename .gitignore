@@ -82,3 +82,5 @@ fp-info-cache
 Gerbers
 *_bak
 .vscode/c_cpp_properties.json
+production
+fabrication-toolkit-options.json
