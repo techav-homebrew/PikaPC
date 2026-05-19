@@ -1,0 +1,59 @@
+Name     PikaPC-SRAM ;
+PartNo   00 ;
+Date     5/11/2026 ;
+Revision 01 ;
+Designer Engineer ;
+Company  techav ;
+Assembly None ;
+Location  ;
+Device   g22V10 ;
+
+/* *************** INPUT PINS *********************/
+PIN   1 = CLK                     ; /*                                 */ 
+PIN   2 = !START                  ; /*                                 */ 
+PIN   3 = RW                      ; /*                                 */ 
+PIN   6 = !CE                     ; /*                                 */ 
+PIN  13 = !RESET                  ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN  23 = !WE                     ; /*                                 */ 
+PIN  22 = !OE                     ; /*                                 */ 
+PIN  21 = !AEN                    ; /*                                 */ 
+PIN  20 = !BEN                    ; /*                                 */ 
+PIN  19 = ACK                     ; /*                                 */ 
+PIN  14 = !CEN                    ; /*                                 */ 
+
+/* *************** PINNODES    *********************/
+PINNODE [16..15] = [Q1..0]        ; /*                                 */
+
+Q1.d = Q0 # (Q1 & START);
+Q0.d = (!Q1 & Q0) # (START & CE & !Q1);
+
+AEN.d = (Q0 # (START & CE) # (Q1 & START));
+
+BEN.d = Q0 # (Q1 & START);
+
+CEN.d = (Q0 # (START & CE) # (Q1 & START));
+
+WE.d = (Q0 # (START & CE) # (Q1 & START))& !RW;
+OE.d = (Q0 # (START & CE) # (Q1 & START))& RW;
+
+ACK.d = Q0;
+
+Q1.ar = !START;
+Q0.ar = !START;
+AEN.ar = !START;
+BEN.ar = !START;
+CEN.ar = !START;
+ACK.ar = !START;
+WE.ar = !START;
+OE.ar = !START;
+
+Q1.sp = 'b'0;
+Q0.sp = 'b'0;
+AEN.sp = 'b'0;
+BEN.sp = 'b'0;
+CEN.sp = 'b'0;
+ACK.sp = 'b'0;
+WE.sp = 'b'0;
+OE.sp = 'b'0;
