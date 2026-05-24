@@ -12,10 +12,10 @@
 
 
 ; CHANGE THIS <<<<<<<<<<<---------------------------------------|
-b_of_4th equ    0x7fe74000      ; bottom of forth system (RAM)  |
-rambase equ     0x7fe00000      ; base of system ram            |
+b_of_4th equ    0x0f874000      ; bottom of forth system (RAM)  |
+rambase equ     0x0f800000      ; base of system ram            |
 rombase equ     0x7ff00000      ; base of system rom            |
-loadpt	equ	0x7fe60000	; used for loads to RAM		|
+loadpt	equ	0x0f860000	; used for loads to RAM		|
 				; (if rom is not defined!)	|
 ramsize equ     0x100000        ; 1M of RAM			|
 romsize	equ	0x20000		; 128K of ROM	 		|
