@@ -139,7 +139,7 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 ;       br3     Video IO        $7400,0000; 32MB;  8b; no burst; 2WS;   hold 1; ready
 ;       br4     IDE             $7c00,0000;  1MB; 32b; no burst; 2WS;   hold 1; ready
 ;       br5     PS/2            $7c10,0000;  1MB; 32b; no burst; 2WS;   hold 1; ready
-;       br7     DRAM            $7f80,0000;  4MB; 32b; burst;    1/1WS; hold 0; ready
+;       br7     DRAM            $0f80,0000;  4MB; 32b; burst;    1/1WS; hold 0; ready
 
         lwa     r3,0xff1e0fa0   ; set br0 (ROM)
         mtdcr   br0,r3          ;
@@ -149,10 +149,10 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
         mtdcr   br2,r3          ;
         lwa     r3,0x40dc4202   ; set br3 (Video IO)
         mtdcr   br3,r3          ;
-        lwa     r3,0xc01d4202   ; set br4 (IDE)
-        mtdcr   br4,r3          ;
-        lwa     r3,0xc11d4202   ; set br5 (PS/2)
-        mtdcr   br5,r3          ;
+;        lwa     r3,0xc01d4202   ; set br4 (IDE)
+;        mtdcr   br4,r3          ;
+;        lwa     r3,0xc11d4202   ; set br5 (PS/2)
+;        mtdcr   br5,r3          ;
         lwa     r3,0xf85d0ab4   ; set br7 (DRAM)
         mtdcr   br7,r3          ;
 
@@ -165,7 +165,13 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 
         bl	initser		; call init routine
         bl      memtest         ; test main memory
-	b	nextinit	; then proceed with initialization
+        bl      romcopy         ; copy rom into main memory
+;	b	nextinit	; then proceed with initialization
+        lwa     r3,loadpt       ; get ram code pointer
+;        la      r3,nextinit(r3) ; get address of next function
+        addi    r3,r3,nextinit  ; get address of next function
+        mtlr    r3              ; copy to lr
+        blr                     ;
 	
 ; It's useful to call this as a subroutine because in a pinch other words
 ; can call it when the settings may have been munged....	
@@ -222,8 +228,26 @@ memerr
         lwa	r3,0x20000000	; chip reset
         mtspr	dbcr,r3
         blr                     ; should never be reached
+
+romcopy
+        prstr   "loading ... "
+        lwa     r3,rombase      ; source pointer
+        lwa     r4,loadpt       ; destination pointer
+        lwa     r5,romsize      ; copy length in bytes
+        slwi    r5,r5,2         ; copy length in words
+        subi    r3,r3,4         ; pre-decrement source
+        subi    r4,r4,4         ; pre-decrement destination
+        mtctr   r5              ; set count register
+romcplp
+        lwzu    r6,4(r3)        ; fetch next word
+        stwu    r6,4(r4)        ; and store it
+        bdnz    romcplp         ; loop until complete
+        prstr   "done.\r\n"
+        blr                     ; start running from ram
+
 	
-nextinit 
+nextinit
+        prstr   "initializing\r\n"
 	lis	r3,0x800	; allow interrupts from serial port
 	mtdcr	exier,r3
 	li	r3,0
