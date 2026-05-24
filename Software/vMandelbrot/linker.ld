@@ -1,6 +1,6 @@
 ENTRY(main)
 SECTIONS{
-    .main 0x7fe60000 :
+    .main 0x0fa00000 :
     {
         KEEP(*(.mainentry))
         *.o (.text)
