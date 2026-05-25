@@ -121,15 +121,14 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 ; 403, or want to use your own
 ; init routines.
 
-; skip enable cache for testing
-;        li      r3,0
-;        mtspr   tblo,r3         ; set time base to 0
-;	mtspr	tbhi,r3
-;        mtspr   sgr,r3          ; update sgr
-;        li      r3,2            ; f0000000-f7ffffff d-cacheable
-;        mtspr   dccr,r3
-;        li      r3,-1           ; all inst cacheable
-;        mtspr   iccr,r3         ; update iccr (all inst cacheable)
+        li      r3,0
+        mtspr   tblo,r3         ; set time base to 0
+	mtspr	tbhi,r3
+        mtspr   sgr,r3          ; update sgr
+        li      r3,2            ; f0000000-f7ffffff d-cacheable
+        mtspr   dccr,r3
+        li      r3,-1           ; all inst cacheable
+        mtspr   iccr,r3         ; update iccr (all inst cacheable)
 
 ; ------------------------------
 ; set up bank registers:
