@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "PikaPC_KBC")(type "KiCad")(uri "${KIPRJMOD}/PikaPC_KBC.pretty")(options "")(descr ""))
+)

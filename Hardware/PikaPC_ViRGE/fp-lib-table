@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "PikaPC_ViRGE")(type "KiCad")(uri "${KIPRJMOD}/PikaPC_ViRGE.pretty")(options "")(descr ""))
+)

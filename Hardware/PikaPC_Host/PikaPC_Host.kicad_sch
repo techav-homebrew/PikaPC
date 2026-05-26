@@ -1,0 +1,852 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "6a60ec03-e28d-46ba-8906-3c4e1028fc94")
+	(paper "USLetter")
+	(title_block
+		(title "PikaPC Host Card")
+		(company "techav")
+	)
+	(lib_symbols)
+	(junction
+		(at 76.2 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2f8b974a-a7df-4e5f-88ed-822bee3b45ce")
+	)
+	(junction
+		(at 78.74 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6c7bc970-5fd9-4592-a99f-7389d78c2af2")
+	)
+	(junction
+		(at 86.36 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a4090a4e-bcdf-419b-b065-f753bee5b504")
+	)
+	(junction
+		(at 81.28 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cf048002-690c-4bbe-b1bb-32c8a129faeb")
+	)
+	(bus
+		(pts
+			(xy 50.8 68.58) (xy 81.28 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d4fbecb-4f4d-45a1-972a-e132a364be3c")
+	)
+	(wire
+		(pts
+			(xy 86.36 76.2) (xy 101.6 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23e3bc6a-f345-4412-a262-43a5724c9af9")
+	)
+	(wire
+		(pts
+			(xy 50.8 81.28) (xy 101.6 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24943cc1-1023-450d-b43c-bc52f2d21922")
+	)
+	(bus
+		(pts
+			(xy 101.6 27.94) (xy 76.2 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ffb38a9-c8a6-4f74-8c1b-7672cf09d9e7")
+	)
+	(wire
+		(pts
+			(xy 50.8 53.34) (xy 101.6 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36449e9f-4851-45a7-a1cf-fad34bc412a2")
+	)
+	(wire
+		(pts
+			(xy 101.6 40.64) (xy 86.36 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3dd09e04-bc7b-4d35-ac2f-b197a4a346b2")
+	)
+	(bus
+		(pts
+			(xy 101.6 30.48) (xy 78.74 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4198635f-2d97-48c3-bab3-9586674c07fb")
+	)
+	(wire
+		(pts
+			(xy 50.8 88.9) (xy 101.6 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43d2b8fa-02ed-4de7-a80e-3768eb9201b1")
+	)
+	(wire
+		(pts
+			(xy 50.8 55.88) (xy 101.6 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45a248cc-c46c-42a3-ba81-bac9f7332129")
+	)
+	(bus
+		(pts
+			(xy 78.74 66.04) (xy 101.6 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4baa3fb3-f22c-48db-bc82-6b78b279487e")
+	)
+	(wire
+		(pts
+			(xy 101.6 38.1) (xy 83.82 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "504c5f70-3c53-47a6-a799-2d5e6ed6cb16")
+	)
+	(bus
+		(pts
+			(xy 81.28 33.02) (xy 81.28 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "545acd37-1878-4642-b7b5-facd7ed56d6b")
+	)
+	(wire
+		(pts
+			(xy 50.8 96.52) (xy 101.6 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "571dd7dd-9ed1-4e2c-9179-730e6fea70ee")
+	)
+	(bus
+		(pts
+			(xy 76.2 27.94) (xy 76.2 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59a75c87-c938-446d-a4f6-ac353e48c2ea")
+	)
+	(bus
+		(pts
+			(xy 50.8 66.04) (xy 78.74 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69791bf8-bfe0-437f-83ef-c3386e8ac8a9")
+	)
+	(bus
+		(pts
+			(xy 78.74 30.48) (xy 78.74 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7197a798-83f1-48dd-9ad8-13a696615363")
+	)
+	(wire
+		(pts
+			(xy 50.8 76.2) (xy 86.36 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75f5295c-7dd1-4b5c-b299-d1223e5c5fae")
+	)
+	(wire
+		(pts
+			(xy 50.8 73.66) (xy 83.82 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f069a20-ae98-4ea7-9d3e-98efeabb269b")
+	)
+	(wire
+		(pts
+			(xy 86.36 40.64) (xy 86.36 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "920e33b9-f322-4512-a513-6175501a362d")
+	)
+	(bus
+		(pts
+			(xy 50.8 91.44) (xy 101.6 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fe63128-5940-4eb3-96b7-ab6bb8f409f3")
+	)
+	(bus
+		(pts
+			(xy 76.2 63.5) (xy 101.6 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afcd1b13-5d6b-42de-acd7-596cf4a91580")
+	)
+	(bus
+		(pts
+			(xy 81.28 68.58) (xy 101.6 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8c6e3f7-b6b1-4874-966d-4e9e45e2a1c2")
+	)
+	(bus
+		(pts
+			(xy 50.8 63.5) (xy 76.2 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbd2a594-3942-4b4a-8912-bee7d27d5069")
+	)
+	(wire
+		(pts
+			(xy 83.82 38.1) (xy 83.82 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9defffd-d12b-45f4-aba1-73b34f42f8d2")
+	)
+	(bus
+		(pts
+			(xy 101.6 33.02) (xy 81.28 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0bed744-fa4a-4a5c-a77a-4f2928de7ab0")
+	)
+	(wire
+		(pts
+			(xy 50.8 83.82) (xy 101.6 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f77faa1b-e5b3-43fe-b8af-4254e64de026")
+	)
+	(wire
+		(pts
+			(xy 50.8 99.06) (xy 101.6 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff674459-636c-4317-9f16-b59dfc9739ba")
+	)
+	(label "R{slash}~{W}"
+		(at 63.5 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3687de18-6e99-49d4-9ec4-0d9ea36278a1")
+	)
+	(label "~{Reset}"
+		(at 63.5 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a4e9f1f5-8a52-4be7-95d7-99b0ad3ac169")
+	)
+	(label "CpuClk"
+		(at 63.5 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b57fe96f-ab9e-45e7-99fa-6b69230effca")
+	)
+	(sheet
+		(at 101.6 25.4)
+		(size 25.4 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1971509d-8a6e-49e3-a0a1-d25da3b1c283")
+		(property "Sheetname" "ROM"
+			(at 101.6 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "rom.kicad_sch"
+			(at 101.6 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "R{slash}~{W}" input
+			(at 101.6 40.64 180)
+			(uuid "366d6934-cef1-4a7c-bba1-517345215f7f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{CS[7..0]}" input
+			(at 101.6 33.02 180)
+			(uuid "d358ac60-c620-4e08-a410-21dda1a22465")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{OE}" input
+			(at 101.6 38.1 180)
+			(uuid "25af4c6c-deb8-4758-908c-4c5e0de8641d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "D[31..0]" input
+			(at 101.6 27.94 180)
+			(uuid "c68f333f-3988-48ec-9c76-0db449017f07")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "A[31..4]" input
+			(at 101.6 30.48 180)
+			(uuid "5617d614-9688-409a-ba8e-d0828c757202")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 50.8)
+		(size 25.4 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "235aa69d-1c72-476c-9869-ef6150073b9e")
+		(property "Sheetname" "CPU Bus"
+			(at 25.4 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cpu_bus.kicad_sch"
+			(at 25.4 102.1846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "~{BusError}" input
+			(at 50.8 81.28 0)
+			(uuid "49c9f789-ecad-44d4-963b-2d0eb87addac")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "D[31..0]" input
+			(at 50.8 63.5 0)
+			(uuid "76864a0f-e131-4099-947b-38ea6781d600")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{Reset}" input
+			(at 50.8 53.34 0)
+			(uuid "159df775-1daf-4f8e-8406-d0ec5c6b46ea")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{CS[7..0]}" input
+			(at 50.8 68.58 0)
+			(uuid "47613f31-f8ce-4190-9111-b3151fed5afb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CpuClk" input
+			(at 50.8 55.88 0)
+			(uuid "0ff9dc38-e509-41f7-8378-686427547bf9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Ready" input
+			(at 50.8 83.82 0)
+			(uuid "e7f526d1-c9e1-4f62-bc08-b91f0084d5dc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R{slash}~{W}" input
+			(at 50.8 76.2 0)
+			(uuid "a117b726-785c-4d40-a879-8693becf1c6d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "A[31..4]" input
+			(at 50.8 66.04 0)
+			(uuid "5ff4b4b8-e1e7-4017-8ac6-07fb7d4620f0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{OE}" input
+			(at 50.8 73.66 0)
+			(uuid "02c9e360-bc46-4039-a36f-823b02258670")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{NMI}" input
+			(at 50.8 88.9 0)
+			(uuid "21f4648f-d0aa-468f-b116-e62d4c92df85")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{IRQ[4..0]}" input
+			(at 50.8 91.44 0)
+			(uuid "45d3c4b9-c3eb-4305-b628-138db723b675")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "HoldReq" input
+			(at 50.8 96.52 0)
+			(uuid "41319423-07ab-4611-bd49-50a180029136")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "HoldAck" input
+			(at 50.8 99.06 0)
+			(uuid "e590d4d3-5c3c-4324-a2ea-7a9c0bb0351e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 50.8)
+		(size 25.4 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "541b8728-35ef-42a9-8317-6c507b38c6a8")
+		(property "Sheetname" "Main Bus"
+			(at 101.6 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "main_bus.kicad_sch"
+			(at 101.6 102.1846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "D[31..0]" input
+			(at 101.6 63.5 180)
+			(uuid "b997e754-3359-4f76-b634-b1ef549cfd89")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "A[31..4]" input
+			(at 101.6 66.04 180)
+			(uuid "a95d43a2-145d-4783-aa1a-6fcab6a59b11")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{Reset}" input
+			(at 101.6 53.34 180)
+			(uuid "30b72709-7123-4ff0-a18a-4fe1556db9c1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R{slash}~{W}" input
+			(at 101.6 76.2 180)
+			(uuid "e25110a9-eee0-491b-9893-33d56a8a8677")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CpuClk" input
+			(at 101.6 55.88 180)
+			(uuid "fe796347-fb13-4995-a4fd-0cd5acfd24d5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{CS[7..0]}" input
+			(at 101.6 68.58 180)
+			(uuid "bf1c1e6c-20d1-4b21-809d-7ad4917d6b36")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Ready" input
+			(at 101.6 83.82 180)
+			(uuid "ac1b6be4-c9d5-4249-810d-a202c1fd1ced")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{Bus_Error}" input
+			(at 101.6 81.28 180)
+			(uuid "801b713d-24a0-461e-b5ae-06cf4909518c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "HoldReq" input
+			(at 101.6 96.52 180)
+			(uuid "5f209dba-4222-4d77-8dbf-799abe377b5a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "HoldAck" input
+			(at 101.6 99.06 180)
+			(uuid "c1969f0a-e391-44ba-a7f6-b6390e94c0dd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{NMI}" input
+			(at 101.6 88.9 180)
+			(uuid "d7e7b46f-b080-473a-b95d-0d653a555aee")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{IRQ[4..0]}" input
+			(at 101.6 91.44 180)
+			(uuid "c468a23d-3666-434a-9391-0530ea1670ba")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 38.1)
+		(size 25.4 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e9ce5f1f-5617-4ea8-8469-46766050bee6")
+		(property "Sheetname" "Serial"
+			(at 25.4 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "serial.kicad_sch"
+			(at 25.4 42.4946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 25.4)
+		(size 25.4 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fa2fd65c-4f78-487f-96bd-13f5cb66f892")
+		(property "Sheetname" "Power"
+			(at 25.4 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 25.4 29.7946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "PikaPC_Host"
+				(path "/6a60ec03-e28d-46ba-8906-3c4e1028fc94"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
