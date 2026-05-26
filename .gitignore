@@ -2,12 +2,21 @@
 Utilities
 Documentation
 SPI
+*old*
 
 # don't include compiler output
 *.hex
 *.lst
 *.p
 *.bin
+*.o
+*.map
+*.i
+*.srec
+*.out
+
+# don't include intermediary files
+Software/vMandelbrot/*.s
 
 # exclude WinCupl output files
 
@@ -67,3 +76,14 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+# exclude plot output
+*_Gerbers.zip
+Gerbers
+*_bak
+.vscode/c_cpp_properties.json
+production
+fabrication-toolkit-options.json
+*name clash*
+Software/TestImages
+*.im
