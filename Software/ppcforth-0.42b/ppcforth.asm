@@ -163,6 +163,7 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 ; initialize serial port
 
         bl	initser		; call init routine
+        bl      pbanner         ; print banner before testing memory
         bl      memtest         ; test main memory
         bl      romcopy         ; copy rom into main memory
 ;	b	nextinit	; then proceed with initialization
@@ -198,6 +199,26 @@ initser	li      r3,0
         li      r3,0x80         ; transmit enabled
         stb     r3,_sptc(r4)
 	blr
+
+; print startup banner; don't use ram
+pbanner
+        lwa     r4,rombase      ; get rom pointer
+        addi    r4,r4,pikabanner ; get pointer to string
+        li      r5,0            ; initialize string index
+        lis     r8,0x4000       ; load i/o address 0x40000000
+pbanlp
+        lbzx    r3,r4,r5        ; load next byte of string
+        andi.   r3,r3,255       ; check if null
+        beq     0,pbend         ; done if byte is null
+pbchrlp
+        lbz     r7,_spls(r8)    ; check status byte
+        andi.   r7,r7,4         ; check tx ready bit
+        beq     0,pbchrlp       ; loop until ready
+        stb     r3,_sptb(r8)    ; print byte
+        addi    r5,r5,1         ; increment index
+        b       pbanlp          ; loop until null
+pbend   blr
+
 
 ; let's add in a memory test
 memtest
@@ -1817,6 +1838,31 @@ wde	db	"WD exception.",13,10,0
 dtlbmiss db	"Data TLB miss.",13,10,0
 itlbmiss db	"Instruction TLB miss.",13,10,0
 debuge	db	"Debug exception.",13,10,0
+
+pikabanner      db      13,10
+        db      "                 ,:&&&.                &",13,10
+        db      "      ,o$&&&$;;&&&&P'`$&               &",13,10
+        db      "   ,o&+'        `&'    `&;             &",13,10
+        db      "  .o&'                   ;&n.          &",13,10
+        db      " .&'   _(O )_           ,&'$&,         &",13,10
+        db      ".&'                   ,&$'  `&&.       &",13,10
+        db      "&&                           `$&.      &                  &v&&&,       ,&&&.  ",13,10
+        db      "&;             .o`             `&x     &                  &&'  `&&   ,&&' `&&.",13,10
+        db      "`&;           ,&'          ,o$&$;&   & &    ,&   ,$&&$,   &     `&;  &'     `&",13,10
+        db      "  `&&.    ,$&&$'         $v&'  'X&   & &    ,&  ;$'  ;$.  &      `& ,&        ",13,10
+        db      "    `$&&&&&$'            $*'    `*&. & &   ,&         %;  &       & &&        ",13,10
+        db      "      &&&'               $        `& & &  ,&          `$  &      .& &         ",13,10
+        db      "     :&&&.               $         & & & ,&      ,$&&$v$  &     .&' &         ",13,10
+        db      "      `&&&.              $         & & &V&^&,   ,$'  `$$  &&.  ;&&  &.        ",13,10
+        db      "       `&&&.             $         & & &$  `&,  $      $  &^&&&$'   &&        ",13,10
+        db      "        `&&&&.           $        .& & &   `&,  $      $  &         `&,       ",13,10
+        db      "          `&&&&;         $;      ;&' & &    `&, $.    .$  &          &      ,&",13,10
+        db      "            `$&&&&x.     $`&,   ,&'  & &     `& `$.  .$&. &          `&&, ,&&'",13,10
+        db      "                `*$&&X&$x$ `$&&$'    & &      &  `$&&$ `$ &            `&&&'  ",13,10
+        db      "                         $",13,10
+        db      "                         $",13,10
+        db      "                         $",13,10
+        db      "                         $",13,10,0
 
 
 	align	4
