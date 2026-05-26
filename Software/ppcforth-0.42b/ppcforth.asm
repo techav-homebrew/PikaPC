@@ -132,55 +132,29 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 
 ; ------------------------------
 ; set up bank registers:
-;	br0	ROM		$7ff0,0000;  1MB;  8b; burst;    3/3WS;	hold 0;
-;	br1	RAM		$7fe0,0000;  1MB; 16b; burst;    1/1WS;	hold 0;
-;	br2	Video 		$7000,0000; 64MB; 32b; no burst; 2WS;	hold 0; ready
-;	br3	Video Alt	$7400,0000; 64MB;  8b; no burst; 2WS;	hold 0; ready
-;	br4	SD Card		$7c00,0000;  1MB;  8b; no burst; 2WS;	hold 0;
-;	br5	PS/2 Controller	$7c10,0000;  1MB;  8b; no burst; 4WS;	hold 2;
-;	br6	[unused]	
-;	br7	Expansion Bus	$7800,0000; 64MB; 32b; no burst; 2WS;	hold 1; 
+;       br0     ROM             $7ff0,0000;  1MB;  8b; burst;    3/3WS; hold 0;
+;       br1     Spare           $7800,0000; 64MB; 32b; no burst; 1WS;   hold 0; ready
+;       br2     Video MMIO      $7000,0000; 32MB; 32b; no burst; 2WS;   hold 1; ready
+;       br3     Video IO        $7400,0000; 32MB;  8b; no burst; 2WS;   hold 1; ready
+;       br4     IDE             $7c00,0000;  1MB; 32b; no burst; 2WS;   hold 1; ready
+;       br5     PS/2            $7c10,0000;  1MB; 32b; no burst; 2WS;   hold 1; ready
+;       br7     DRAM            $0f80,0000;  4MB; 32b; burst;    1/1WS; hold 0; ready
 
-	lwa     r3,0xff1e0fa0   ; set br0 (ROM)
+        lwa     r3,0xff1e0fa0   ; set br0 (ROM)
         mtdcr   br0,r3          ;
-	lwa 	r3,0xfe1e8500	; set br1 (RAM)
+        lwa     r3,0x80dd4102   ; set br1 (Spare)
         mtdcr   br1,r3          ;
-	lwa 	r3,0x00dd4200	; set br2 (Video)
-	mtdcr 	br2,r3		;
-	lwa 	r3,0x40dc4200	; set br3 (Video Alt)
-	mtdcr 	br3,r3		;
-	lwa 	r3,0xc01c0101	; set br4 (SD Card)
-	mtdcr 	br4,r3		;
-	lwa 	r3,0xc11c0485	; set br5 (PS/2)
-	mtdcr 	br5,r3		;
-	lwa	r3,0x80dd0283	; set br7 (Expansion)
-	mtdcr	br7,r3		;
+        lwa     r3,0x00dd4202   ; set br2 (Video MMIO)
+        mtdcr   br2,r3          ;
+        lwa     r3,0x40dc4202   ; set br3 (Video IO)
+        mtdcr   br3,r3          ;
+;        lwa     r3,0xc01d4202   ; set br4 (IDE)
+;        mtdcr   br4,r3          ;
+;        lwa     r3,0xc11d4202   ; set br5 (PS/2)
+;        mtdcr   br5,r3          ;
+        lwa     r3,0xf85d0ab4   ; set br7 (DRAM)
+        mtdcr   br7,r3          ;
 
-
-;        lwa     r3,0xff1e0fa0   ; get br0 value 3/3 ws ff1e0fa0 ff1c05a0
-;        mtdcr   br0,r3          ; set up br0
-;        lwa     r3,0xfe1b0a10   ; get br1 value
-;	lwa 	r3,0xfe1e8500	; set br1 for 1MB 16-bit SRAM, Burst 1-1 wait
-;        mtdcr   br1,r3          ; set up br1 (ram bank)
-
-; techav - not using br2 or br3 on 403ga
-;        lwa     r3,0x011c8fce   ; get br2/br3 value (for IO config)
-	
-;
-;	I have two boards-- one based on the 403gc which has a bank of IO on
-;	br2, and a 403gcx board which has IO on br3
-;	
-	
-	
-;	ifdef   p403gcx		; This also determines which BRs are used
-				; for IO, and whether turbo is enabled
-;        mtdcr   br3,r3          ; I/O is on bank reg 3	
-;	lwa	r3,0xb0006021	; get io config reg value 0xb0006021 is turbo
-	
-;        elseif
-;        mtdcr   br2,r3          ; I/O is on bank reg 2
-;        lwa     r3,0xb0002021   ; get io config reg value
-;	endif
         
 ;	mtdcr   iocr,r3
 	lwa 	r3,0x00000023	; user serclk & rts/cts, no timerclk, no debug
@@ -189,7 +163,15 @@ dvcache dccci   r0,r4           ; invalidate all d-cache
 ; initialize serial port
 
         bl	initser		; call init routine
-	b	nextinit	; then proceed with initialization
+        bl      pbanner         ; print banner before testing memory
+        bl      memtest         ; test main memory
+        bl      romcopy         ; copy rom into main memory
+;	b	nextinit	; then proceed with initialization
+        lwa     r3,loadpt       ; get ram code pointer
+;        la      r3,nextinit(r3) ; get address of next function
+        addi    r3,r3,nextinit  ; get address of next function
+        mtlr    r3              ; copy to lr
+        blr                     ;
 	
 ; It's useful to call this as a subroutine because in a pinch other words
 ; can call it when the settings may have been munged....	
@@ -217,8 +199,75 @@ initser	li      r3,0
         li      r3,0x80         ; transmit enabled
         stb     r3,_sptc(r4)
 	blr
+
+; print startup banner; don't use ram
+pbanner
+        lwa     r4,rombase      ; get rom pointer
+        addi    r4,r4,pikabanner ; get pointer to string
+        li      r5,0            ; initialize string index
+        lis     r8,0x4000       ; load i/o address 0x40000000
+pbanlp
+        lbzx    r3,r4,r5        ; load next byte of string
+        andi.   r3,r3,255       ; check if null
+        beq     0,pbend         ; done if byte is null
+pbchrlp
+        lbz     r7,_spls(r8)    ; check status byte
+        andi.   r7,r7,4         ; check tx ready bit
+        beq     0,pbchrlp       ; loop until ready
+        stb     r3,_sptb(r8)    ; print byte
+        addi    r5,r5,1         ; increment index
+        b       pbanlp          ; loop until null
+pbend   blr
+
+
+; let's add in a memory test
+memtest
+        lwa     r1,systack 	; initialize system stack
+        lwa     r3,rambase      ; get pointer to main memory
+        lwa     r4,ramsize      ; get size of main memory
+        add     r4,r3,r4        ; calculate top memory address
+        mr      r5,r3           ; r5 will be incrementing pointer and pattern
+memlp1
+        stw     r5,0(r5)        ; save pattern to memory
+        addi    r5,r5,4         ; increment pointer
+        cmpw    r5,r4           ; check if we're outside memory. if r5 > r4 then C0 will be set
+        blt     memlp1          ; keep looping until done
+        mr      r5,r3           ; reinitialize incrementing pointer
+memlp2
+        lwz     r6,0(r5)        ; fetch saved byte
+        cmpw    r5,r6           ; check for match
+        bne     memerr          ; print error if no match
+        addi    r5,r5,4         ; increment pointer
+        cmpw    r5,r4           ; check bounds
+        blt     memlp2          ; keep looping until done
+
+        prstr   "\r\nmem test complete.\r\n"
+        blr
+memerr
+        prstr   "\r\nmem test failed. resetting.\r\n"
+        lwa	r3,0x20000000	; chip reset
+        mtspr	dbcr,r3
+        blr                     ; should never be reached
+
+romcopy
+        prstr   "loading ... "
+        lwa     r3,rombase      ; source pointer
+        lwa     r4,loadpt       ; destination pointer
+        lwa     r5,romsize      ; copy length in bytes
+        slwi    r5,r5,2         ; copy length in words
+        subi    r3,r3,4         ; pre-decrement source
+        subi    r4,r4,4         ; pre-decrement destination
+        mtctr   r5              ; set count register
+romcplp
+        lwzu    r6,4(r3)        ; fetch next word
+        stwu    r6,4(r4)        ; and store it
+        bdnz    romcplp         ; loop until complete
+        prstr   "done.\r\n"
+        blr                     ; start running from ram
+
 	
-nextinit 
+nextinit
+        prstr   "initializing\r\n"
 	lis	r3,0x800	; allow interrupts from serial port
 	mtdcr	exier,r3
 	li	r3,0
@@ -285,7 +334,7 @@ gbase   mflr    r27
 	li	r7,0x400
 	bl	instvect
 	
-	lwar	r4,exth
+	lwar	r4,exth         ; external interrupt (serial) handler
 	li	r7,0x500
 	bl	instvect
 
@@ -499,17 +548,16 @@ warm
 
 ; Install exception vector handler
 ; pass address of handler in r4, offset in r7
-instvect lwa    r3,evector 	; addr of base exception vector 
-	add	r3,r3,r7
+instvect 
+        lwa     r3,evector 	; addr of base exception vector 
+        add	r3,r3,r7
         lwa     r5,_bcode
         subf    r6,r3,r4        ; get diff in addr of taskman-vector
         lwa     r4,0x3ffffff
         and     r6,r6,r4        ; and off high 6 bits
         or      r5,r5,r6        ; or into opcode
         stw     r5,0(r3)        ; store opcode
-	blr
-
-
+        blr
 
 
 ; need to provide more info when an exception occurs!
@@ -1790,6 +1838,31 @@ wde	db	"WD exception.",13,10,0
 dtlbmiss db	"Data TLB miss.",13,10,0
 itlbmiss db	"Instruction TLB miss.",13,10,0
 debuge	db	"Debug exception.",13,10,0
+
+pikabanner      db      13,10
+        db      "                 ,:&&&.                &",13,10
+        db      "      ,o$&&&$;;&&&&P'`$&               &",13,10
+        db      "   ,o&+'        `&'    `&;             &",13,10
+        db      "  .o&'                   ;&n.          &",13,10
+        db      " .&'   _(O )_           ,&'$&,         &",13,10
+        db      ".&'                   ,&$'  `&&.       &",13,10
+        db      "&&                           `$&.      &                  &v&&&,       ,&&&.  ",13,10
+        db      "&;             .o`             `&x     &                  &&'  `&&   ,&&' `&&.",13,10
+        db      "`&;           ,&'          ,o$&$;&   & &    ,&   ,$&&$,   &     `&;  &'     `&",13,10
+        db      "  `&&.    ,$&&$'         $v&'  'X&   & &    ,&  ;$'  ;$.  &      `& ,&        ",13,10
+        db      "    `$&&&&&$'            $*'    `*&. & &   ,&         %;  &       & &&        ",13,10
+        db      "      &&&'               $        `& & &  ,&          `$  &      .& &         ",13,10
+        db      "     :&&&.               $         & & & ,&      ,$&&$v$  &     .&' &         ",13,10
+        db      "      `&&&.              $         & & &V&^&,   ,$'  `$$  &&.  ;&&  &.        ",13,10
+        db      "       `&&&.             $         & & &$  `&,  $      $  &^&&&$'   &&        ",13,10
+        db      "        `&&&&.           $        .& & &   `&,  $      $  &         `&,       ",13,10
+        db      "          `&&&&;         $;      ;&' & &    `&, $.    .$  &          &      ,&",13,10
+        db      "            `$&&&&x.     $`&,   ,&'  & &     `& `$.  .$&. &          `&&, ,&&'",13,10
+        db      "                `*$&&X&$x$ `$&&$'    & &      &  `$&&$ `$ &            `&&&'  ",13,10
+        db      "                         $",13,10
+        db      "                         $",13,10
+        db      "                         $",13,10
+        db      "                         $",13,10,0
 
 
 	align	4

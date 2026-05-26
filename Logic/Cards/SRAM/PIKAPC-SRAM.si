@@ -1,0 +1,27 @@
+Name     PikaPC-SRAM;
+PartNo   00;
+Date     5/11/2026;
+Revision 01;
+Designer Engineer;
+Company  techav;
+Assembly None;
+Location ;
+Device   g22V10;
+
+
+ORDER: CLK, !START, RW, !CE, !RESET, !WE, !OE, !AEN, !BEN, ACK, !CEN, Q1, Q0; 
+
+
+VECTORS:
+K1111********
+K0101********
+K0111********
+K0111********
+K0111********
+K1111********
+K1111********
+K0001********
+K0011********
+K0011********
+K0011********
+K1111********

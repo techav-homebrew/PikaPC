@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PikaPC")(type "KiCad")(uri "C:/Users/techav/Documents/GitHub/PikaPC403/Hardware/PikaPC.kicad_sym")(options "")(descr ""))
+)
