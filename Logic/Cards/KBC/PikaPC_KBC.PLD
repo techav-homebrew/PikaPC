@@ -1,0 +1,71 @@
+Name     PIKAPC_KBC ;
+PartNo   00 ;
+Date     5/26/2026 ;
+Revision 01 ;
+Designer Engineer ;
+Company  techav ;
+Assembly None ;
+Location  ;
+Device   g22V10 ;
+
+/* *************** INPUT PINS *********************/
+PIN   1 = CLK                     ; /*                                 */ 
+PIN   2 = !ADDRn                  ; /*                                 */ 
+PIN   3 = !STARTn                 ; /*                                 */ 
+PIN   4 = !BE0n                   ; /*                                 */ 
+PIN   5 = INT2                    ; /*                                 */ 
+PIN   6 = INT1                    ; /*                                 */ 
+PIN  10 = !RESETn                 ; /*                                 */ 
+PIN  11 = RWn                     ; /*                                 */ 
+PIN  13 = AD4                     ; /*                                 */ 
+
+/* *************** outPUT PINS *********************/
+PIN  23 = !ACKn                   ; /*                                 */ 
+PIN  22 = !IRQn                   ; /*                                 */ 
+PIN  18 = !CEn                    ; /*                                 */ 
+PIN  17 = !RDn                    ; /*                                 */ 
+PIN  16 = A4                      ; /*                                 */ 
+PIN  15 = !WRn                    ; /*                                 */ 
+PIN  14 = !BENn                   ; /*                                 */ 
+
+/* *************** PINNODES    *********************/
+PINNODE [21..19] = [Q2..0]        ; /*                                 */ 
+
+
+Q2.d = (!Q2 & Q1 & Q0 & STARTn) # (Q2 & !Q1 & STARTn);
+Q2.ar   = RESETn;
+Q2.sp   = 'b'0;
+
+Q1.d = (!Q2 & !Q1 & Q0 & STARTn) # (!Q2 & Q1 & !Q0 & STARTn);
+Q1.ar   = RESETn;
+Q1.sp   = 'b'0;
+
+Q0.d = (!Q1 & !Q0 & STARTn & ADDRn) # (!Q2 & Q1 & !Q0 & STARTn) # (Q2 & !Q1 & STARTn);
+Q0.ar   = RESETn;
+Q0.sp   = 'b'0;
+
+ACKn.d = (Q2 & !Q1 & STARTn);
+ACKn.ar = RESETn;
+ACKn.sp = 'b'0;
+
+CEn.d = (Q2 # Q1 # Q0 # ADDRn) & STARTn & (!Q2 # !Q1);
+CEn.ar = RESETn;
+CEn.sp = 'b'0;
+
+BENn.d = (Q2 # Q1 # Q0) & STARTn & (!Q2 # !Q1);
+BENn.ar = RESETn;
+BENn.sp = 'b'0;
+
+RDn.d = (Q2 # Q1 # Q0 # ADDRn) & STARTn & RWn & (!Q2 # !Q1);
+RDn.ar = RESETn;
+RDn.sp = 'b'0;
+
+WRn.d = (Q2 # Q1 # Q0 # ADDRn) & STARTn & !RWn & (!Q2 # !Q1);
+WRn.ar = RESETn;
+WRn.sp = 'b'0;
+
+A4.d = (!Q2 & !Q1 & !Q0 & AD4) # (Q0 & A4) # (Q1 & A4) # (Q2 & A4);
+A4.ar = RESETn;
+A4.sp = 'b'0;
+
+IRQn = INT1 # INT2;

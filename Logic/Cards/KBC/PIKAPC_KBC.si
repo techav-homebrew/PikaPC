@@ -1,0 +1,24 @@
+Name     ;
+PartNo   ;
+Date     ;
+Revision ;
+Designer ;
+Company  ;
+Assembly ;
+Location ;
+
+
+ORDER: CLK, !RESETn, !STARTn, !ADDRn, RWn, AD4, A4, !ACKn, !BENn, !CEn, Q0, Q1, Q2, !RDn, !WRn, INT2, INT1, !IRQn, !BE0n; 
+
+
+VECTORS:
+K01111*********00*1
+K11111*********00*1
+K11011*********00*1
+K10010*********00*1
+K10111*********00*1
+K10111*********00*1
+K10111*********00*1
+K10111*********00*1
+K11111*********00*1
+K11111*********10*1
